@@ -1,3 +1,4 @@
+import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import upstateMeshLogo from "/um_logo_web.png";
@@ -10,37 +11,52 @@ function App() {
     <Container maxWidth="md">
       <Stack
         direction="column"
+        px={1}
         spacing={3}
         sx={{
           justifyContent: "center",
-          alignItems: "flex-start",
+          alignItems: "center",
+          height: "100vh",
         }}
       >
-        <Stack
-          direction="row"
-          spacing={2}
+        <Box
           sx={{
-            justifyContent: "center",
-            alignItems: "center",
+            backgroundColor: "#75eba5",
+            borderRadius: 1,
+            lineHeight: 1,
+            maxWidth: 500,
             width: "100%",
           }}
         >
-          <img src={upstateMeshLogo} className="logo" alt="Upstate Mesh logo" />
-        </Stack>
-        <div className="temp">
-          We are a community group of makers and tech enthusiasts growing an
+          <Box
+            sx={{
+              padding: 2,
+            }}
+          >
+            <img
+              src={upstateMeshLogo}
+              alt="Upstate Mesh logo"
+              width="100%"
+              height="auto"
+            />
+          </Box>
+        </Box>
+        <Box className="temp">
+          We are a community group of makers and tech enthusiasts building an
           open source text messaging network in Upstate New York's Capital
           District.
-        </div>
-        <h2>Join the network</h2>
-        <div className="temp">
-          More info on how to join the network is coming soon. For now, if
+        </Box>
+        <Box sx={{ width: "100%" }}>
+          <h2>Join the network</h2>
+        </Box>
+        <Box className="temp">
+          More details on how to join the network is coming soon. For now, if
           you're interested in joining, check out our{" "}
           <a href="https://discord.gg/mjwbKJBv" target="_blank" title="Discord">
             Discord
           </a>{" "}
           or one of the social media channels below.
-        </div>
+        </Box>
         <Stack
           direction="row"
           spacing={2}
