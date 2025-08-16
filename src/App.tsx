@@ -8,7 +8,15 @@ import "./App.css";
 
 function App() {
   return (
-    <Container maxWidth="md">
+    <Container
+      maxWidth="md"
+      sx={{
+        height: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Stack
         direction="column"
         px={1}
@@ -16,7 +24,6 @@ function App() {
         sx={{
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh",
         }}
       >
         <Box
