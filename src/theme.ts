@@ -15,6 +15,9 @@ const Theme = createTheme({
     },
   },
   typography: {
+    allVariants: {
+      lineHeight: 1.5,
+    },
     fontFamily: '"Mozilla Text", sans-serif',
     fontSize: 17,
     fontWeightRegular: 400,
@@ -24,7 +27,6 @@ const Theme = createTheme({
     h4: { fontWeight: 800 },
     h5: { fontWeight: 800 },
     h6: { fontWeight: 800 },
-    lineHeight: 1.5,
   },
   components: {
     MuiCssBaseline: {
