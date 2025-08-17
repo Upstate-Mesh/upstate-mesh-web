@@ -1,13 +1,6 @@
 html,
 body {
-  line-height: 1.5;
-  font-family: "Mozilla Text", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-size: 19px;
-  font-style: normal;
-  color: #ffffff;
-  background-color: #3a3c4d;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,16 +8,6 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-}
-
-a {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-h2 {
-  line-height: 1;
-  margin: 0;
 }
 
 #root {

@@ -1,7 +1,10 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+
 import upstateMeshLogo from "/um_logo_web.png";
+
 import SocialIcons from "./SocialIcons";
 
 function App() {
@@ -46,22 +49,24 @@ function App() {
             />
           </Box>
         </Box>
-        <Box>
-          We are a community group of makers and tech enthusiasts building a
-          community mesh text messaging network in Upstate New York's Capital
-          District.
-        </Box>
+        <Typography>
+          We are a forming a community group of makers and tech enthusiasts to
+          support a mesh text messaging network in Upstate New York's Capital
+          District (and beyond!).
+        </Typography>
         <Box sx={{ width: "100%" }}>
-          <h2>Join the network</h2>
+          <Typography component="h5" variant="h5">
+            Join the network
+          </Typography>
         </Box>
-        <Box>
+        <Typography>
           More details on how to join the network is coming soon. For now, if
           you're interested in joining, check out our{" "}
           <a href="https://discord.gg/mjwbKJBv" target="_blank" title="Discord">
             Discord
           </a>{" "}
           or one of the social media channels below.
-        </Box>
+        </Typography>
         <SocialIcons />
       </Stack>
     </Container>

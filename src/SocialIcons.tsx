@@ -1,8 +1,9 @@
 import blueskyIcon from "/bluesky.svg";
 import discordIcon from "/discord.svg";
 import instagramIcon from "/instagram.svg";
-import SocialIcon from "./SocialIcon";
 import Stack from "@mui/material/Stack";
+
+import SocialIcon from "./SocialIcon";
 
 export default function SocialIcons() {
   return (
