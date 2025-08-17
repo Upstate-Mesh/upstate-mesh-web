@@ -2,9 +2,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import upstateMeshLogo from "/um_logo_web.png";
-import blueskyIcon from "/bluesky.svg";
-import discordIcon from "/discord.svg";
-import "./App.css";
+import SocialIcons from "./SocialIcons";
 
 function App() {
   return (
@@ -48,15 +46,15 @@ function App() {
             />
           </Box>
         </Box>
-        <Box className="temp">
-          We are a community group of makers and tech enthusiasts building an
-          open source text messaging network in Upstate New York's Capital
+        <Box>
+          We are a community group of makers and tech enthusiasts building a
+          community mesh text messaging network in Upstate New York's Capital
           District.
         </Box>
         <Box sx={{ width: "100%" }}>
           <h2>Join the network</h2>
         </Box>
-        <Box className="temp">
+        <Box>
           More details on how to join the network is coming soon. For now, if
           you're interested in joining, check out our{" "}
           <a href="https://discord.gg/mjwbKJBv" target="_blank" title="Discord">
@@ -64,26 +62,7 @@ function App() {
           </a>{" "}
           or one of the social media channels below.
         </Box>
-        <Stack
-          direction="row"
-          spacing={2}
-          sx={{
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <a
-            href="https://bsky.app/profile/upstatemesh.bsky.social"
-            target="_blank"
-            title="Bluesky"
-          >
-            <img src={blueskyIcon} className="icon" alt="Bluesky" />
-          </a>
-          <a href="https://discord.gg/mjwbKJBv" target="_blank" title="Discord">
-            <img src={discordIcon} className="icon" alt="Discord" />
-          </a>
-        </Stack>
+        <SocialIcons />
       </Stack>
     </Container>
   );
