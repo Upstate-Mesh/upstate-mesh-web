@@ -11,9 +11,8 @@ export default function SocialIcons() {
       direction="row"
       spacing={3}
       sx={{
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignItems: "center",
-        width: "100%",
       }}
     >
       <SocialIcon
