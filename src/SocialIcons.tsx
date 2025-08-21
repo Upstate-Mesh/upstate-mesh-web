@@ -27,7 +27,7 @@ export default function SocialIcons() {
       />
       <SocialIcon
         src={discordIcon}
-        href="https://discord.gg/mjwbKJBv"
+        href="https://discord.gg/FvajRmXEsb"
         title="Discord"
       />
     </Stack>

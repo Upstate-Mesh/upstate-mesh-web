@@ -28,7 +28,7 @@ function RouteComponent() {
         <Typography>
           Outside of the mesh network itself, we're most active in our{" "}
           <a
-            href="https://discord.gg/mjwbKJBv"
+            href="https://discord.gg/FvajRmXEsb"
             target="_blank"
             title="Discord server"
           >
