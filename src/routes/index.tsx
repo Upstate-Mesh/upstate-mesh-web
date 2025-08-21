@@ -15,7 +15,7 @@ function RouteComponent() {
         direction="column"
         spacing={2}
         sx={{
-          background: "#ffffff url(/albany.jpg) center center/cover no-repeat",
+          background: "#3a3c4d url(/albany.jpg) center center/cover no-repeat",
           justifyContent: "center",
           alignItems: "center",
           height: 350,
@@ -50,8 +50,8 @@ function RouteComponent() {
           }}
         >
           <Typography>
-            We are a community group of makers and tech enthusiasts building a
-            solar-powered{" "}
+            We are a community group of makers and tech enthusiasts
+            experimenting with a solar-powered{" "}
             <a
               href="https://meshtastic.org/"
               target="_blank"

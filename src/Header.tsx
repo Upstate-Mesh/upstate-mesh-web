@@ -7,11 +7,14 @@ import ButtonLink from "./ButtonLink";
 export default function Header() {
   return (
     <Box
-      py={2}
-      px={6}
       sx={{
         backgroundColor: "#75eba5",
         boxShadow: "0 5px 5px rgba(0, 0, 0, .2)",
+        px: {
+          xs: 2,
+          md: 6,
+        },
+        py: 2,
         width: "100%",
       }}
     >

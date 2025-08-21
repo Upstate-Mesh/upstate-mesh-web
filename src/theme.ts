@@ -20,7 +20,7 @@ const Theme = createTheme({
   },
   typography: {
     allVariants: {
-      lineHeight: 1.3,
+      lineHeight: 1.5,
     },
     fontFamily: '"Mozilla Text", sans-serif',
     fontSize: 15,
