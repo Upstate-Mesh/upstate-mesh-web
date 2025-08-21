@@ -34,8 +34,7 @@ function RouteComponent() {
             Welcome to Upstate Mesh
           </Typography>
           <Typography component="h5" variant="h5" sx={{ color: "#ffffff" }}>
-            A meshtastic user group for the Capital District, Upper Hudson
-            Valley, and beyond!
+            A meshtastic user group for the Capital District and beyond!
           </Typography>
         </Box>
       </Stack>
