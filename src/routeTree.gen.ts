@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SimilarNetworksRouteImport } from './routes/similar-networks'
 import { Route as LearnRouteImport } from './routes/learn'
 import { Route as JoinRouteImport } from './routes/join'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SimilarNetworksRoute = SimilarNetworksRouteImport.update({
+  id: '/similar-networks',
+  path: '/similar-networks',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LearnRoute = LearnRouteImport.update({
   id: '/learn',
   path: '/learn',
@@ -33,34 +39,45 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/join': typeof JoinRoute
   '/learn': typeof LearnRoute
+  '/similar-networks': typeof SimilarNetworksRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/join': typeof JoinRoute
   '/learn': typeof LearnRoute
+  '/similar-networks': typeof SimilarNetworksRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/join': typeof JoinRoute
   '/learn': typeof LearnRoute
+  '/similar-networks': typeof SimilarNetworksRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/join' | '/learn'
+  fullPaths: '/' | '/join' | '/learn' | '/similar-networks'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/join' | '/learn'
-  id: '__root__' | '/' | '/join' | '/learn'
+  to: '/' | '/join' | '/learn' | '/similar-networks'
+  id: '__root__' | '/' | '/join' | '/learn' | '/similar-networks'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   JoinRoute: typeof JoinRoute
   LearnRoute: typeof LearnRoute
+  SimilarNetworksRoute: typeof SimilarNetworksRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/similar-networks': {
+      id: '/similar-networks'
+      path: '/similar-networks'
+      fullPath: '/similar-networks'
+      preLoaderRoute: typeof SimilarNetworksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/learn': {
       id: '/learn'
       path: '/learn'
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   JoinRoute: JoinRoute,
   LearnRoute: LearnRoute,
+  SimilarNetworksRoute: SimilarNetworksRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
