@@ -208,20 +208,20 @@ function RouteComponent() {
           you have a specific use case or are running a test that requires more
           frequent updates.
         </Typography>
-        <Typography component="b" variant="b">
-          Device Config
+        <Typography>
+          <b>Device Config</b>
         </Typography>
         <Typography>Node Info Broadcast Interval: 3 Hours</Typography>
-        <Typography component="b" variant="b">
-          Position
+        <Typography>
+          <b>Position</b>
         </Typography>
         <Typography>
           Broadcast Interval: 1 Hour, Enable Smart Position, Minimum Interval:
           One Minute, Minimum Distance: 100, Position Flags: Disable all flags
           that are not explicitly needed for your use case.
         </Typography>
-        <Typography component="b" variant="b">
-          Telemetry (Sensors) Config
+        <Typography>
+          <b>Telemetry (Sensors) Config</b>
         </Typography>
         <Typography>Device Metrics: 3 Hours, Sensor Metrics: 1 Hour</Typography>
       </Stack>
