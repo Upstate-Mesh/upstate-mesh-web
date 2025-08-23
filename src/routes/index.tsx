@@ -18,7 +18,7 @@ function RouteComponent() {
           background: "#3a3c4d url(/albany.jpg) center center/cover no-repeat",
           justifyContent: "center",
           alignItems: "center",
-          height: 350,
+          height: 400,
           padding: 2,
           width: "100%",
         }}
@@ -30,7 +30,7 @@ function RouteComponent() {
             padding: 2,
           }}
         >
-          <Typography component="h1" variant="h4">
+          <Typography component="h1" variant="h4" sx={{ lineHeight: 1.2 }}>
             Welcome to Upstate Mesh
           </Typography>
           <Typography component="h5" variant="h5" sx={{ color: "#ffffff" }}>
