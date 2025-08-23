@@ -25,12 +25,12 @@ const Theme = createTheme({
     fontFamily: '"Mozilla Text", sans-serif',
     fontSize: 15,
     fontWeightRegular: 400,
-    h1: { color: "#75eba5", fontWeight: 800 },
-    h2: { color: "#75eba5", fontWeight: 800 },
-    h3: { color: "#75eba5", fontWeight: 800 },
-    h4: { color: "#75eba5", fontWeight: 800 },
-    h5: { color: "#75eba5", fontWeight: 800 },
-    h6: { color: "#75eba5", fontWeight: 800 },
+    h1: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
+    h2: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
+    h3: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
+    h4: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
+    h5: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
+    h6: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
   },
   components: {
     MuiCssBaseline: {

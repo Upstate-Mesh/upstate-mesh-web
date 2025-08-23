@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 
 import upstateMeshLogo from "/um_logo_web.png";
-import ButtonLink from "./ButtonLink";
+import Nav from "./Nav";
 
 export default function Header() {
   return (
@@ -43,16 +43,7 @@ export default function Header() {
           </a>
         </Box>
         <Box>
-          <Stack
-            direction="row"
-            spacing={2}
-            sx={{
-              justifyContent: "flex-end",
-              alignItems: "center",
-            }}
-          >
-            <ButtonLink to="/join">Join</ButtonLink>
-          </Stack>
+          <Nav />
         </Box>
       </Stack>
     </Box>

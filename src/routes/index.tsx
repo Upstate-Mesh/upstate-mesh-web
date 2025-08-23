@@ -30,7 +30,7 @@ function RouteComponent() {
             padding: 2,
           }}
         >
-          <Typography component="h1" variant="h4" sx={{ lineHeight: 1.2 }}>
+          <Typography component="h1" variant="h4">
             Welcome to Upstate Mesh
           </Typography>
           <Typography component="h5" variant="h5" sx={{ color: "#ffffff" }}>
