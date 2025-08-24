@@ -31,12 +31,6 @@ function RouteComponent() {
         </Typography>
         <ul>
           <li>
-            <b>New York City: </b>
-            <a href="https://nyme.sh/" target="_blank" title="nyme.sh">
-              nyme.sh
-            </a>
-          </li>
-          <li>
             <b>Hudson Valley: </b>
             <a
               href="https://hvmesh.net/"
@@ -52,6 +46,22 @@ function RouteComponent() {
               Kaatskills Mesh
             </a>
           </li>
+          <li>
+            <b>Southern Tier: </b>
+            <a
+              href="https://stmesh.net/"
+              target="_blank"
+              title="Southern Tier NY Meshtastic"
+            >
+              Southern Tier NY Meshtastic
+            </a>
+          </li>
+          <li>
+            <b>New York City: </b>
+            <a href="https://nyme.sh/" target="_blank" title="nyme.sh">
+              nyme.sh
+            </a>
+          </li>
         </ul>
         <Typography component="h5" variant="h5">
           Meshes outside of New York
@@ -61,6 +71,12 @@ function RouteComponent() {
           York to check out.
         </Typography>
         <ul>
+          <li>
+            <b>New Hampshire: </b>
+            <a href="https://nhmesh.com/" target="_blank" title="NHMesh">
+              NHMesh
+            </a>
+          </li>
           <li>
             <b>North New Jersey: </b>
             <a
@@ -84,15 +100,9 @@ function RouteComponent() {
             </a>
           </li>
           <li>
-            <b>Birmingham, Alabama: </b>
-            <a href="http://birminghammesh.org/" target="_blank">
-              Birmingham Mesh
-            </a>
-          </li>
-          <li>
-            <b>Calgary, Alberta: </b>
-            <a href="https://yycmesh.com" target="_blank">
-              YYC Mesh
+            <b>Nashville, Tennessee: </b>
+            <a href="https://www.instagram.com/meshville.tn" target="_blank">
+              Meshville
             </a>
           </li>
           <li>
@@ -108,39 +118,27 @@ function RouteComponent() {
             </a>
           </li>
           <li>
+            <b>Birmingham, Alabama: </b>
+            <a href="http://birminghammesh.org/" target="_blank">
+              Birmingham Mesh
+            </a>
+          </li>
+          <li>
             <b>Chicago, Illinois: </b>
             <a href="https://chicagolandmesh.org/" target="_blank">
               Chicagoland Mesh
             </a>
           </li>
           <li>
+            <b>Wisconsin: </b>
+            <a href="https://meshconsin.org/" target="_blank">
+              Meshconsin
+            </a>
+          </li>
+          <li>
             <b>Denver, Colorado: </b>
             <a href="https://denvermesh.org/" target="_blank">
               Denver Mesh
-            </a>
-          </li>
-          <li>
-            <b>Hawaii: </b>
-            <a href="https://www.hawaiimesh.net/" target="_blank">
-              Hawaii Mesh
-            </a>
-          </li>
-          <li>
-            <b>Nashville, Tennessee: </b>
-            <a href="https://www.instagram.com/meshville.tn" target="_blank">
-              Meshville
-            </a>
-          </li>
-          <li>
-            <b>Northern Texas: </b>
-            <a href="https://ntxmesh.com" target="_blank">
-              North Texas Mesh
-            </a>
-          </li>
-          <li>
-            <b>Austin, Texas: </b>
-            <a href="https://www.austinmesh.org/" target="_blank">
-              Austin Mesh
             </a>
           </li>
           <li>
@@ -156,6 +154,24 @@ function RouteComponent() {
             </a>
           </li>
           <li>
+            <b>Northern Texas: </b>
+            <a href="https://ntxmesh.com" target="_blank">
+              North Texas Mesh
+            </a>
+          </li>
+          <li>
+            <b>Austin, Texas: </b>
+            <a href="https://www.austinmesh.org/" target="_blank">
+              Austin Mesh
+            </a>
+          </li>
+          <li>
+            <b>Calgary, Alberta: </b>
+            <a href="https://yycmesh.com" target="_blank">
+              YYC Mesh
+            </a>
+          </li>
+          <li>
             <b>San Francisco / Bay Area, California: </b>
             <a href="https://bayme.sh" target="_blank">
               bayme.sh
@@ -168,9 +184,9 @@ function RouteComponent() {
             </a>
           </li>
           <li>
-            <b>Wisconsin: </b>
-            <a href="https://meshconsin.org/" target="_blank">
-              Meshconsin
+            <b>Hawaii: </b>
+            <a href="https://www.hawaiimesh.net/" target="_blank">
+              Hawaii Mesh
             </a>
           </li>
         </ul>
