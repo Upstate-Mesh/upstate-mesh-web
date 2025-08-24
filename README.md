@@ -1,21 +1,26 @@
-# React + TypeScript + Vite
+# Upstate Mesh WWW
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the React / Typescript / MUI source code for https://www.upstatemesh.org
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+## License
 
-## Deploy Your Own
+### Content
 
-Deploy your own Vite project with Vercel.
+Content licensed Creative Commons Attribution-ShareAlike 4.0 with significant
+portions adopted and remixed from https://github.com/austinmesh/www
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/framework-boilerplates/vite-react&template=vite-react)
+### Source Code
 
-_Live Example: https://vite-react-example.vercel.app_
+Copyright 2025 Upstate Mesh
 
-### Deploying From Your Terminal
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
+    http://www.apache.org/licenses/LICENSE-2.0
 
-```shell
-$ vercel
-```
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
