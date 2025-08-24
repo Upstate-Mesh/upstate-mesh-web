@@ -10,7 +10,7 @@ export default function Footer() {
     <Box
       px={2}
       py={4}
-      sx={{ backgroundColor: "rgb(0, 0, 0, .2)", flexGrow: 1, width: "100%" }}
+      sx={{ backgroundColor: "#3a3c4d", flexGrow: 1, width: "100%" }}
     >
       <Container maxWidth="md">
         <Stack

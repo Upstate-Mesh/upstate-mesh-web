@@ -6,8 +6,8 @@ const Theme = createTheme({
       main: "#75EBA5",
     },
     background: {
-      default: "#3a3c4d",
-      paper: "#3a3c4d",
+      default: "#2e303d",
+      paper: "#2e303d",
     },
     text: {
       primary: "#ffffff",
@@ -36,7 +36,7 @@ const Theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: "#3a3c4d",
+          backgroundColor: "#2e303d",
           color: "#ffffff",
         },
         a: {

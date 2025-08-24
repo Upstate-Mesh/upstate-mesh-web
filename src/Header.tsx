@@ -9,7 +9,7 @@ export default function Header() {
     <Box
       sx={{
         backgroundColor: "#75eba5",
-        boxShadow: "0 5px 5px rgba(0, 0, 0, .2)",
+        borderBottom: "2px solid rgb(0, 0, 0, .2)",
         px: {
           xs: 2,
           md: 6,

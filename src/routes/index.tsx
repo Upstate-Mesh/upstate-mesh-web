@@ -16,6 +16,7 @@ function RouteComponent() {
         spacing={2}
         sx={{
           background: "#3a3c4d url(/albany.jpg) center center/cover no-repeat",
+          boxShadow: "0 10px 10px rgba(0, 0, 0, .2)",
           justifyContent: "center",
           alignItems: "center",
           height: 400,
