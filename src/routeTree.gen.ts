@@ -9,24 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SimilarNetworksRouteImport } from './routes/similar-networks'
-import { Route as LearnRouteImport } from './routes/learn'
-import { Route as JoinRouteImport } from './routes/join'
+import { Route as _interiorLayoutRouteImport } from './routes/__interiorLayout'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as _interiorLayoutSimilarNetworksRouteImport } from './routes/__interiorLayout/similar-networks'
+import { Route as _interiorLayoutLearnRouteImport } from './routes/__interiorLayout/learn'
+import { Route as _interiorLayoutJoinRouteImport } from './routes/__interiorLayout/join'
 
-const SimilarNetworksRoute = SimilarNetworksRouteImport.update({
-  id: '/similar-networks',
-  path: '/similar-networks',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LearnRoute = LearnRouteImport.update({
-  id: '/learn',
-  path: '/learn',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const JoinRoute = JoinRouteImport.update({
-  id: '/join',
-  path: '/join',
+const _interiorLayoutRoute = _interiorLayoutRouteImport.update({
+  id: '/__interiorLayout',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -34,62 +24,69 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const _interiorLayoutSimilarNetworksRoute =
+  _interiorLayoutSimilarNetworksRouteImport.update({
+    id: '/similar-networks',
+    path: '/similar-networks',
+    getParentRoute: () => _interiorLayoutRoute,
+  } as any)
+const _interiorLayoutLearnRoute = _interiorLayoutLearnRouteImport.update({
+  id: '/learn',
+  path: '/learn',
+  getParentRoute: () => _interiorLayoutRoute,
+} as any)
+const _interiorLayoutJoinRoute = _interiorLayoutJoinRouteImport.update({
+  id: '/join',
+  path: '/join',
+  getParentRoute: () => _interiorLayoutRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/join': typeof JoinRoute
-  '/learn': typeof LearnRoute
-  '/similar-networks': typeof SimilarNetworksRoute
+  '/join': typeof _interiorLayoutJoinRoute
+  '/learn': typeof _interiorLayoutLearnRoute
+  '/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/join': typeof JoinRoute
-  '/learn': typeof LearnRoute
-  '/similar-networks': typeof SimilarNetworksRoute
+  '/join': typeof _interiorLayoutJoinRoute
+  '/learn': typeof _interiorLayoutLearnRoute
+  '/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/join': typeof JoinRoute
-  '/learn': typeof LearnRoute
-  '/similar-networks': typeof SimilarNetworksRoute
+  '/__interiorLayout': typeof _interiorLayoutRouteWithChildren
+  '/__interiorLayout/join': typeof _interiorLayoutJoinRoute
+  '/__interiorLayout/learn': typeof _interiorLayoutLearnRoute
+  '/__interiorLayout/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/join' | '/learn' | '/similar-networks'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/join' | '/learn' | '/similar-networks'
-  id: '__root__' | '/' | '/join' | '/learn' | '/similar-networks'
+  id:
+    | '__root__'
+    | '/'
+    | '/__interiorLayout'
+    | '/__interiorLayout/join'
+    | '/__interiorLayout/learn'
+    | '/__interiorLayout/similar-networks'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  JoinRoute: typeof JoinRoute
-  LearnRoute: typeof LearnRoute
-  SimilarNetworksRoute: typeof SimilarNetworksRoute
+  _interiorLayoutRoute: typeof _interiorLayoutRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/similar-networks': {
-      id: '/similar-networks'
-      path: '/similar-networks'
-      fullPath: '/similar-networks'
-      preLoaderRoute: typeof SimilarNetworksRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/learn': {
-      id: '/learn'
-      path: '/learn'
-      fullPath: '/learn'
-      preLoaderRoute: typeof LearnRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/join': {
-      id: '/join'
-      path: '/join'
-      fullPath: '/join'
-      preLoaderRoute: typeof JoinRouteImport
+    '/__interiorLayout': {
+      id: '/__interiorLayout'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof _interiorLayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -99,14 +96,49 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/__interiorLayout/similar-networks': {
+      id: '/__interiorLayout/similar-networks'
+      path: '/similar-networks'
+      fullPath: '/similar-networks'
+      preLoaderRoute: typeof _interiorLayoutSimilarNetworksRouteImport
+      parentRoute: typeof _interiorLayoutRoute
+    }
+    '/__interiorLayout/learn': {
+      id: '/__interiorLayout/learn'
+      path: '/learn'
+      fullPath: '/learn'
+      preLoaderRoute: typeof _interiorLayoutLearnRouteImport
+      parentRoute: typeof _interiorLayoutRoute
+    }
+    '/__interiorLayout/join': {
+      id: '/__interiorLayout/join'
+      path: '/join'
+      fullPath: '/join'
+      preLoaderRoute: typeof _interiorLayoutJoinRouteImport
+      parentRoute: typeof _interiorLayoutRoute
+    }
   }
 }
 
+interface _interiorLayoutRouteChildren {
+  _interiorLayoutJoinRoute: typeof _interiorLayoutJoinRoute
+  _interiorLayoutLearnRoute: typeof _interiorLayoutLearnRoute
+  _interiorLayoutSimilarNetworksRoute: typeof _interiorLayoutSimilarNetworksRoute
+}
+
+const _interiorLayoutRouteChildren: _interiorLayoutRouteChildren = {
+  _interiorLayoutJoinRoute: _interiorLayoutJoinRoute,
+  _interiorLayoutLearnRoute: _interiorLayoutLearnRoute,
+  _interiorLayoutSimilarNetworksRoute: _interiorLayoutSimilarNetworksRoute,
+}
+
+const _interiorLayoutRouteWithChildren = _interiorLayoutRoute._addFileChildren(
+  _interiorLayoutRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  JoinRoute: JoinRoute,
-  LearnRoute: LearnRoute,
-  SimilarNetworksRoute: SimilarNetworksRoute,
+  _interiorLayoutRoute: _interiorLayoutRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
