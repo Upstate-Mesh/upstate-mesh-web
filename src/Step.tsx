@@ -8,22 +8,42 @@ import Typography from "@mui/material/Typography";
 interface StepProps {
   stepNum: number;
   title: string;
+  imgSrc?: string;
+  vidSrc?: string;
   description: string;
 }
 
-export default function Step({ stepNum, title, description }: StepProps) {
+export default function Step({
+  stepNum,
+  title,
+  imgSrc,
+  vidSrc,
+  description,
+}: StepProps) {
   return (
-    <Card>
+    <Card sx={{ width: "100%" }}>
       <CardHeader
         avatar={<Avatar aria-label="step number">{stepNum}</Avatar>}
         title={title}
+        titleTypographyProps={{ variant: "h6" }}
       />
-      <CardMedia
-        component="img"
-        image="https://placehold.co/900x600"
-        alt="Paella dish"
-        width="100%"
-      />
+      {vidSrc && (
+        <CardMedia
+          component="iframe"
+          src={vidSrc}
+          sx={{
+            width: "100%",
+            aspectRatio: "16/9",
+            border: 0,
+          }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      )}
+      {imgSrc && (
+        <CardMedia component="img" image={imgSrc} alt={title} width="100%" />
+      )}
       <CardContent>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           {description}

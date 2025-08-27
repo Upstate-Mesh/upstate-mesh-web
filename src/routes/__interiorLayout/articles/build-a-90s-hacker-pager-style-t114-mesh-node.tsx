@@ -51,13 +51,13 @@ const rows = [
     "Go with whichever you prefer. The model author offers variants for either, so it depends on your tools and comfort level.",
   ),
   createData(
-    "M2.5 x ?mm machine screws",
+    "M2.5 x 4mm machine screws",
     2,
     undefined,
     "Attaches the holster to the belt clip via your choice above of hex nuts or heat insets",
   ),
   createData(
-    "M3 x ?mm machine screw",
+    "M3 x 16mm machine screw",
     1,
     undefined,
     "Mechanically attaches the front to the back of the case",
@@ -79,6 +79,7 @@ function RouteComponent() {
       <Typography component="h1" variant="h4">
         Build a 90's hacker pager-style T114 mesh node
       </Typography>
+      <Typography>by Craig KD2NSP</Typography>
       <Typography variant="caption">
         Use modern tech to build a Meshtastic text messaging node that goes
         wherever you go, complete with a 90's hacker cyberpunk aesthetic. Trust
@@ -169,7 +170,25 @@ function RouteComponent() {
         About $60 USD average as of September, 2025, minus shipping costs, with
         the assumption you have materials for 3D printing already.
       </Typography>
-      <Step stepNum={1} title="Lorem ipsum dolor sit amet" description="TODO" />
+      <Typography component="h5" variant="h5">
+        Let's build!
+      </Typography>
+      <Typography>
+        Now that we've sourced all our parts and have our tools ready, let's
+        make it happen.
+      </Typography>
+      <Step
+        stepNum={0}
+        title="Get your vibes in order"
+        vidSrc="https://www.youtube.com/embed/feWNvGpWHLM?si=oloIoxY_T60k3eGN"
+        description="Any track from the Hackers soundtrack will do, but Underworld gets my vote."
+      />
+      <Step
+        stepNum={1}
+        title="Print all 3D printed parts"
+        imgSrc="/pager_step_0.jpg"
+        description="1x case front, 1x case back, 1x holster. We recommend PETG, but you'd probably be okay with PLA too, just don't leave it in the sun."
+      />
     </>
   );
 }
