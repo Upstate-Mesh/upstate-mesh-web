@@ -1,3 +1,6 @@
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -7,6 +10,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
 import { createFileRoute } from "@tanstack/react-router";
+
 export const Route = createFileRoute(
   "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node",
 )({
@@ -43,6 +47,18 @@ const rows = [
     2,
     undefined,
     "Go with whichever you prefer. The model author offers variants for either, so it depends on your tools and comfort level.",
+  ),
+  createData(
+    "M2.5 x ?mm machine screws",
+    2,
+    undefined,
+    "Attaches the holster to the belt clip via your choice above of hex nuts or heat insets",
+  ),
+  createData(
+    "M3 x ?mm machine screw",
+    1,
+    undefined,
+    "Mechanically attaches the front to the back of the case",
   ),
 ];
 
@@ -82,11 +98,13 @@ function RouteComponent() {
       <Typography>
         Someone who wants to dive into the world of off-grid text messaging with
         Meshtastic, but doesn't know where to begin. The intention behind this
-        article is to present an entry point to the hobby. It's a combination of
-        other nerdy hobbies including, but not limited to electronics, amateur
-        radio, 3D printing, making things, tinkering around, etc. So if that
-        sounds like your jam and you want to build a chonky 90s pager-style
-        node, read on.
+        article is to present an entry point to the hobby.
+      </Typography>
+      <Typography>
+        It's a combination of other nerdy hobbies including, but not limited to
+        electronics, amateur radio, 3D printing, making things, tinkering
+        around, etc. So if that sounds like your jam and you want to build a
+        chonky 90s pager-style node, read on.
       </Typography>
       <Typography component="h5" variant="h5">
         Required Tools
@@ -96,7 +114,8 @@ function RouteComponent() {
           A precision driver/bit set. The sort of thing to drive machine screws.
         </li>
         <li>
-          Access to a 3D printer to print the case and very hip belt holster.`
+          Access to a 3D printer to print the case and very cool belt
+          holster.{" "}
         </li>
       </ul>
       <Typography component="h5" variant="h5">
@@ -120,9 +139,18 @@ function RouteComponent() {
                 <TableCell component="th" scope="row">
                   {!row.url && <>{row.name}</>}
                   {row.url && (
-                    <a href={row.url} target="_blank" title={row.name}>
+                    <Link
+                      href={row.url}
+                      target="_blank"
+                      title={row.name}
+                      rel="noopener noreferrer"
+                      sx={{ display: "inline-flex", alignItems: "center" }}
+                    >
                       {row.name}
-                    </a>
+                      <Box component="span" sx={{ ml: 0.5, lineHeight: 0 }}>
+                        <OpenInNewIcon fontSize="small" />
+                      </Box>
+                    </Link>
                   )}
                 </TableCell>
                 <TableCell align="right">{row.quantity}</TableCell>
@@ -132,6 +160,13 @@ function RouteComponent() {
           </TableBody>
         </Table>
       </TableContainer>
+      <Typography component="h6" variant="h6">
+        Rough total cost
+      </Typography>
+      <Typography>
+        About $60 USD average as of September, 2025, minus shipping costs, with
+        the assumption you have materials for 3D printing already.
+      </Typography>
     </>
   );
 }
