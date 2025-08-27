@@ -11,6 +11,8 @@ import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
 import { createFileRoute } from "@tanstack/react-router";
 
+import Step from "../../../Step";
+
 export const Route = createFileRoute(
   "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node",
 )({
@@ -167,6 +169,7 @@ function RouteComponent() {
         About $60 USD average as of September, 2025, minus shipping costs, with
         the assumption you have materials for 3D printing already.
       </Typography>
+      <Step stepNum={1} title="Lorem ipsum dolor sit amet" description="TODO" />
     </>
   );
 }
