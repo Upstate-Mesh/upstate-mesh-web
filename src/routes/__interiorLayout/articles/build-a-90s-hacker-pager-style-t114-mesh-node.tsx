@@ -14,9 +14,20 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import Step from "../../../Step";
 
+const PAGE_TITLE =
+  "Build a 90's hacker pager-style T114 mesh node - Upstate Mesh";
+
 export const Route = createFileRoute(
   "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node",
 )({
+  head: () => ({
+    meta: [
+      {
+        title: PAGE_TITLE,
+      },
+    ],
+    title: PAGE_TITLE,
+  }),
   component: RouteComponent,
 });
 
@@ -116,13 +127,8 @@ function RouteComponent() {
         Required Tools
       </Typography>
       <ul>
-        <li>
-          A precision driver/bit set. The sort of thing to drive machine screws.
-        </li>
-        <li>
-          Access to a 3D printer to print the case and very cool belt
-          holster.{" "}
-        </li>
+        <li>A precision driver/bit set for machine screws.</li>
+        <li>Access to a 3D printer for the case and belt holster.</li>
       </ul>
       <Typography component="h5" variant="h5">
         Bill of materials
@@ -182,9 +188,9 @@ function RouteComponent() {
       </Typography>
       <Step
         stepNum={0}
-        title="Get your vibes in order"
-        vidSrc="https://www.youtube.com/embed/feWNvGpWHLM?si=oloIoxY_T60k3eGN"
-        description="Any track from the Hackers soundtrack will do, but Underworld gets my vote."
+        title="Optional, but encouraged: get your vibes in order"
+        vidSrc="https://www.youtube.com/embed/SJkhxe93uII?si=s0Ug74L7QkPFFZLT"
+        description="Any track from the Hackers soundtrack will do."
       />
       <Step
         stepNum={1}

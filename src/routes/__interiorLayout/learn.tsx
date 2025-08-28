@@ -1,7 +1,22 @@
 import Typography from "@mui/material/Typography";
 import { createFileRoute } from "@tanstack/react-router";
 
+const PAGE_TITLE = "Learn - Upstate Mesh";
+
 export const Route = createFileRoute("/__interiorLayout/learn")({
+  head: () => ({
+    meta: [
+      {
+        title: PAGE_TITLE,
+      },
+      {
+        name: "description",
+        content:
+          "Learn about mesh communications, Meshtastic, and Upstate Mesh.",
+      },
+    ],
+    title: PAGE_TITLE,
+  }),
   component: RouteComponent,
 });
 
@@ -9,7 +24,7 @@ function RouteComponent() {
   return (
     <>
       <Typography component="h1" variant="h4">
-        Learn about Upstate Mesh
+        Learn
       </Typography>
       <Typography component="h5" variant="h5">
         Why build a mesh in the first place?

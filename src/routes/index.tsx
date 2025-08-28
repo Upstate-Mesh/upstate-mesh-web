@@ -5,6 +5,15 @@ import Typography from "@mui/material/Typography";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: "/um_hero.png",
+      },
+    ],
+  }),
   component: RouteComponent,
 });
 
@@ -15,18 +24,27 @@ function RouteComponent() {
         direction="column"
         spacing={2}
         sx={{
-          background: "#3a3c4d url(/albany.jpg) center center/cover no-repeat",
+          background: "#3a3c4d url(/um_hero.png) center center/cover no-repeat",
           boxShadow: "0 10px 10px rgba(0, 0, 0, .2)",
-          justifyContent: "center",
-          alignItems: "center",
-          height: 400,
+          height: {
+            xs: 550,
+            md: 400,
+          },
           padding: 2,
           width: "100%",
+          justifyContent: {
+            xs: "center",
+            md: "flex-end",
+          },
+          alignItems: {
+            xs: "center",
+            md: "flex-start",
+          },
         }}
       >
         <Box
           sx={{
-            backgroundColor: "rgb(0, 0, 0, .7)",
+            backgroundColor: "rgb(0, 0, 0, .6)",
             borderRadius: 2,
             padding: 2,
           }}

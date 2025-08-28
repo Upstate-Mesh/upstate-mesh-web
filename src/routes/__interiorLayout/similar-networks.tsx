@@ -1,7 +1,22 @@
 import Typography from "@mui/material/Typography";
 import { createFileRoute } from "@tanstack/react-router";
 
+const PAGE_TITLE = "Similar Networks - Upstate Mesh";
+
 export const Route = createFileRoute("/__interiorLayout/similar-networks")({
+  head: () => ({
+    meta: [
+      {
+        title: PAGE_TITLE,
+      },
+      {
+        name: "description",
+        content:
+          "Mesh networks similar to Upstate Mesh in New York and around the world.",
+      },
+    ],
+    title: PAGE_TITLE,
+  }),
   component: RouteComponent,
 });
 

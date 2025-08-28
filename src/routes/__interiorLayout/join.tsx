@@ -1,7 +1,21 @@
 import Typography from "@mui/material/Typography";
 import { createFileRoute } from "@tanstack/react-router";
 
+const PAGE_TITLE = "Join - Upstate Mesh";
+
 export const Route = createFileRoute("/__interiorLayout/join")({
+  head: () => ({
+    meta: [
+      {
+        title: PAGE_TITLE,
+      },
+      {
+        name: "description",
+        content: "How to configure your node and join Upstate mesh.",
+      },
+    ],
+    title: PAGE_TITLE,
+  }),
   component: RouteComponent,
 });
 
@@ -9,7 +23,7 @@ function RouteComponent() {
   return (
     <>
       <Typography component="h1" variant="h4">
-        How to join Upstate Mesh
+        Join
       </Typography>
       <Typography component="h5" variant="h5">
         Join the group

@@ -25,6 +25,7 @@ const Theme = createTheme({
     fontFamily: '"Mozilla Text", sans-serif',
     fontSize: 15,
     fontWeightRegular: 400,
+    caption: { fontSize: ".95rem" },
     h1: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
     h2: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
     h3: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
