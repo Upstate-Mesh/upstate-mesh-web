@@ -2,6 +2,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -76,15 +77,17 @@ function createData(
 function RouteComponent() {
   return (
     <>
-      <Typography component="h1" variant="h4">
-        Build a 90's hacker pager-style T114 mesh node
-      </Typography>
-      <Typography>by Craig KD2NSP</Typography>
-      <Typography variant="caption">
-        Use modern tech to build a Meshtastic text messaging node that goes
-        wherever you go, complete with a 90's hacker cyberpunk aesthetic. Trust
-        your technolust.
-      </Typography>
+      <Stack spacing={0.5}>
+        <Typography component="h1" variant="h4">
+          Build a 90's hacker pager-style T114 mesh node
+        </Typography>
+        <Typography variant="caption">
+          Use modern tech to build a Meshtastic text messaging node that goes
+          wherever you go, complete with a 90's hacker cyberpunk aesthetic.
+          Trust your technolust.
+        </Typography>
+        <Typography variant="caption">by Craig KD2NSP</Typography>
+      </Stack>
       <video
         autoPlay
         muted
