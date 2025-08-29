@@ -113,7 +113,7 @@ function RouteComponent() {
         <li>
           <b>Community</b>
           <br />
-          Because this is essentially a regional group text message chain we are
+          As this is essentially a regional group text message chain we are
           hoping people use the network to build community. Tell the group where
           your band is playing tonight, chat about local events, ask for a good
           cheese dip recipe, etc.

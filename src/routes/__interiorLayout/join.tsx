@@ -119,7 +119,7 @@ function RouteComponent() {
       </Typography>
       <ul>
         <li>
-          <b>MQTT:</b> Disabled;Ignore;
+          <b>MQTT:</b> Disabled;Ignore; *see the MQTT section below
         </li>
         <li>
           <b>Role:</b> Client (NOT Router & Client)
@@ -133,8 +133,7 @@ function RouteComponent() {
       </ul>
       <Typography>
         This is a community driven project, following these guidelines will
-        ensure the best experience for everyone as we continue to grow. (credit
-        @Nick, @AdvJosh (TEX#) - KJ5FZD, @edsai KI5OSB)
+        ensure the best experience for everyone as we continue to grow.
       </Typography>
       <Typography component="h6" variant="h6">
         MQTT
@@ -153,6 +152,16 @@ function RouteComponent() {
         optimize, diagnose issues and plan future network expansion. Our goal is
         to build a robust, reliable off grid network that can be utilized by our
         community during internet/power outages.
+      </Typography>
+      <Typography>
+        That said, we host an MQTT server for members to use as a way of mapping
+        out our network. It is not intended for bridging gaps in the mesh,
+        simply for visualizing network activity when nodes have internet
+        connectivity. For more details, view our{" "}
+        <a href="/mqtt" title="MQTT">
+          MQTT guide
+        </a>
+        .
       </Typography>
       <Typography component="h6" variant="h6">
         Device Role

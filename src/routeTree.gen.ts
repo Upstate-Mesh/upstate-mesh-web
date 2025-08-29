@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as _interiorLayoutRouteImport } from './routes/__interiorLayout'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as _interiorLayoutSimilarNetworksRouteImport } from './routes/__interiorLayout/similar-networks'
+import { Route as _interiorLayoutMqttRouteImport } from './routes/__interiorLayout/mqtt'
 import { Route as _interiorLayoutLearnRouteImport } from './routes/__interiorLayout/learn'
 import { Route as _interiorLayoutJoinRouteImport } from './routes/__interiorLayout/join'
 import { Route as _interiorLayoutArticlesIndexRouteImport } from './routes/__interiorLayout/articles/index'
@@ -32,6 +33,11 @@ const _interiorLayoutSimilarNetworksRoute =
     path: '/similar-networks',
     getParentRoute: () => _interiorLayoutRoute,
   } as any)
+const _interiorLayoutMqttRoute = _interiorLayoutMqttRouteImport.update({
+  id: '/mqtt',
+  path: '/mqtt',
+  getParentRoute: () => _interiorLayoutRoute,
+} as any)
 const _interiorLayoutLearnRoute = _interiorLayoutLearnRouteImport.update({
   id: '/learn',
   path: '/learn',
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/join': typeof _interiorLayoutJoinRoute
   '/learn': typeof _interiorLayoutLearnRoute
+  '/mqtt': typeof _interiorLayoutMqttRoute
   '/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
   '/articles/build-a-90s-hacker-pager-style-t114-mesh-node': typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute
   '/articles': typeof _interiorLayoutArticlesIndexRoute
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/join': typeof _interiorLayoutJoinRoute
   '/learn': typeof _interiorLayoutLearnRoute
+  '/mqtt': typeof _interiorLayoutMqttRoute
   '/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
   '/articles/build-a-90s-hacker-pager-style-t114-mesh-node': typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute
   '/articles': typeof _interiorLayoutArticlesIndexRoute
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/__interiorLayout': typeof _interiorLayoutRouteWithChildren
   '/__interiorLayout/join': typeof _interiorLayoutJoinRoute
   '/__interiorLayout/learn': typeof _interiorLayoutLearnRoute
+  '/__interiorLayout/mqtt': typeof _interiorLayoutMqttRoute
   '/__interiorLayout/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
   '/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node': typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute
   '/__interiorLayout/articles/': typeof _interiorLayoutArticlesIndexRoute
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/'
     | '/join'
     | '/learn'
+    | '/mqtt'
     | '/similar-networks'
     | '/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
     | '/articles'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/'
     | '/join'
     | '/learn'
+    | '/mqtt'
     | '/similar-networks'
     | '/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
     | '/articles'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/__interiorLayout'
     | '/__interiorLayout/join'
     | '/__interiorLayout/learn'
+    | '/__interiorLayout/mqtt'
     | '/__interiorLayout/similar-networks'
     | '/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
     | '/__interiorLayout/articles/'
@@ -137,6 +149,13 @@ declare module '@tanstack/react-router' {
       path: '/similar-networks'
       fullPath: '/similar-networks'
       preLoaderRoute: typeof _interiorLayoutSimilarNetworksRouteImport
+      parentRoute: typeof _interiorLayoutRoute
+    }
+    '/__interiorLayout/mqtt': {
+      id: '/__interiorLayout/mqtt'
+      path: '/mqtt'
+      fullPath: '/mqtt'
+      preLoaderRoute: typeof _interiorLayoutMqttRouteImport
       parentRoute: typeof _interiorLayoutRoute
     }
     '/__interiorLayout/learn': {
@@ -173,6 +192,7 @@ declare module '@tanstack/react-router' {
 interface _interiorLayoutRouteChildren {
   _interiorLayoutJoinRoute: typeof _interiorLayoutJoinRoute
   _interiorLayoutLearnRoute: typeof _interiorLayoutLearnRoute
+  _interiorLayoutMqttRoute: typeof _interiorLayoutMqttRoute
   _interiorLayoutSimilarNetworksRoute: typeof _interiorLayoutSimilarNetworksRoute
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute: typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute
   _interiorLayoutArticlesIndexRoute: typeof _interiorLayoutArticlesIndexRoute
@@ -181,6 +201,7 @@ interface _interiorLayoutRouteChildren {
 const _interiorLayoutRouteChildren: _interiorLayoutRouteChildren = {
   _interiorLayoutJoinRoute: _interiorLayoutJoinRoute,
   _interiorLayoutLearnRoute: _interiorLayoutLearnRoute,
+  _interiorLayoutMqttRoute: _interiorLayoutMqttRoute,
   _interiorLayoutSimilarNetworksRoute: _interiorLayoutSimilarNetworksRoute,
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute:
     _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute,

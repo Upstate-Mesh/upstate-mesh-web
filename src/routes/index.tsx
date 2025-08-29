@@ -93,7 +93,7 @@ function RouteComponent() {
           </Typography>
           <Typography>
             We are setting up solar-powered radio repeaters in the Capital
-            Region. These radios communicate on the{" "}
+            District. These radios communicate on the{" "}
             <a
               href="https://en.wikipedia.org/wiki/33-centimeter_band"
               target="_blank"

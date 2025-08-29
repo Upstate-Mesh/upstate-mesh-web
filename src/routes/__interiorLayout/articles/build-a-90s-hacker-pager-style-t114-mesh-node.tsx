@@ -124,11 +124,23 @@ function RouteComponent() {
         chonky 90s pager-style node, read on.
       </Typography>
       <Typography component="h5" variant="h5">
-        Required Tools
+        What does the completed build look like?
+      </Typography>
+      <img
+        src="https://placehold.co/1200x600/EEE/31343C"
+        alt="temp"
+        style={{ width: "100%", height: "auto" }}
+      />
+      <Typography component="h5" variant="h5">
+        Required tools
       </Typography>
       <ul>
         <li>A precision driver/bit set for machine screws.</li>
         <li>Access to a 3D printer for the case and belt holster.</li>
+        <li>
+          Optionally, a soldering iron for heat set inserts on the holster if
+          you prefer that approach vs. hex nuts.
+        </li>
       </ul>
       <Typography component="h5" variant="h5">
         Bill of materials
