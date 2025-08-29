@@ -30,12 +30,12 @@ function RouteComponent() {
             xs: 550,
             md: 400,
           },
-          padding: 2,
-          width: "100%",
-          justifyContent: {
-            xs: "center",
-            md: "flex-end",
+          padding: {
+            xs: 0,
+            md: 2,
           },
+          width: "100%",
+          justifyContent: "flex-end",
           alignItems: {
             xs: "center",
             md: "flex-start",
@@ -44,8 +44,14 @@ function RouteComponent() {
       >
         <Box
           sx={{
-            backgroundColor: "rgb(0, 0, 0, .6)",
-            borderRadius: 2,
+            backgroundColor: {
+              xs: "rgb(0, 0, 0, .8)",
+              md: "rgb(0, 0, 0, .6)",
+            },
+            borderRadius: {
+              xs: 0,
+              md: 2,
+            },
             padding: 2,
           }}
         >

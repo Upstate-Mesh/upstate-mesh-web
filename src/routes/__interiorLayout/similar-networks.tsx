@@ -68,7 +68,7 @@ function RouteComponent() {
         </li>
       </ul>
       <Typography component="h5" variant="h5">
-        Meshes outside of New York
+        Mesh networks outside of New York
       </Typography>
       <Typography>
         Meshtastic is growing worldwide, here are some networks outside of New

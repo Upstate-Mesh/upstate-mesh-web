@@ -11,11 +11,7 @@ export default function Header() {
         backgroundColor: "#75eba5",
         borderBottom: "2px solid rgb(0, 0, 0, .2)",
         boxShadow: "0 10px 10px rgba(0, 0, 0, .3)",
-        px: {
-          xs: 2,
-          md: 6,
-        },
-        py: 2,
+        p: 2,
         width: "100%",
         zIndex: 999,
       }}
