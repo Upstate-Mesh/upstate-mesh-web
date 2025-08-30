@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
@@ -36,19 +38,19 @@ const rows = [
     "Heltec Mesh Node T114 with Display - Kit including 1200mAh Battery",
     1,
     "https://muzi.works/products/heltec-t114-kit-h1-battery",
-    "Why are we suggesting you get this kit instead of just individual parts? This has everything you need (aside from the case) to begin assembling with no soldering required.",
+    "Why am I suggesting you get this kit instead of just individual parts? It has everything you need (aside from the case) to begin assembly. There is no soldering required and it will all fit in the case just right.",
   ),
   createData(
     "H2T - Case for Heltec T114 with GPS running Meshtastic",
     1,
     "https://www.printables.com/model/982046-h2t-case-for-heltec-t114-with-gps-running-meshtast",
-    "Recommended to print in PETG if you have it (or something strong/heat resistant), if not, PLA will work. Don't have a printer, but live in the Capital Region? Hit us up on Discord and we'll set you up with a case.",
+    "I recommend you print it in PETG if you have it (or something strong/heat resistant). If not, PLA will work. Just pick a fun color you like!",
   ),
   createData(
     "Pager Style Holster for the muzi.works H2T Heltec T114 Case",
     1,
     "https://www.printables.com/model/1080074-pager-style-holster-for-the-muziworks-h2t-heltec-t",
-    "Recommended to print in PETG if you have it (or something strong/heat resistant), if not, PLA will work. Don't have a printer, but live in the Capital Region? Hit us up on Discord and we'll set you up with a holster.",
+    "I recommend you print it in PETG if you have it (or something strong/heat resistant). If not, PLA will work. Just pick a fun color you like!",
   ),
   createData(
     "Baofeng style belt clip",
@@ -86,7 +88,7 @@ function createData(
   name: string,
   quantity: number,
   url?: string,
-  notes?: string,
+  notes?: ReactNode,
 ) {
   return { name, quantity, url, notes };
 }
@@ -126,10 +128,10 @@ function RouteComponent() {
         article is to present an entry point to the hobby.
       </Typography>
       <Typography>
-        It's a combination of other nerdy hobbies including, but not limited to
-        electronics, amateur radio, 3D printing, making things, tinkering
-        around, etc. So if that sounds like your jam and you want to build a
-        chonky 90s pager-style node, read on.
+        It's a combination of other nerdy hobbies including electronics, amateur
+        radio, 3D printing, making things, tinkering around, etc. So if that
+        sounds like your jam and you want to build a chonky 90s pager-style
+        node, read on.
       </Typography>
       <Typography component="h5" variant="h5">
         What does the completed build look like?
@@ -144,7 +146,11 @@ function RouteComponent() {
       </Typography>
       <ul>
         <li>A precision driver/bit set for machine screws.</li>
-        <li>Access to a 3D printer for the case and belt holster.</li>
+        <li>
+          Access to a 3D printer for the case and belt holster. Don't have a
+          printer, but live in the Capital District? Hit us up on Discord and
+          we'll set you up with a case and holster.
+        </li>
         <li>
           Optionally, a soldering iron for heat set inserts on the holster if
           you prefer that approach vs. hex nuts.
@@ -209,14 +215,14 @@ function RouteComponent() {
       <Step
         stepNum={0}
         title="Optional, but encouraged: get your vibes in order"
-        vidSrc="https://www.youtube.com/embed/SJkhxe93uII?si=s0Ug74L7QkPFFZLT"
-        description="Any track from the Hackers soundtrack will do."
+        vidSrc="https://www.youtube.com/embed/sAt02YId4ks?si=DkrG-kaxVOak8vWQ"
+        description="Anything from the Hackers soundtrack will do."
       />
       <Step
         stepNum={1}
         title="Print all 3D printed parts"
         imgSrc="/pager_step_0.jpg"
-        description="1x case front, 1x case back, 1x holster. We recommend PETG, but you'd probably be okay with PLA too, just don't leave it in the sun."
+        description="1x case front, 1x case back, 1x holster. I recommend PETG, but you'd probably be okay with PLA too, just don't leave it in the sun."
       />
       <Step
         stepNum={2}
@@ -425,8 +431,8 @@ function RouteComponent() {
         , and you're on the mesh.
       </Typography>
       <Typography>
-        We hope you enjoyed the build as much as we did. If you have any
-        questions or comments, hop onto our Discord and give a shout.
+        I hope you enjoyed the build as much as I did! If you have any questions
+        or comments, hop onto our Discord and give a shout.
       </Typography>
     </>
   );
