@@ -17,7 +17,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Step from "../../../Step";
 
 const PAGE_TITLE =
-  "Build a 90's hacker pager-style T114 mesh node - Upstate Mesh";
+  "Build a '90s hacker pager-style T114 mesh node - Upstate Mesh";
 
 export const Route = createFileRoute(
   "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node",
@@ -59,7 +59,7 @@ const rows = [
     "There are others available elsewhere, it just needs to be compatible with this screw hole layout.",
   ),
   createData(
-    "M2.5 hex nuts or heat set insets",
+    "M2.5 hex nuts or heat set inserts",
     2,
     undefined,
     "Go with whichever you prefer. The model author offers variants for either, so it depends on your tools and comfort level.",
@@ -98,15 +98,15 @@ function RouteComponent() {
     <>
       <Stack spacing={1}>
         <Typography component="h1" variant="h4">
-          Build a 90's hacker pager-style T114 mesh node
+          Build a '90s hacker pager-style T114 mesh node
         </Typography>
         <Typography variant="caption">
           Use modern tech to build a Meshtastic text messaging node that goes
-          wherever you go, complete with a 90's hacker cyberpunk aesthetic.
+          wherever you go, complete with a '90s hacker cyberpunk aesthetic.
           Trust your technolust.
         </Typography>
         <Typography variant="caption">
-          By Craig KD2NSP | September 1, 2025
+          By Craig KD2NSP | August 31, 2025
         </Typography>
       </Stack>
       <video
@@ -123,9 +123,9 @@ function RouteComponent() {
         Who is this for?
       </Typography>
       <Typography>
-        Someone who wants to dive into the world of off-grid text messaging with
-        Meshtastic, but doesn't know where to begin. The intention behind this
-        article is to present an entry point to the hobby.
+        This is for anyone curious about off-grid text messaging with Meshtastic
+        but unsure where to start. The intention behind this article is to
+        present an entry point to the hobby.
       </Typography>
       <Typography>
         It's a combination of other nerdy hobbies including electronics, amateur
@@ -202,8 +202,8 @@ function RouteComponent() {
         Rough total cost
       </Typography>
       <Typography>
-        About $60 USD average as of September, 2025, minus shipping costs, with
-        the assumption you have materials for 3D printing already.
+        Average cost: about $60 USD (as of August 2025, excluding shipping and
+        assuming you already have 3D printing materials and some machine screws).
       </Typography>
       <Typography component="h5" variant="h5">
         Let's build!
@@ -233,7 +233,7 @@ function RouteComponent() {
             <li>
               Doing this prevents a situation where you fully assemble the node,
               then have to take it all apart again if troubleshooting is
-              required. Trust me, I've been there. We're just looking to
+              required. Trust me- I've been there. We're just looking to
               validate that everything powers up as expected.
             </li>
             <li>
@@ -245,7 +245,7 @@ function RouteComponent() {
               damaged when powered up.
             </li>
             <li>
-              The GPS module only connects one way, carefully look at the
+              The GPS module only connects one way, so carefully check the
               orientation before connecting.
             </li>
             <li>
@@ -329,7 +329,7 @@ function RouteComponent() {
         description={
           <ol>
             <li>
-              Insert the butons face down into the case, everything else will
+              Insert the buttons face down into the case, everything else will
               stack above.
             </li>
             <li>
@@ -383,8 +383,8 @@ function RouteComponent() {
         imgSrc="/pager_step_9.jpg"
         description={
           <>
-            Flip the back over and connect the battery, lining the wire into the
-            open space reserved for it.
+            Flip the back over and connect the battery, tucking the wire into
+            the open space reserved for it.
           </>
         }
       />
@@ -431,8 +431,8 @@ function RouteComponent() {
         , and you're on the mesh.
       </Typography>
       <Typography>
-        I hope you enjoyed the build as much as I did! If you have any questions
-        or comments, hop onto our Discord and give a shout.
+        Hope you had fun with this build! If you run into issues or just want to
+        share your finished node, hop into our Discord and give a shout.
       </Typography>
     </>
   );
