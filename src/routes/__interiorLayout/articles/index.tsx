@@ -35,7 +35,7 @@ function RouteComponent() {
           <Article
             title="Build a 90's hacker pager-style T114 mesh node"
             thumbnail="/pager_completed.jpg"
-            description="Use modern tech to build a Meshtastic text messaging node that goes wherever you go, complete with a 90's hacker cyberpunk aesthetic. Trust your technolust."
+            description="Use modern tech to build a Meshtastic text messaging node that goes wherever you go, complete with a '90s hacker cyberpunk aesthetic."
             href="/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
           />
         </Grid>
