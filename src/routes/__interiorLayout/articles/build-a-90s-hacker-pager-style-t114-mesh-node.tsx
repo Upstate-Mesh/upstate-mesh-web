@@ -27,6 +27,11 @@ export const Route = createFileRoute(
       {
         title: PAGE_TITLE,
       },
+      {
+        name: "description",
+        content:
+          "Use modern tech to build a Meshtastic text messaging node that goes wherever you go, complete with a '90s hacker cyberpunk aesthetic.",
+      },
     ],
     title: PAGE_TITLE,
   }),
@@ -203,7 +208,8 @@ function RouteComponent() {
       </Typography>
       <Typography>
         Average cost: about $60 USD (as of August 2025, excluding shipping and
-        assuming you already have 3D printing materials and some machine screws).
+        assuming you already have 3D printing materials and some machine
+        screws).
       </Typography>
       <Typography component="h5" variant="h5">
         Let's build!
