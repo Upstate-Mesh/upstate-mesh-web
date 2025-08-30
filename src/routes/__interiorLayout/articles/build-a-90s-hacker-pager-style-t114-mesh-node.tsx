@@ -63,10 +63,16 @@ const rows = [
     "Go with whichever you prefer. The model author offers variants for either, so it depends on your tools and comfort level.",
   ),
   createData(
-    "M2.5 x 4mm machine screws",
+    "M2.5 machine screws",
     2,
     undefined,
     "Attaches the holster to the belt clip via your choice above of hex nuts or heat insets",
+  ),
+  createData(
+    "M2.5 washers",
+    2,
+    undefined,
+    "Used as spacers between the screws and hex nuts on the holster.",
   ),
   createData(
     "M3 x 16mm machine screw",
@@ -88,7 +94,7 @@ function createData(
 function RouteComponent() {
   return (
     <>
-      <Stack spacing={0.5}>
+      <Stack spacing={1}>
         <Typography component="h1" variant="h4">
           Build a 90's hacker pager-style T114 mesh node
         </Typography>
@@ -97,7 +103,9 @@ function RouteComponent() {
           wherever you go, complete with a 90's hacker cyberpunk aesthetic.
           Trust your technolust.
         </Typography>
-        <Typography variant="caption">by Craig KD2NSP</Typography>
+        <Typography variant="caption">
+          By Craig KD2NSP | September 1, 2025
+        </Typography>
       </Stack>
       <video
         autoPlay
@@ -127,8 +135,8 @@ function RouteComponent() {
         What does the completed build look like?
       </Typography>
       <img
-        src="https://placehold.co/1200x600/EEE/31343C"
-        alt="temp"
+        src="/pager_completed.jpg"
+        alt="Completed T114 build"
         style={{ width: "100%", height: "auto" }}
       />
       <Typography component="h5" variant="h5">
@@ -210,6 +218,216 @@ function RouteComponent() {
         imgSrc="/pager_step_0.jpg"
         description="1x case front, 1x case back, 1x holster. We recommend PETG, but you'd probably be okay with PLA too, just don't leave it in the sun."
       />
+      <Step
+        stepNum={2}
+        title="Bench test electronics"
+        imgSrc="/pager_step_1.jpg"
+        description={
+          <ul>
+            <li>
+              Doing this prevents a situation where you fully assemble the node,
+              then have to take it all apart again if troubleshooting is
+              required. Trust me, I've been there. We're just looking to
+              validate that everything powers up as expected.
+            </li>
+            <li>
+              <strong>
+                Ensure the antenna and GPS module are connected to the PCB
+                <i> before</i> hooking up the battery or USB-C power.
+              </strong>{" "}
+              Without connecting the antennas, the microcontroller could be
+              damaged when powered up.
+            </li>
+            <li>
+              The GPS module only connects one way, carefully look at the
+              orientation before connecting.
+            </li>
+            <li>
+              The antenna pigtail can be tricky to push down onto the PCB. Be
+              firm, but do not use too much force.
+            </li>
+          </ul>
+        }
+      />
+      <Step
+        stepNum={3}
+        title="Organize your parts into groups"
+        imgSrc="/pager_step_2.jpg"
+        description={
+          <ol>
+            <li>
+              Group 1:
+              <ul>
+                <li>Case front</li>
+                <li>PCB</li>
+                <li>GPS module</li>
+                <li>Antenna and pigtail</li>
+                <li>M3 x 16mm machine screw</li>
+              </ul>
+            </li>
+            <li>
+              Group 2:
+              <ul>
+                <li>Case back</li>
+                <li>2000mAh LiPo</li>
+              </ul>
+            </li>
+            <li>
+              Group 3:
+              <ul>
+                <li>Holster</li>
+                <li>Belt clip</li>
+                <li>M2.5 hex nuts or heat set insets</li>
+                <li>M2.5 x 4mm machine screws</li>
+              </ul>
+            </li>
+          </ol>
+        }
+      />
+      <Step
+        stepNum={4}
+        title="Dry fit the M3 x 16mm screw"
+        imgSrc="/pager_step_3.jpg"
+        description={
+          <>
+            You'll want to do this before final assembly, to "drill" into the
+            back of the case, making it simpler when the time comes. Keep in
+            mind you're screwing this into plastic with no threads, so make sure
+            to do it by hand. Remove the screw, setting it aside for a later
+            step.
+          </>
+        }
+      />
+      <Step
+        stepNum={5}
+        title="Remove the 2 screws holding the plastic cover over the screen"
+        imgSrc="/pager_step_5.jpg"
+        description={
+          <>
+            Be <strong> very careful </strong> when doing this. The screen will
+            be loose, connected to the PCB only by a ribbon cable. Set the
+            screws aside for step 7.
+          </>
+        }
+      />
+      <Step
+        stepNum={6}
+        title="Separate the antenna, washers, and hex nut"
+        imgSrc="/pager_step_4.jpg"
+        description={<>This is preparation for the next step.</>}
+      />
+      <Step
+        stepNum={7}
+        title="Assemble the front of the case"
+        imgSrc="/pager_step_6.jpg"
+        description={
+          <ol>
+            <li>
+              Insert the butons face down into the case, everything else will
+              stack above.
+            </li>
+            <li>
+              Insert the SMA antenna connector into the hex-shaped slot on the
+              top, stack the washers and screw on the retention nut to the top.
+            </li>
+            <li>
+              Connect the GPS module and antenna pigtail to the PCB, being
+              careful not to damage the LCD or ribbon cable.
+            </li>
+            <li>
+              Carefully thread the antenna pigtail through the inset portion of
+              the case, just above where the PCB will slot into the case.
+            </li>
+            <li>
+              Align the LCD and PCB, slotting it into the case at the edge where
+              the USB-C connector fits in.
+            </li>
+            <li>
+              Carefully press it down into the alignment slot. This may require
+              flipping it over to ensure the LCD is correctly aligned.
+            </li>
+            <li>
+              Gently push the GPS module into its slot on the left side of the
+              case, with the ceramic portion of the antenna facing out, chipset
+              and connector facing in.
+            </li>
+            <li>
+              With everything correctly aligned and in place, screw in the 2
+              small screws we saved from the PCB in step 5 to the right side of
+              the PCB in the two holes adjacent to the power connectors.
+            </li>
+          </ol>
+        }
+      />
+      <Step
+        stepNum={8}
+        title="Line up the battery"
+        imgSrc="/pager_step_8.jpg"
+        description={
+          <>
+            Be <strong> careful </strong> when doing this. It will fit, but
+            quite snugly. Make sure to align it as in the photo, so the
+            connector has space.
+          </>
+        }
+      />
+      <Step
+        stepNum={9}
+        title="Connect the battery"
+        imgSrc="/pager_step_9.jpg"
+        description={
+          <>
+            Flip the back over and connect the battery, lining the wire into the
+            open space reserved for it.
+          </>
+        }
+      />
+      <Step
+        stepNum={10}
+        title="Final node assembly"
+        imgSrc="/pager_step_10.jpg"
+        description={
+          <>
+            Firmly press the two halves of the case together. It will click when
+            everything is lined up and closed. Screw in the M3 screw we dry fit
+            earlier.
+          </>
+        }
+      />
+      <Step
+        stepNum={11}
+        title="Attach belt clip to holster"
+        imgSrc="/pager_step_11.jpg"
+        description={
+          <>
+            If you decided to go the heat set route, you'll need to get those
+            lined up in the holster. If you went the hex nut route, they'll fit
+            to the slots on the inside of the holster. All that remains is to
+            screw the M2.5 screws through the back of the belt clip into the
+            holster. This can be tricky as the springs on the clip require a bit
+            of strength to hold in place while driving the screws.
+          </>
+        }
+      />
+      <Typography component="h5" variant="h5">
+        All done!
+      </Typography>
+      <Typography>
+        That's it, you've completed the build. All that's left is to connect it
+        to your Meshtastic mobile app,{" "}
+        <a
+          href="https://meshtastic.org/downloads/"
+          target="_blank"
+          title="flash the latest firmware"
+        >
+          flash the latest firmware
+        </a>
+        , and you're on the mesh.
+      </Typography>
+      <Typography>
+        We hope you enjoyed the build as much as we did. If you have any
+        questions or comments, hop onto our Discord and give a shout.
+      </Typography>
     </>
   );
 }

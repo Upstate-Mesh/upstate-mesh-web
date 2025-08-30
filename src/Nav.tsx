@@ -36,6 +36,10 @@ const navItems: ReadonlyArray<NavItem> = [
     label: "Learn",
     to: "/learn",
   },
+  /*{
+    label: "Articles",
+    to: "/articles",
+    },*/
   {
     label: "Similar Networks",
     to: "/similar-networks",

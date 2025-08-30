@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import Avatar from "@mui/material/Avatar";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -10,7 +12,7 @@ interface StepProps {
   title: string;
   imgSrc?: string;
   vidSrc?: string;
-  description: string;
+  description: ReactNode;
 }
 
 export default function Step({
