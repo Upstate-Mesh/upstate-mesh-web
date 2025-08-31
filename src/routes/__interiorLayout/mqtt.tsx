@@ -38,15 +38,9 @@ function RouteComponent() {
         have set up a private MQTT server for use by local members.
       </Typography>
       <Typography>
-        It's a fully optional part of participating in the group and is by no
-        means required.
-      </Typography>
-      <Typography>
         It is <b>not</b> recommended to use this as a substitue for building a
         robust, resilient mesh network. Bridging nodes through the Internet
-        would present a false representation of the reality off-grid. Please
-        only enable MQTT if you'd like to contribute to the node visualization
-        map.
+        would present a false representation of the reality off-grid.
       </Typography>
       <Typography variant="h5">Quickstart</Typography>
       <ol>
@@ -84,11 +78,42 @@ function RouteComponent() {
           </ul>
         </li>
       </ol>
+      <Typography variant="h6">Channel configuration</Typography>
       <Typography>
-        NOTE: We have deactivated Downlink functionality in our MQTT server.
-        This means that even if Downlink is enabled for a given channel in your
-        node's settings, it will not receive packets from our MQTT server.
+        Each channel you wish to connect to the MQTT server needs to be
+        configured separately.
       </Typography>
+      <Typography>
+        <b>If you just want to appear on the map</b>, we recommend configuring
+        your <strong>Primary Channel</strong> to be{" "}
+        <strong>Uplink Enabled</strong>. We do not allow for Downlink MQTT on
+        the primary channel.
+      </Typography>
+      <Typography variant="h6">Private channel with full MQTT</Typography>
+      <Typography>
+        We <strong>do</strong> allow for both <strong>Uplink Enabled</strong>{" "}
+        and <strong>Downlink Enabled</strong> in the{" "}
+        <strong>Upsate Mesh</strong> private channel. This channel is like a big
+        regional chat room over the mesh and MQTT.
+      </Typography>
+      <ul>
+        <li>
+          <strong>Channel Number:</strong> <code>1</code>
+        </li>
+        <li>
+          <strong>Name:</strong> <code>UpstateMesh</code>
+        </li>
+        <li>
+          <strong>Key Size:</strong> <code>256 bit</code>
+        </li>
+        <li>
+          <strong>Key:</strong>{" "}
+          <code>dsb2L/BYJ0XtOiWFiy/hoLKha1NIlEiKY6RA8jw2zSM=</code>
+        </li>
+        <li>
+          <strong>Channel Role:</strong> <code>Secondary</code>
+        </li>
+      </ul>
       <Typography>
         If you need assistance setting up your device, hop into the Discord and
         give us a shout!
