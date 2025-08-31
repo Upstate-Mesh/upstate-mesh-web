@@ -40,9 +40,9 @@ export const Route = createFileRoute(
 
 const rows = [
   createData(
-    "Heltec Mesh Node T114 with Display - Kit including 1200mAh Battery",
+    "Heltec Mesh Node T114 with Display - Kit including 2000mAh Battery",
     1,
-    "https://muzi.works/products/heltec-t114-kit-h1-battery",
+    "https://muzi.works/products/heltec-t114-kit",
     "Why am I suggesting you get this kit instead of just individual parts? It has everything you need (aside from the case) to begin assembly. There is no soldering required and it will all fit in the case just right.",
   ),
   createData(
@@ -207,7 +207,7 @@ function RouteComponent() {
         Rough total cost
       </Typography>
       <Typography>
-        Average cost: about $60 USD (as of August 2025, excluding shipping and
+        Average cost: about $70 USD (as of August 2025, excluding shipping and
         assuming you already have 3D printing materials and some machine
         screws).
       </Typography>
