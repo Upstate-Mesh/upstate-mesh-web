@@ -74,8 +74,8 @@ function RouteComponent() {
           }}
         >
           <Typography>
-            We are a community group of makers and tech enthusiasts
-            experimenting with a solar-powered{" "}
+            Upstate Mesh is an open source community group of makers and tech
+            enthusiasts experimenting with a solar-powered{" "}
             <a
               href="https://meshtastic.org/"
               target="_blank"
@@ -92,8 +92,8 @@ function RouteComponent() {
             How does it work?
           </Typography>
           <Typography>
-            We are setting up solar-powered radio repeaters in the Capital
-            District. These radios communicate on the{" "}
+            Community members are setting solar-powered radio repeaters in the
+            Capital District. These radios communicate on the{" "}
             <a
               href="https://en.wikipedia.org/wiki/33-centimeter_band"
               target="_blank"
@@ -152,18 +152,17 @@ function RouteComponent() {
             message.
           </Typography>
           <Typography>
-            Upstate Mesh works the same way as this paper example, but instead
-            of sending paper notes we're using digital text messages and sending
-            it with radio waves. Our radios are solar powered and they don’t
-            need any internet or cell phone coverage. This means they will work
-            even if the power is out.
+            Meshtastic works the same way as this paper example, but instead of
+            sending paper notes users send digital text messages with radio
+            waves. Our radios are solar powered and they don’t need any internet
+            or cell phone coverage. This means they will work even if the power
+            is out.
           </Typography>
           <Typography component="h5" variant="h5">
             How to join
           </Typography>
           <Typography>
-            We're just getting started and would love to have you join! Check
-            out our{" "}
+            Check out{" "}
             <a
               href="/join"
               title="instructions on how to join the mesh network"
@@ -173,16 +172,17 @@ function RouteComponent() {
             .
           </Typography>
           <Typography>
-            Outside of the mesh network itself, we're most active in our{" "}
+            Outside of the mesh network itself, community members are most
+            active in{" "}
             <a
               href="https://discord.gg/FvajRmXEsb"
               target="_blank"
               title="Discord server"
             >
-              Discord server
+              Discord
             </a>
             , which you're certainly welcome to join even if you do not have a
-            radio or node on the mesh. You can also follow us on{" "}
+            radio or node on the mesh. You can also follow on{" "}
             <a
               href="https://bsky.app/profile/upstatemesh.bsky.social"
               target="_blank"

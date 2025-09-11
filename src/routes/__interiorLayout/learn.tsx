@@ -1,3 +1,6 @@
+import Card from "@mui/material/Card";
+import CardHeader from "@mui/material/CardHeader";
+import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -49,6 +52,24 @@ function RouteComponent() {
           Steve Stroh N8GNJ, Zero Retries 0170
         </a>
       </Typography>
+      <Card sx={{ width: "100%" }}>
+        <CardHeader
+          title="Mesh communications after a disaster"
+          titleTypographyProps={{ variant: "h6" }}
+        />
+        <CardMedia
+          component="iframe"
+          src="https://www.youtube.com/embed/s6Z6Z0Iizgg?si=I62mmax7qP8Uz7er"
+          sx={{
+            width: "100%",
+            aspectRatio: "16/9",
+            border: 0,
+          }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </Card>
       <Typography component="h5" variant="h5">
         What can it do?
       </Typography>
@@ -113,10 +134,10 @@ function RouteComponent() {
         <li>
           <b>Community</b>
           <br />
-          As this is essentially a regional group text message chain we are
-          hoping people use the network to build community. Tell the group where
-          your band is playing tonight, chat about local events, ask for a good
-          cheese dip recipe, etc.
+          As this is essentially a regional group text message chain, the hope
+          is that people use the network to build community. Tell the group
+          where your band is playing tonight, chat about local events, ask for a
+          good cheese dip recipe, etc.
         </li>
         <li>
           <b>Disasters</b>
@@ -138,9 +159,9 @@ function RouteComponent() {
           corporation - all the communication bounces through the entire mesh.
           Upstate Mesh is open to everyone - you don't have to ask permission to
           join and all of the software is open-source. Upstate Mesh is resilient
-          - our solar-powered radios don't need cell phone towers, internet
-          access, or electricity. We hope this project will inspire others to
-          build things that are decentralized, open, and resilient.
+          - solar-powered radios don't need cell phone towers, internet access,
+          or electricity. Hopefully, this project will inspire others to build
+          things that are decentralized, open, and resilient.
         </li>
       </ol>
       <Typography component="h5" variant="h5">
