@@ -47,6 +47,11 @@ const Theme = createTheme({
             color: "#75EBA5",
           },
         },
+        code: {
+          color: "#75EBA5",
+          fontFamily: '"JetBrains Mono", monospace',
+          fontSize: 15,
+        },
       },
     },
     MuiButton: {
@@ -84,6 +89,13 @@ const Theme = createTheme({
           "&:hover": {
             color: "#75EBA5",
           },
+        },
+      },
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          borderColor: "#2e303d",
         },
       },
     },
