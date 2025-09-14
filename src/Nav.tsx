@@ -29,12 +29,12 @@ const navItems: ReadonlyArray<NavItem> = [
     mobile: true,
   },
   {
-    label: "Join",
-    to: "/join",
-  },
-  {
     label: "Learn",
     to: "/learn",
+  },
+  {
+    label: "Join",
+    to: "/join",
   },
   {
     label: "Articles",

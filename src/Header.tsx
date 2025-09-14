@@ -11,7 +11,9 @@ export default function Header() {
         backgroundColor: "#75eba5",
         borderBottom: "2px solid rgb(0, 0, 0, .2)",
         boxShadow: "0 10px 10px rgba(0, 0, 0, .3)",
+        height: 78,
         p: 2,
+        position: "fixed",
         width: "100%",
         zIndex: 999,
       }}

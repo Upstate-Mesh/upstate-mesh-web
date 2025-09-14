@@ -26,7 +26,7 @@ function RouteComponent() {
         MQTT
       </Typography>
       <Typography>
-        Within the Upstate Mesh network, we're using MQTT as a means of{" "}
+        Within the mesh network, MQTT is used as a means of{" "}
         <a
           href="http://mqtt.upstatemesh.org/map"
           target="_blank"
@@ -34,8 +34,8 @@ function RouteComponent() {
         >
           visualizing
         </a>{" "}
-        the off-grid network activity, on nodes which have Internet access. We
-        have set up a private MQTT server for use by local members.
+        mesh activity on nodes which have Internet access. A private MQTT server
+        is setup for use locally.
       </Typography>
       <Typography>
         It is <b>not</b> recommended to use this as a substitue for building a
@@ -84,17 +84,18 @@ function RouteComponent() {
         configured separately.
       </Typography>
       <Typography>
-        <b>If you just want to appear on the map</b>, we recommend configuring
-        your <strong>Primary Channel</strong> to be{" "}
-        <strong>Uplink Enabled</strong>. We do not allow for Downlink MQTT on
-        the primary channel.
+        <b>If you just want to appear on the map</b>, it's recommended to
+        configuring your <strong>Primary Channel</strong> to be{" "}
+        <strong>Uplink Enabled</strong>. Downlink MQTT is not enabled on the
+        primary channel. Even if activated, the node will not receive downlink
+        packets.
       </Typography>
       <Typography variant="h6">Private channel with full MQTT</Typography>
       <Typography>
-        We <strong>do</strong> allow for both <strong>Uplink Enabled</strong>{" "}
-        and <strong>Downlink Enabled</strong> in the{" "}
-        <strong>Upsate Mesh</strong> private channel. This channel is like a big
-        regional chat room over the mesh and MQTT.
+        It <strong>is</strong> allowed to configure{" "}
+        <strong>Uplink Enabled</strong> and <strong>Downlink Enabled</strong> in
+        the <strong>Upsate Mesh</strong> private channel. This channel is like a
+        big regional chat room over the mesh and MQTT.
       </Typography>
       <ul>
         <li>
@@ -116,19 +117,30 @@ function RouteComponent() {
       </ul>
       <Typography>
         If you need assistance setting up your device, hop into the Discord and
-        give us a shout!
+        give a shout!
       </Typography>
       <Typography variant="h5">Meshview</Typography>
       <Typography>
-        The packets gathered by our MQTT server may be{" "}
+        The packets gathered by the MQTT server may be{" "}
         <a
           href="http://mqtt.upstatemesh.org/"
           title="Meshview map"
           target="_blank"
         >
-          visualized on our Meshview map
+          visualized on the Meshview map
         </a>
-        .
+        . They are also bridged to upstream MQTT servers including{" "}
+        <a href="https://meshmap.net/" title="MeshMap" target="_blank">
+          https://meshmap.net/
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://meshtastic.liamcottle.net/"
+          title="Meshtastic Map"
+          target="_blank"
+        >
+          https://meshtastic.liamcottle.net/
+        </a>
       </Typography>
     </>
   );

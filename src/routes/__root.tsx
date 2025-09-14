@@ -1,3 +1,4 @@
+import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { createRootRoute, HeadContent, Outlet } from "@tanstack/react-router";
 
@@ -32,7 +33,9 @@ export const Route = createRootRoute({
         }}
       >
         <Header />
-        <Outlet />
+        <Box sx={{ pt: "80px", width: "100%" }}>
+          <Outlet />
+        </Box>
         <Footer />
       </Stack>
     </>

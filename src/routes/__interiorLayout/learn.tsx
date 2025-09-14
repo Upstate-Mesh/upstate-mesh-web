@@ -30,7 +30,7 @@ function RouteComponent() {
         Learn
       </Typography>
       <Typography component="h5" variant="h5">
-        Why build a mesh in the first place?
+        Why build a mesh network in the first place?
       </Typography>
       <Typography sx={{ borderLeft: "3px solid #75eba5", pl: 2 }}>
         First responders have access to FirstNet, a hardened, prioritized

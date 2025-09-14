@@ -74,8 +74,8 @@ function RouteComponent() {
           }}
         >
           <Typography>
-            Upstate Mesh is an open source community group of makers and tech
-            enthusiasts experimenting with a solar-powered{" "}
+            Upstate Mesh is a community group of makers and tech enthusiasts
+            tinkering with an open source, solar-powered{" "}
             <a
               href="https://meshtastic.org/"
               target="_blank"
@@ -83,17 +83,17 @@ function RouteComponent() {
             >
               Meshtastic
             </a>{" "}
-            network in Upstate New York's Capital District (and beyond). This
-            network acts like a regional text messaging system, allowing people
-            to communicate with anyone on the network. All of this happens
-            without any external infrastructure.
+            network in Upstate New York's Capital District. A Meshtastic network
+            acts like a regional text messaging system. It's perfect for hiking,
+            camping, emergency preparedness, or just trying new off-grid
+            technology!
           </Typography>
           <Typography component="h5" variant="h5">
             How does it work?
           </Typography>
           <Typography>
-            Community members are setting solar-powered radio repeaters in the
-            Capital District. These radios communicate on the{" "}
+            Community members set up solar-powered radio repeaters. These radios
+            communicate on the{" "}
             <a
               href="https://en.wikipedia.org/wiki/33-centimeter_band"
               target="_blank"
@@ -154,12 +154,11 @@ function RouteComponent() {
           <Typography>
             Meshtastic works the same way as this paper example, but instead of
             sending paper notes users send digital text messages with radio
-            waves. Our radios are solar powered and they don’t need any internet
-            or cell phone coverage. This means they will work even if the power
-            is out.
+            waves. The radios are solar powered and they don’t need any internet
+            access. This means they will work even if the power is out.
           </Typography>
           <Typography component="h5" variant="h5">
-            How to join
+            How to join the mesh
           </Typography>
           <Typography>
             Check out{" "}
@@ -172,17 +171,17 @@ function RouteComponent() {
             .
           </Typography>
           <Typography>
-            Outside of the mesh network itself, community members are most
-            active in{" "}
+            Outside of the mesh network itself, folks are most active in{" "}
             <a
               href="https://discord.gg/FvajRmXEsb"
               target="_blank"
               title="Discord server"
             >
               Discord
-            </a>
-            , which you're certainly welcome to join even if you do not have a
-            radio or node on the mesh. You can also follow on{" "}
+            </a>{" "}
+            building radios, talking about 3d printing, designing solar
+            solutions, etc. You're welcome to join even if you do not have a
+            node on the mesh. You can also follow on{" "}
             <a
               href="https://bsky.app/profile/upstatemesh.bsky.social"
               target="_blank"

@@ -151,9 +151,7 @@ function RouteComponent() {
       </Typography>
       <ul>
         <li>A precision driver/bit set for machine screws.</li>
-        <li>
-          Access to a 3D printer for the case and belt holster.
-        </li>
+        <li>Access to a 3D printer for the case and belt holster.</li>
         <li>
           Optionally, a soldering iron for heat set inserts on the holster if
           you prefer that approach vs. hex nuts.

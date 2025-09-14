@@ -23,8 +23,8 @@ export default function Footer() {
         >
           <SocialIcons />
           <Typography variant="caption">
-            Our website content is licensed under the Creative Commons
-            Attribution-ShareAlike 4.0 International License. Portions of our
+            Website content licensed under the Creative Commons
+            Attribution-ShareAlike 4.0 International License. Portions of the
             content have been adopted and adapted from the excellent folks at{" "}
             <a
               href="https://www.austinmesh.org/"
