@@ -155,12 +155,12 @@ function RouteComponent() {
         <li>
           <b>Decentralized, open, and resilient</b>
           <br />
-          Upstate Mesh is decentralized - there is no central server or
+          Mesh networks are decentralized - there is no central server or
           corporation - all the communication bounces through the entire mesh.
-          Upstate Mesh is open to everyone - you don't have to ask permission to
-          join and all of the software is open-source. Upstate Mesh is resilient
-          - solar-powered radios don't need cell phone towers, internet access,
-          or electricity. Hopefully, this project will inspire others to build
+          It open to everyone - you don't have to ask permission to join and all
+          of the software is open-source. Mesh networks are resilient -
+          solar-powered radios don't need cell phone towers, internet access, or
+          electricity. Hopefully, this project will inspire others to build
           things that are decentralized, open, and resilient.
         </li>
       </ol>
