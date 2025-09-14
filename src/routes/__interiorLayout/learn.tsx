@@ -157,8 +157,8 @@ function RouteComponent() {
           <br />
           Mesh networks are decentralized - there is no central server or
           corporation - all the communication bounces through the entire mesh.
-          It open to everyone - you don't have to ask permission to join and all
-          of the software is open-source. Mesh networks are resilient -
+          It' open to everyone - you don't have to ask permission to join and
+          all of the software is open-source. Mesh networks are resilient -
           solar-powered radios don't need cell phone towers, internet access, or
           electricity. Hopefully, this project will inspire others to build
           things that are decentralized, open, and resilient.
