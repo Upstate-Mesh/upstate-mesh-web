@@ -181,24 +181,28 @@ function RouteComponent() {
             </a>{" "}
             building radios, talking about 3d printing, designing solar
             solutions, etc. You're welcome to join even if you do not have a
-            node on the mesh. You can also follow on{" "}
-            <a
-              href="https://bsky.app/profile/upstatemesh.bsky.social"
-              target="_blank"
-              title="Bluesky"
-            >
-              Bluesky
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://www.instagram.com/upstatemesh/"
-              target="_blank"
-              title="Instagram"
-            >
-              Instagram
-            </a>
-            .
+            node on the mesh.
           </Typography>
+          <Box
+            sx={{
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              width: "100%",
+            }}
+          >
+            <a
+              href="https://discord.gg/FvajRmXEsb"
+              target="_blank"
+              title="Discord server"
+            >
+              <img
+                src="/um_discord_qrcode.png"
+                style={{ width: 250, height: "auto" }}
+                alt="Discord QR code"
+              />
+            </a>
+          </Box>
         </Stack>
       </Container>
     </Box>
