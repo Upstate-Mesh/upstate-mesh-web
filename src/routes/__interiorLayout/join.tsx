@@ -30,7 +30,7 @@ function RouteComponent() {
       </Typography>
       <ol>
         <li>
-          Get a Meshtastic Radio.
+          Get a Mesh Radio.
           <ul>
             <li>
               You can build one yourself for about $35. The official Meshtastic
@@ -44,9 +44,9 @@ function RouteComponent() {
               </a>
             </li>
             <li>
-              The LILYGO T-Echo is a good first meshtastic radio, as it costs
-              around $70 and is ready to go out of the box (besides having to
-              flash the firmware).
+              The LILYGO T-Echo is a good first radio, as it costs around $70
+              and is ready to go out of the box (besides having to flash the
+              firmware).
             </li>
             <li>
               You can also buy a pre-built battery-powered radio for between
@@ -55,8 +55,7 @@ function RouteComponent() {
             <li>
               If you can afford it, and have a place to mount it outside, you
               could buy a pre-built solar-powered node for between $100 and $200
-              from Meshtastic Powered device manufacturers and mount it as high
-              off the ground as you can.
+              and mount it as high off the ground as you can.
             </li>
             <li>
               Alternatively you can{" "}

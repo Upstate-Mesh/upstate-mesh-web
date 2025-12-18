@@ -59,7 +59,7 @@ function RouteComponent() {
             Welcome to Upstate Mesh
           </Typography>
           <Typography component="h5" variant="h5" sx={{ color: "#ffffff" }}>
-            A meshtastic community group for the Capital District!
+            A mesh communication community group for the Capital District!
           </Typography>
         </Box>
       </Stack>
@@ -75,18 +75,10 @@ function RouteComponent() {
         >
           <Typography>
             Upstate Mesh is a community group of makers and tech enthusiasts
-            tinkering with an open source, solar-powered{" "}
-            <a
-              href="https://meshtastic.org/"
-              target="_blank"
-              title="Meshtastic"
-            >
-              Meshtastic
-            </a>{" "}
-            network in Upstate New York's Capital District. A Meshtastic network
-            acts like a regional text messaging system. It's perfect for hiking,
-            camping, emergency preparedness, or just trying new off-grid
-            technology!
+            tinkering with an open source, solar-powered mesh network in Upstate
+            New York's Capital District. A mesh network acts like a regional
+            text messaging system. It's perfect for hiking, camping, emergency
+            preparedness, or just trying new off-grid technology!
           </Typography>
           <Typography component="h5" variant="h5">
             How does it work?
@@ -152,10 +144,10 @@ function RouteComponent() {
             message.
           </Typography>
           <Typography>
-            Meshtastic works the same way as this paper example, but instead of
-            sending paper notes users send digital text messages with radio
-            waves. The radios are solar powered and they don’t need any internet
-            access. This means they will work even if the power is out.
+            Mesh communication works the same way as this paper example, but
+            instead of sending paper notes users send digital text messages with
+            radio waves. The radios are solar powered and they don’t need any
+            internet access. This means they will work even if the power is out.
           </Typography>
           <Typography component="h5" variant="h5">
             How to join the mesh

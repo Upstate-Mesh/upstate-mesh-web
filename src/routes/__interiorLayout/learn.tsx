@@ -14,8 +14,7 @@ export const Route = createFileRoute("/__interiorLayout/learn")({
       },
       {
         name: "description",
-        content:
-          "Learn about mesh communications, Meshtastic, and Upstate Mesh.",
+        content: "Learn about mesh communications and Upstate Mesh.",
       },
     ],
     title: PAGE_TITLE,
