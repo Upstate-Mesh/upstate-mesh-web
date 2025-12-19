@@ -73,28 +73,28 @@ function RouteComponent() {
         What can it do?
       </Typography>
       <Typography>
-        Meshtastic is a bit like a decentralized social media platform or SMS
-        text messaging. It has a number of different features which will be
-        familiar to anyone who has sent a text message or posted on social
+        Mesh communication is a bit like a decentralized social media platform
+        or SMS text messaging. It has a number of different features which will
+        be familiar to anyone who has sent a text message or posted on social
         media.
       </Typography>
       <ol>
         <li>
-          <b>Primary channel</b>
+          <b>Public channel</b>
           <br />
-          You can broadcast an unencrypted message to the Primary Channel and
-          everyone on your mesh will see it. This is a bit like “posting”
+          You can broadcast an unencrypted message to the Primary/Public Channel
+          and everyone on your mesh will see it. This is a bit like “posting”
           publicly on a social media platform.
         </li>
         <li>
           <b>Group channels</b>
           <br />
           You can send an encrypted message to a select group of people on a
-          Secondary Channel and everyone who is subscribed to that channel will
-          get it. People can join the channel if you provide them with an
-          encryption key which you can send to them via Direct Message or which
-          they can scan from a QR code in person. This is a bit like a private
-          group on social media, or a group text message chain on SMS.
+          private and everyone who is subscribed to that channel will get it.
+          People can join the channel if you provide them with an encryption key
+          which you can send to them via Direct Message or which they can scan
+          from a QR code in person. This is a bit like a private group on social
+          media, or a group text message chain on SMS.
         </li>
         <li>
           <b>Direct messages</b>
@@ -109,14 +109,6 @@ function RouteComponent() {
           it will show up on everyone’s map in the app.
         </li>
         <li>
-          <b>Connect worldwide</b>
-          <br />
-          If anyone on your local mesh is running an MQTT gateway your local
-          mesh will connect to the other meshes around the world. This can allow
-          you to broadcast messages to everyone globally or send encrypted
-          messages to groups or individuals worldwide.
-        </li>
-        <li>
           <b>Telemetry data</b>
           <br />
           Nodes can be set up to send telemetry data like the battery status or
@@ -127,7 +119,7 @@ function RouteComponent() {
         </li>
       </ol>
       <Typography component="h5" variant="h5">
-        What build this network?
+        Why build this network?
       </Typography>
       <ol>
         <li>
@@ -164,102 +156,199 @@ function RouteComponent() {
         </li>
       </ol>
       <Typography component="h5" variant="h5">
-        Comparing it to APRS on amateur radio bands
+        Meshtastic vs. MeshCore on Upstate Mesh
       </Typography>
       <Typography>
-        For people who are familiar with using the{" "}
-        <a
-          href="https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System"
-          target="_blank"
-          title="Automatic Packet Reporting System"
-        >
-          Automatic Packet Reporting System
-        </a>{" "}
-        (APRS) on ham radio, Meshtastic is similar in a few ways:
+        Upstate Mesh is technology-agnostic. We care about reliable,
+        decentralized mesh networking that keeps working even if the power goes
+        out. This page explains (1) how mesh networking works at a high level,
+        and (2) the practical differences between Meshtastic and MeshCore so you
+        can pick the right tool for your use case.
       </Typography>
       <Typography component="h6" variant="h6">
-        Similarities
+        ELI5
+      </Typography>
+      <Typography>
+        Think of sending a whisper across a playground. With Meshtastic,
+        everyone passes your whisper along, so the "chain" can move and grow as
+        people move around, but they stop sharing your message after it's passed
+        through 7 people. With MeshCore, only special helpers (repeaters) pass
+        the whisper, but they can pass it to up to 64 more helpers.
+      </Typography>
+      <Typography>
+        By default, with MeshCore those helpers also talk faster and there are
+        fewer side conversations that might delay your whisper. On Meshtastic,
+        the other people talk slower and are having side conversations that have
+        to finish before your whisper can be shared, slowing down the rate at
+        which your whisper makes its way through the crowd.
+      </Typography>
+      <Typography component="h6" variant="h6">
+        TL;DR;
+      </Typography>
+      <Typography>
+        Meshtastic works well when people and links are moving (friends at an
+        event, a hike, a bike ride). Regular nodes help by rebroadcasting, so
+        coverage can shift and grow as people move. MeshCore works well when you
+        can place fixed repeaters on rooftops or hills. Phones connect through
+        companion radios; companions do not rebroadcast, so repeaters are what
+        grow the mesh.
+      </Typography>
+      <Typography>
+        <strong>Main differences</strong>
       </Typography>
       <ul>
+        <li>Hop limits: Meshtastic default 3 (max 7); MeshCore up to 64.</li>
         <li>
-          <b>Digipeaters</b>
-          <br />
-          APRS radios can be set up as clients, which receive all messages and
-          only transmit the users messages, or APRS radios can be set up as
-          digipeaters, which repeat all the messages they hear. Meshtastic
-          radios by default all act as repeaters – just like APRS digipeaters.
+          Who rebroadcasts: Meshtastic clients help relay; MeshCore companions
+          do not. Only repeaters relay.
         </li>
         <li>
-          <b>iGates</b>
-          <br />
-          MQTT Gateways are like APRS iGates – they repeat all local traffic
-          over the internet to other MQTT Gateways around the world.
+          Telemetry(battery, temperature, etc): Meshtastic pushes data
+          regularly; MeshCore pushes rarely, and allows manual pulling.
         </li>
         <li>
-          <b>ANSRVR</b>
-          <br />
-          APRS users can subscribe to groups using the ANSRVR service. This
-          allows for group chats like the popular #APRSThursday net. Meshtastic
-          has “Secondary Channels” that can be subscribe to, allowing users to
-          send messages to everyone on the channel.
-        </li>
-        <li>
-          <b>Burst</b>
-          <br />
-          APRS uses the AX.25 protocol which sends messages using data bursts
-          between 0.3 and 0.5 seconds long. Meshtastic uses the LoRa protocol
-          which sends messages in data bursts between 0.5 and 10 seconds long.
+          Responsiveness: MeshCore feels considerably faster with default
+          config; Meshtastic can be manually tuned to similar results.
         </li>
       </ul>
       <Typography component="h6" variant="h6">
-        Differences
-      </Typography>
-      <Typography>
-        But Meshtastic is also <strong>different</strong> than APRS in a few
-        ways:
+        Mesh networking in 30 seconds
       </Typography>
       <ul>
         <li>
-          <b>Primary</b>
-          <br />
-          APRS doesn’t have a way to broadcast a message to everyone on the
-          network. Messages sent to Meshtastic's Primary Channel go to everyone.
+          Self-healing + multi-hop: Messages can traverse multiple radios
+          (“hops”). If one link disappears, the mesh finds another path.
         </li>
         <li>
-          <b>Encryption</b>
-          <br />
-          APRS is unencrypted because it is against FCC regulations to use
-          encryption on amateur radio bands/modes. Meshtastic is encrypted for
-          communications on private group channels and for direct messages
-          between users, because it runs on the 900 MHz ISM band, which does not
-          have restrictions on encryption.
+          Flood routing: On low-power radios, many systems use a simple “managed
+          flood” where nodes selectively rebroadcast packets without maintaining
+          big routing tables.
         </li>
         <li>
-          <b>License</b>
-          <br />
-          APRS requires the user to have a technician amateur radio license.
-          Meshtastic does not require any license and is open for anyone to use.
+          Direct paths: Some systems learn a path during the first flood, then
+          send future messages via a more efficient “next-hop” route, falling
+          back to flood if the path breaks.
+        </li>
+      </ul>
+      <Typography component="h6" variant="h6">
+        Default roles &amp; behavior
+      </Typography>
+      <ul>
+        <li>
+          Meshtastic: Default role is CLIENT, which does take part in
+          rebroadcasting in most cases. This helps ad-hoc, moving groups connect
+          even without fixed infrastructure.
         </li>
         <li>
-          <b>Equipment cost</b>
-          <br />
-          APRS capable handheld ham radios cost upwards of $400. Meshtastic
-          radios cost less than $100.
+          MeshCore: Default end-user firmware is Companion (USB/BLE app
+          companion). Companions do not rebroadcast other people’s packets;
+          Repeaters handle forwarding. This concentrates airtime on
+          purpose-built, well-placed infrastructure nodes.
+        </li>
+      </ul>
+      <Typography>
+        Meshtastic shines for non-geostationary groups (e.g. a ski hill or a
+        bike ride with moving parties). MeshCore is optimized for large scale
+        meshes with infrastructure nodes (repeaters) placed on high points.
+      </Typography>
+      <Typography component="h6" variant="h6">
+        Routing strategies
+      </Typography>
+      <ul>
+        <li>
+          Meshtastic: Managed flood. Since v2.6, Direct Messages use next-hop
+          routing: flood to discover, then optimized relays for subsequent DMs.
         </li>
         <li>
-          <b>Email</b>
-          <br />
-          APRS has services which allow users to send emails and SMS text
-          messages to people who aren’t ham radio users. Meshtastic does not
-          have this feature but it could be added in the future.
+          MeshCore: Flood-then-direct by design: first message floods to learn a
+          path; later messages embed the learned path; if that route fails after
+          a few retries, the node automatically falls back to flood.
+        </li>
+      </ul>
+      <Typography component="h6" variant="h6">
+        Hop limits
+      </Typography>
+      <ul>
+        <li>Meshtastic: Default Max Hops = 3 (configurable to max 7)</li>
+        <li>MeshCore: Internal max hop limit = 64</li>
+      </ul>
+      <Typography>
+        <strong>Implication for Upstate Mesh:</strong> Hill/valley terrain often
+        needs many relays. Seven hops can be a hard ceiling for Meshtastic
+        across the whole area, while MeshCore's higher limit gives more
+        headroom.
+      </Typography>
+      <Typography component="h6" variant="h6">
+        Telemetry &amp; airtime
+      </Typography>
+      <ul>
+        <li>
+          Meshtastic periodically transmits device telemetry, position, and node
+          info on timers (defaults ~30 min, 15 min*, and 3 hours). As meshes
+          grow, the firmware auto-backs off these intervals to reduce
+          congestion. This is good for tracking/telemetry, but on very large
+          meshes the background traffic can consume valuable airtime.
         </li>
         <li>
-          <b>Simplicity</b>
+          MeshCore avoids frequent network-wide telemetry by default. Repeaters
+          can send periodic adverts (local or flood) on long intervals, and you
+          can tune or disable them to conserve airtime.
+        </li>
+      </ul>
+      <Typography>
+        For Upstate Mesh, where the goal is region wide messaging (not sensor
+        telemetry), MeshCore’s default traffic profile typically leaves more
+        airtime for actual messages.
+      </Typography>
+      <Typography component="h6" variant="h6">
+        Radio presets, throughput &amp; interference
+      </Typography>
+      <Typography>
+        Both systems use LoRa (Chirp Spread Spectrum), where bandwidth,
+        spreading factor (SF), and coding rate (CR) trade range for speed and
+        airtime.
+      </Typography>
+      <ul>
+        <li>
+          Meshtastic defaults: The standard preset is LongFast, which (in US)
+          uses 250 kHz bandwidth and a conservative SF/CR mix. It's robust, but
+          airtime per message is relatively high, especially over multiple hops.
           <br />
-          APRS is quite a bit more difficult to use than Meshtastic. APRS does
-          not have any standardized user interface – there are dozens of
-          software packages available. Meshtastic has a standardized iPhone and
-          Android app which is easy to understand for new users.
+          <small>
+            NOTE: You can switch Meshtastic to faster presets (e.g.,
+            MediumFast/ShortFast) or even custom narrow bandwidths; Meshtastic
+            supports special narrow values like 31.25 kHz and 62.5 kHz when
+            manually configured.
+          </small>
+        </li>
+        <li>
+          MeshCore defaults: In the US, the default preset is a narrower
+          bandwidth (62.5 kHz) with moderate SF/CR to slot between noisy parts
+          of the US 902–928 MHz ISM band, improving SNR and airtime efficiency
+          while maintaining city-scale coverage.
+        </li>
+      </ul>
+      <Typography>
+        In real Albany-area testing, the narrower default MeshCore configs have
+        produced noticeably snappier delivery (often sub-second for nearby
+        peers, and sub-2 second for multi-hop routes) compared to default
+        Meshtastic presets. Your mileage will vary by terrain, antenna quality,
+        and infrastructure density, but the airtime math generally favors higher
+        data rates + less background traffic.
+      </Typography>
+      <Typography component="h6" variant="h6">
+        When to use which
+      </Typography>
+      <ul>
+        <li>
+          Choose Meshtastic if you want a "bring-a-radio, it just works"
+          experience for roaming groups, mapping, and rich telemetry modules,
+          with minimal setup and no guaranteed infrastructure.
+        </li>
+        <li>
+          Choose MeshCore if your aim is a resilient, city or region scale
+          messaging network with fixed repeaters, where end-users don’t
+          rebroadcast by default.
         </li>
       </ul>
     </>
