@@ -11,11 +11,11 @@ function RouteComponent() {
     <Container maxWidth="md">
       <Stack
         direction="column"
-        py={3}
         spacing={3}
         sx={{
           justifyContent: "center",
           alignItems: "flex-start",
+          py: 3,
         }}
       >
         <Outlet />

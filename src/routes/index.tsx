@@ -66,16 +66,16 @@ function RouteComponent() {
       <Container maxWidth="md">
         <Stack
           direction="column"
-          py={3}
           spacing={3}
           sx={{
             justifyContent: "center",
             alignItems: "flex-start",
+            py: 3,
           }}
         >
           <Typography>
             Upstate Mesh is a community group of makers and tech enthusiasts
-            tinkering with an open source, solar-powered mesh network in Upstate
+            tinkering with open source, solar-powered mesh networks in Upstate
             New York's Capital District. A mesh network acts like a regional
             text messaging system. It's perfect for hiking, camping, emergency
             preparedness, or just trying new off-grid technology!
@@ -91,7 +91,7 @@ function RouteComponent() {
               target="_blank"
               title="33cm band"
             >
-              906.875 MHZ
+              910.525 MHz
             </a>{" "}
             frequency using the{" "}
             <a
@@ -101,53 +101,10 @@ function RouteComponent() {
             >
               LoRa protocol
             </a>
-            . The radios mesh using the open-source{" "}
-            <a
-              href="https://meshtastic.org/"
-              target="_blank"
-              title="Meshtastic"
-            >
-              Meshtastic
-            </a>{" "}
-            software. Users can connect to these repeaters by Bluetooth if
-            they’re close enough or they can use their own handheld nodes which
-            will also act as repeaters. The messages hop from node to node,
-            extending the reach of the network and ensuring everyone receives
-            every message.
-          </Typography>
-          <Typography component="h6" variant="h6">
-            Can you explain it like I'm 5?
-          </Typography>
-          <Typography>
-            Pretend you're sitting in class and want to send a note to everyone
-            in the class. You write your note on a piece of paper and copy it
-            three times. The message can be up to 228 characters - about as long
-            as this paragraph so far. You hand those three pieces of paper to
-            the three people around you. Then those three people re-write the
-            message three times and hand it to the three people around them and
-            so on. Now imagine a big gust of wind comes and blows away some of
-            the messages. If even just a few people saw the note and keep
-            copying and re-sending it, eventually everyone will get a copy of
-            the note. This is like sending an unencrypted message to everyone on
-            the network.
-          </Typography>
-          <Typography>
-            Now imagine you want to send a message to a single person or a
-            select group of people but you don't want other people who see the
-            note to be able to read it. You could write the note using a secret
-            language. You could then hand a decoder key to your friend or to a
-            group of friends and they could decode the message. The message
-            still gets passed the same way - with every single person writing
-            the message a few times and handing it to everyone - but only those
-            people with the decoder key will be able to understand the message.
-            This is like sending an encrypted direct message or encrypted group
-            message.
-          </Typography>
-          <Typography>
-            Mesh communication works the same way as this paper example, but
-            instead of sending paper notes users send digital text messages with
-            radio waves. The radios are solar powered and they don’t need any
-            internet access. This means they will work even if the power is out.
+            . The radios mesh using the open-source software. Users can use
+            their own handheld nodes with a mobile app and can send messages to
+            other users. The messages hop from node to node, extending the reach
+            of the network, helping everyone receive messages.
           </Typography>
           <Typography component="h5" variant="h5">
             How to join the mesh

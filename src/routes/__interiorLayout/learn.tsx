@@ -334,7 +334,9 @@ function RouteComponent() {
         peers, and sub-2 second for multi-hop routes) compared to default
         Meshtastic presets. Your mileage will vary by terrain, antenna quality,
         and infrastructure density, but the airtime math generally favors higher
-        data rates + less background traffic.
+        data rates + less background traffic. This, among other reasons is why
+        the majority of members have chosen to focus their time and effort on
+        building a robust MeshCore mesh.
       </Typography>
       <Typography component="h6" variant="h6">
         When to use which

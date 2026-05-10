@@ -70,7 +70,7 @@ export interface FileRoutesByFullPath {
   '/mqtt': typeof _interiorLayoutMqttRoute
   '/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
   '/articles/build-a-90s-hacker-pager-style-t114-mesh-node': typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute
-  '/articles': typeof _interiorLayoutArticlesIndexRoute
+  '/articles/': typeof _interiorLayoutArticlesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -101,7 +101,7 @@ export interface FileRouteTypes {
     | '/mqtt'
     | '/similar-networks'
     | '/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
-    | '/articles'
+    | '/articles/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -133,7 +133,7 @@ declare module '@tanstack/react-router' {
     '/__interiorLayout': {
       id: '/__interiorLayout'
       path: ''
-      fullPath: ''
+      fullPath: '/'
       preLoaderRoute: typeof _interiorLayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -175,7 +175,7 @@ declare module '@tanstack/react-router' {
     '/__interiorLayout/articles/': {
       id: '/__interiorLayout/articles/'
       path: '/articles'
-      fullPath: '/articles'
+      fullPath: '/articles/'
       preLoaderRoute: typeof _interiorLayoutArticlesIndexRouteImport
       parentRoute: typeof _interiorLayoutRoute
     }

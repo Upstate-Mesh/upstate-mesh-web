@@ -1,6 +1,11 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import { createRootRoute, HeadContent, Outlet } from "@tanstack/react-router";
+import {
+  createRootRoute,
+  HeadContent,
+  Outlet,
+  ScrollRestoration,
+} from "@tanstack/react-router";
 
 import Footer from "../Footer";
 import Header from "../Header";
@@ -23,6 +28,7 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <HeadContent />
+      <ScrollRestoration />
       <Stack
         direction="column"
         spacing={0}

@@ -8,9 +8,13 @@ import SocialIcons from "./SocialIcons";
 export default function Footer() {
   return (
     <Box
-      px={2}
-      py={4}
-      sx={{ backgroundColor: "#3a3c4d", flexGrow: 1, width: "100%" }}
+      sx={{
+        backgroundColor: "#000000",
+        flexGrow: 1,
+        width: "100%",
+        px: 2,
+        py: 4,
+      }}
     >
       <Container maxWidth="md">
         <Stack
@@ -41,25 +45,6 @@ export default function Footer() {
             <a href="https://unsplash.com/photos/a-city-skyline-at-night-EPwcjhF5i6U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
               Unsplash
             </a>
-          </Typography>
-          <Typography variant="caption">
-            Upstate Mesh is not affilated with{" "}
-            <a
-              href="https://meshtastic.org/"
-              target="_blank"
-              title="Meshtastic"
-            >
-              Meshtastic®
-            </a>
-            , nor endorsed by{" "}
-            <a
-              href="https://meshtastic.org/docs/legal/licensing-and-trademark/"
-              title="Meshtastic LLC"
-              target="_blank"
-            >
-              Meshtastic LLC
-            </a>
-            .{" "}
           </Typography>
         </Stack>
       </Container>

@@ -6,7 +6,7 @@ const Theme = createTheme({
       main: "#75EBA5",
     },
     background: {
-      default: "#2e303d",
+      default: "#111111",
       paper: "#3a3c4d",
     },
     text: {
@@ -22,10 +22,10 @@ const Theme = createTheme({
     allVariants: {
       lineHeight: 1.5,
     },
-    fontFamily: '"Mozilla Text", sans-serif',
-    fontSize: 15,
+    fontFamily: '"JetBrains Mono", sans-serif',
+    fontSize: 13,
     fontWeightRegular: 400,
-    caption: { fontSize: ".95rem" },
+    caption: { fontSize: ".85rem" },
     h1: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
     h2: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
     h3: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
@@ -37,7 +37,7 @@ const Theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: "#2e303d",
+          backgroundColor: "#111111",
           color: "#ffffff",
         },
         a: {
