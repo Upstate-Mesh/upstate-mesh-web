@@ -8,194 +8,194 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as _interiorLayoutRouteImport } from './routes/__interiorLayout'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as _interiorLayoutSimilarNetworksRouteImport } from './routes/__interiorLayout/similar-networks'
-import { Route as _interiorLayoutMqttRouteImport } from './routes/__interiorLayout/mqtt'
-import { Route as _interiorLayoutLearnRouteImport } from './routes/__interiorLayout/learn'
-import { Route as _interiorLayoutJoinRouteImport } from './routes/__interiorLayout/join'
-import { Route as _interiorLayoutArticlesIndexRouteImport } from './routes/__interiorLayout/articles/index'
-import { Route as _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport } from './routes/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
+import { Route as rootRouteImport } from "./routes/__root";
+import { Route as _interiorLayoutRouteImport } from "./routes/__interiorLayout";
+import { Route as IndexRouteImport } from "./routes/index";
+import { Route as _interiorLayoutSimilarNetworksRouteImport } from "./routes/__interiorLayout/similar-networks";
+import { Route as _interiorLayoutMqttRouteImport } from "./routes/__interiorLayout/mqtt";
+import { Route as _interiorLayoutLearnRouteImport } from "./routes/__interiorLayout/learn";
+import { Route as _interiorLayoutJoinRouteImport } from "./routes/__interiorLayout/join";
+import { Route as _interiorLayoutArticlesIndexRouteImport } from "./routes/__interiorLayout/articles/index";
+import { Route as _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport } from "./routes/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
 
 const _interiorLayoutRoute = _interiorLayoutRouteImport.update({
-  id: '/__interiorLayout',
+  id: "/__interiorLayout",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const _interiorLayoutSimilarNetworksRoute =
   _interiorLayoutSimilarNetworksRouteImport.update({
-    id: '/similar-networks',
-    path: '/similar-networks',
+    id: "/similar-networks",
+    path: "/similar-networks",
     getParentRoute: () => _interiorLayoutRoute,
-  } as any)
+  } as any);
 const _interiorLayoutMqttRoute = _interiorLayoutMqttRouteImport.update({
-  id: '/mqtt',
-  path: '/mqtt',
+  id: "/mqtt",
+  path: "/mqtt",
   getParentRoute: () => _interiorLayoutRoute,
-} as any)
+} as any);
 const _interiorLayoutLearnRoute = _interiorLayoutLearnRouteImport.update({
-  id: '/learn',
-  path: '/learn',
+  id: "/learn",
+  path: "/learn",
   getParentRoute: () => _interiorLayoutRoute,
-} as any)
+} as any);
 const _interiorLayoutJoinRoute = _interiorLayoutJoinRouteImport.update({
-  id: '/join',
-  path: '/join',
+  id: "/join",
+  path: "/join",
   getParentRoute: () => _interiorLayoutRoute,
-} as any)
+} as any);
 const _interiorLayoutArticlesIndexRoute =
   _interiorLayoutArticlesIndexRouteImport.update({
-    id: '/articles/',
-    path: '/articles/',
+    id: "/articles/",
+    path: "/articles/",
     getParentRoute: () => _interiorLayoutRoute,
-  } as any)
+  } as any);
 const _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute =
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport.update(
     {
-      id: '/articles/build-a-90s-hacker-pager-style-t114-mesh-node',
-      path: '/articles/build-a-90s-hacker-pager-style-t114-mesh-node',
+      id: "/articles/build-a-90s-hacker-pager-style-t114-mesh-node",
+      path: "/articles/build-a-90s-hacker-pager-style-t114-mesh-node",
       getParentRoute: () => _interiorLayoutRoute,
     } as any,
-  )
+  );
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/join': typeof _interiorLayoutJoinRoute
-  '/learn': typeof _interiorLayoutLearnRoute
-  '/mqtt': typeof _interiorLayoutMqttRoute
-  '/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
-  '/articles/build-a-90s-hacker-pager-style-t114-mesh-node': typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute
-  '/articles/': typeof _interiorLayoutArticlesIndexRoute
+  "/": typeof IndexRoute;
+  "/join": typeof _interiorLayoutJoinRoute;
+  "/learn": typeof _interiorLayoutLearnRoute;
+  "/mqtt": typeof _interiorLayoutMqttRoute;
+  "/similar-networks": typeof _interiorLayoutSimilarNetworksRoute;
+  "/articles/build-a-90s-hacker-pager-style-t114-mesh-node": typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  "/articles/": typeof _interiorLayoutArticlesIndexRoute;
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/join': typeof _interiorLayoutJoinRoute
-  '/learn': typeof _interiorLayoutLearnRoute
-  '/mqtt': typeof _interiorLayoutMqttRoute
-  '/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
-  '/articles/build-a-90s-hacker-pager-style-t114-mesh-node': typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute
-  '/articles': typeof _interiorLayoutArticlesIndexRoute
+  "/": typeof IndexRoute;
+  "/join": typeof _interiorLayoutJoinRoute;
+  "/learn": typeof _interiorLayoutLearnRoute;
+  "/mqtt": typeof _interiorLayoutMqttRoute;
+  "/similar-networks": typeof _interiorLayoutSimilarNetworksRoute;
+  "/articles/build-a-90s-hacker-pager-style-t114-mesh-node": typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  "/articles": typeof _interiorLayoutArticlesIndexRoute;
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/__interiorLayout': typeof _interiorLayoutRouteWithChildren
-  '/__interiorLayout/join': typeof _interiorLayoutJoinRoute
-  '/__interiorLayout/learn': typeof _interiorLayoutLearnRoute
-  '/__interiorLayout/mqtt': typeof _interiorLayoutMqttRoute
-  '/__interiorLayout/similar-networks': typeof _interiorLayoutSimilarNetworksRoute
-  '/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node': typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute
-  '/__interiorLayout/articles/': typeof _interiorLayoutArticlesIndexRoute
+  __root__: typeof rootRouteImport;
+  "/": typeof IndexRoute;
+  "/__interiorLayout": typeof _interiorLayoutRouteWithChildren;
+  "/__interiorLayout/join": typeof _interiorLayoutJoinRoute;
+  "/__interiorLayout/learn": typeof _interiorLayoutLearnRoute;
+  "/__interiorLayout/mqtt": typeof _interiorLayoutMqttRoute;
+  "/__interiorLayout/similar-networks": typeof _interiorLayoutSimilarNetworksRoute;
+  "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node": typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  "/__interiorLayout/articles/": typeof _interiorLayoutArticlesIndexRoute;
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
+  fileRoutesByFullPath: FileRoutesByFullPath;
   fullPaths:
-    | '/'
-    | '/join'
-    | '/learn'
-    | '/mqtt'
-    | '/similar-networks'
-    | '/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
-    | '/articles/'
-  fileRoutesByTo: FileRoutesByTo
+    | "/"
+    | "/join"
+    | "/learn"
+    | "/mqtt"
+    | "/similar-networks"
+    | "/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
+    | "/articles/";
+  fileRoutesByTo: FileRoutesByTo;
   to:
-    | '/'
-    | '/join'
-    | '/learn'
-    | '/mqtt'
-    | '/similar-networks'
-    | '/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
-    | '/articles'
+    | "/"
+    | "/join"
+    | "/learn"
+    | "/mqtt"
+    | "/similar-networks"
+    | "/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
+    | "/articles";
   id:
-    | '__root__'
-    | '/'
-    | '/__interiorLayout'
-    | '/__interiorLayout/join'
-    | '/__interiorLayout/learn'
-    | '/__interiorLayout/mqtt'
-    | '/__interiorLayout/similar-networks'
-    | '/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
-    | '/__interiorLayout/articles/'
-  fileRoutesById: FileRoutesById
+    | "__root__"
+    | "/"
+    | "/__interiorLayout"
+    | "/__interiorLayout/join"
+    | "/__interiorLayout/learn"
+    | "/__interiorLayout/mqtt"
+    | "/__interiorLayout/similar-networks"
+    | "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
+    | "/__interiorLayout/articles/";
+  fileRoutesById: FileRoutesById;
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  _interiorLayoutRoute: typeof _interiorLayoutRouteWithChildren
+  IndexRoute: typeof IndexRoute;
+  _interiorLayoutRoute: typeof _interiorLayoutRouteWithChildren;
 }
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/__interiorLayout': {
-      id: '/__interiorLayout'
-      path: ''
-      fullPath: '/'
-      preLoaderRoute: typeof _interiorLayoutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/__interiorLayout/similar-networks': {
-      id: '/__interiorLayout/similar-networks'
-      path: '/similar-networks'
-      fullPath: '/similar-networks'
-      preLoaderRoute: typeof _interiorLayoutSimilarNetworksRouteImport
-      parentRoute: typeof _interiorLayoutRoute
-    }
-    '/__interiorLayout/mqtt': {
-      id: '/__interiorLayout/mqtt'
-      path: '/mqtt'
-      fullPath: '/mqtt'
-      preLoaderRoute: typeof _interiorLayoutMqttRouteImport
-      parentRoute: typeof _interiorLayoutRoute
-    }
-    '/__interiorLayout/learn': {
-      id: '/__interiorLayout/learn'
-      path: '/learn'
-      fullPath: '/learn'
-      preLoaderRoute: typeof _interiorLayoutLearnRouteImport
-      parentRoute: typeof _interiorLayoutRoute
-    }
-    '/__interiorLayout/join': {
-      id: '/__interiorLayout/join'
-      path: '/join'
-      fullPath: '/join'
-      preLoaderRoute: typeof _interiorLayoutJoinRouteImport
-      parentRoute: typeof _interiorLayoutRoute
-    }
-    '/__interiorLayout/articles/': {
-      id: '/__interiorLayout/articles/'
-      path: '/articles'
-      fullPath: '/articles/'
-      preLoaderRoute: typeof _interiorLayoutArticlesIndexRouteImport
-      parentRoute: typeof _interiorLayoutRoute
-    }
-    '/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node': {
-      id: '/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
-      path: '/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
-      fullPath: '/articles/build-a-90s-hacker-pager-style-t114-mesh-node'
-      preLoaderRoute: typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport
-      parentRoute: typeof _interiorLayoutRoute
-    }
+    "/__interiorLayout": {
+      id: "/__interiorLayout";
+      path: "";
+      fullPath: "/";
+      preLoaderRoute: typeof _interiorLayoutRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+      preLoaderRoute: typeof IndexRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/__interiorLayout/similar-networks": {
+      id: "/__interiorLayout/similar-networks";
+      path: "/similar-networks";
+      fullPath: "/similar-networks";
+      preLoaderRoute: typeof _interiorLayoutSimilarNetworksRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
+    "/__interiorLayout/mqtt": {
+      id: "/__interiorLayout/mqtt";
+      path: "/mqtt";
+      fullPath: "/mqtt";
+      preLoaderRoute: typeof _interiorLayoutMqttRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
+    "/__interiorLayout/learn": {
+      id: "/__interiorLayout/learn";
+      path: "/learn";
+      fullPath: "/learn";
+      preLoaderRoute: typeof _interiorLayoutLearnRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
+    "/__interiorLayout/join": {
+      id: "/__interiorLayout/join";
+      path: "/join";
+      fullPath: "/join";
+      preLoaderRoute: typeof _interiorLayoutJoinRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
+    "/__interiorLayout/articles/": {
+      id: "/__interiorLayout/articles/";
+      path: "/articles";
+      fullPath: "/articles/";
+      preLoaderRoute: typeof _interiorLayoutArticlesIndexRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
+    "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node": {
+      id: "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
+      path: "/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
+      fullPath: "/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
+      preLoaderRoute: typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
   }
 }
 
 interface _interiorLayoutRouteChildren {
-  _interiorLayoutJoinRoute: typeof _interiorLayoutJoinRoute
-  _interiorLayoutLearnRoute: typeof _interiorLayoutLearnRoute
-  _interiorLayoutMqttRoute: typeof _interiorLayoutMqttRoute
-  _interiorLayoutSimilarNetworksRoute: typeof _interiorLayoutSimilarNetworksRoute
-  _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute: typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute
-  _interiorLayoutArticlesIndexRoute: typeof _interiorLayoutArticlesIndexRoute
+  _interiorLayoutJoinRoute: typeof _interiorLayoutJoinRoute;
+  _interiorLayoutLearnRoute: typeof _interiorLayoutLearnRoute;
+  _interiorLayoutMqttRoute: typeof _interiorLayoutMqttRoute;
+  _interiorLayoutSimilarNetworksRoute: typeof _interiorLayoutSimilarNetworksRoute;
+  _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute: typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  _interiorLayoutArticlesIndexRoute: typeof _interiorLayoutArticlesIndexRoute;
 }
 
 const _interiorLayoutRouteChildren: _interiorLayoutRouteChildren = {
@@ -206,16 +206,16 @@ const _interiorLayoutRouteChildren: _interiorLayoutRouteChildren = {
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute:
     _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute,
   _interiorLayoutArticlesIndexRoute: _interiorLayoutArticlesIndexRoute,
-}
+};
 
 const _interiorLayoutRouteWithChildren = _interiorLayoutRoute._addFileChildren(
   _interiorLayoutRouteChildren,
-)
+);
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   _interiorLayoutRoute: _interiorLayoutRouteWithChildren,
-}
+};
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();

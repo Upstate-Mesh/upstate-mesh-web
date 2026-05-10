@@ -56,6 +56,16 @@ function RouteComponent() {
           onto your node using the MeshCore web flasher.
         </li>
         <li>
+          Download the{" "}
+          <a href="https://meshcore.io/" target="_blank" title="MeshCore app">
+            MeshCore companion app
+          </a>{" "}
+          on your iPhone, Android device or use the web client.
+        </li>
+        <li>
+          Pair your node to your device with Bluetooth in the MeshCore app.
+        </li>
+        <li>
           Configure your radio settings to match the Upstate Mesh network:
           <ul>
             <li>Preset: US Default</li>
@@ -63,15 +73,8 @@ function RouteComponent() {
             <li>Code Rate: 8</li>
           </ul>
         </li>
-        <li>
-          Download the{" "}
-          <a href="https://meshcore.io/" target="_blank" title="MeshCore app">
-            MeshCore companion app
-          </a>{" "}
-          on your iPhone, Android device or use the web client.
-        </li>
-        <li>Pair your node to your device with Bluetooth.</li>
-        <li>Say hi on the mesh!</li>
+        <li>Say hi in the public channel!</li>
+        <li>Send "ping" in the #testing channel.</li>
       </ol>
     </>
   );

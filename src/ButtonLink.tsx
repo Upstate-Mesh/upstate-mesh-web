@@ -12,7 +12,7 @@ const MUIButtonLinkComponent = React.forwardRef<
   HTMLAnchorElement,
   MUIButtonLinkProps
 >((props, ref) => (
-  <Button ref={ref} component="a" color="darkButton" {...props} />
+  <Button ref={ref} component="a" color="darkButton" size="small" {...props} />
 ));
 
 const CreatedButtonLinkComponent = createLink(MUIButtonLinkComponent);
