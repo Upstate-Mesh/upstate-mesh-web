@@ -30,7 +30,7 @@ const Theme = createTheme({
     h2: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
     h3: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
     h4: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
-    h5: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
+    h5: { color: "#75eba5", fontWeight: 800, lineHeight: 1.3 },
     h6: { color: "#75eba5", fontWeight: 800, lineHeight: 1.2 },
   },
   components: {

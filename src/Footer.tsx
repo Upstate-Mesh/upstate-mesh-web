@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <Box
       sx={{
-        backgroundColor: "#000000",
+        backgroundColor: "#1a1a1a",
         flexGrow: 1,
         width: "100%",
         px: 2,
