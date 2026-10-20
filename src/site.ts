@@ -22,3 +22,10 @@ export const NEXT_MEETUP: Meetup | null = {
   address: "Troy, NY",
   rsvpUrl: DISCORD_URL,
 };
+
+// Live tools hosted by Upstate Mesh. Change these in one place when the tools
+// move to their permanent home.
+export const CORESCOPE_URL = "https://live.upst8me.sh";
+export const LIVE_MAP_URL = "https://map.upst8me.sh";
+export const HEALTH_CHECK_URL = "https://health.upst8me.sh";
+export const HEALTH_CHECK_CHANNEL = "#ny-hc";

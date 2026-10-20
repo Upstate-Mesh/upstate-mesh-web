@@ -251,6 +251,13 @@ function RouteComponent() {
           Direct messages may take a few tries the first time while your node
           learns a path. After that, they go straight through.
         </li>
+        <li>
+          Run a{" "}
+          <Link to="/live" title="Live tools">
+            health check
+          </Link>{" "}
+          to see whether any observers hear you, and through which repeaters.
+        </li>
         <li>Still stuck? Ask in our Discord. Someone will help.</li>
       </ul>
       <Typography component="h5" variant="h5">
@@ -287,6 +294,13 @@ function RouteComponent() {
             Regions
           </Link>{" "}
           for how to configure one.
+        </li>
+        <li>
+          Watch the mesh{" "}
+          <Link to="/live" title="Live tools">
+            live
+          </Link>{" "}
+          and test your reach with the health check.
         </li>
         <li>
           Help map the network by{" "}

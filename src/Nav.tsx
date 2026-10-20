@@ -41,6 +41,10 @@ const navItems: ReadonlyArray<NavItem> = [
     to: "/regions",
   },
   {
+    label: "Live",
+    to: "/live",
+  },
+  {
     label: "Articles",
     to: "/articles",
   },
@@ -64,7 +68,7 @@ export default function Nav() {
     return (
       <Stack
         direction="row"
-        spacing={2}
+        spacing={1.5}
         sx={{
           justifyContent: "flex-end",
           alignItems: "center",

@@ -19,7 +19,8 @@ const MUIButtonLinkComponent = React.forwardRef<
     color="primary"
     size="small"
     sx={{
-      px: 2.5,
+      px: 2,
+      whiteSpace: "nowrap",
       py: 0.75,
       backgroundColor: "#3a3c4d",
       color: "#ffffff",
