@@ -45,6 +45,10 @@ const navItems: ReadonlyArray<NavItem> = [
     to: "/articles",
   },
   {
+    label: "FAQ",
+    to: "/faq",
+  },
+  {
     label: "Similar Networks",
     to: "/similar-networks",
   },
@@ -53,7 +57,7 @@ const navItems: ReadonlyArray<NavItem> = [
 export default function Nav() {
   const navigate = useNavigate();
   const theme = useTheme();
-  const desktop = useMediaQuery(theme.breakpoints.up("md"));
+  const desktop = useMediaQuery(theme.breakpoints.up("lg"));
   const [menuOpen, setMenuOpen] = useState(false);
 
   if (desktop) {

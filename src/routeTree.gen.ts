@@ -16,6 +16,11 @@ import { Route as _interiorLayoutRegionsRouteImport } from "./routes/__interiorL
 import { Route as _interiorLayoutMqttRouteImport } from "./routes/__interiorLayout/mqtt";
 import { Route as _interiorLayoutLearnRouteImport } from "./routes/__interiorLayout/learn";
 import { Route as _interiorLayoutJoinRouteImport } from "./routes/__interiorLayout/join";
+import { Route as _interiorLayoutHostARepeaterRouteImport } from "./routes/__interiorLayout/host-a-repeater";
+import { Route as _interiorLayoutFaqRouteImport } from "./routes/__interiorLayout/faq";
+import { Route as _interiorLayoutContactRouteImport } from "./routes/__interiorLayout/contact";
+import { Route as _interiorLayoutCommunityGuidelinesRouteImport } from "./routes/__interiorLayout/community-guidelines";
+import { Route as _interiorLayoutBotGuidelinesRouteImport } from "./routes/__interiorLayout/bot-guidelines";
 import { Route as _interiorLayoutArticlesIndexRouteImport } from "./routes/__interiorLayout/articles/index";
 import { Route as _interiorLayoutArticlesGettingStartedWithMeshcoreRouteImport } from "./routes/__interiorLayout/articles/getting-started-with-meshcore";
 import { Route as _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport } from "./routes/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
@@ -55,6 +60,34 @@ const _interiorLayoutJoinRoute = _interiorLayoutJoinRouteImport.update({
   path: "/join",
   getParentRoute: () => _interiorLayoutRoute,
 } as any);
+const _interiorLayoutHostARepeaterRoute =
+  _interiorLayoutHostARepeaterRouteImport.update({
+    id: "/host-a-repeater",
+    path: "/host-a-repeater",
+    getParentRoute: () => _interiorLayoutRoute,
+  } as any);
+const _interiorLayoutFaqRoute = _interiorLayoutFaqRouteImport.update({
+  id: "/faq",
+  path: "/faq",
+  getParentRoute: () => _interiorLayoutRoute,
+} as any);
+const _interiorLayoutContactRoute = _interiorLayoutContactRouteImport.update({
+  id: "/contact",
+  path: "/contact",
+  getParentRoute: () => _interiorLayoutRoute,
+} as any);
+const _interiorLayoutCommunityGuidelinesRoute =
+  _interiorLayoutCommunityGuidelinesRouteImport.update({
+    id: "/community-guidelines",
+    path: "/community-guidelines",
+    getParentRoute: () => _interiorLayoutRoute,
+  } as any);
+const _interiorLayoutBotGuidelinesRoute =
+  _interiorLayoutBotGuidelinesRouteImport.update({
+    id: "/bot-guidelines",
+    path: "/bot-guidelines",
+    getParentRoute: () => _interiorLayoutRoute,
+  } as any);
 const _interiorLayoutArticlesIndexRoute =
   _interiorLayoutArticlesIndexRouteImport.update({
     id: "/articles/",
@@ -78,6 +111,11 @@ const _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute =
 
 export interface FileRoutesByFullPath {
   "/": typeof IndexRoute;
+  "/bot-guidelines": typeof _interiorLayoutBotGuidelinesRoute;
+  "/community-guidelines": typeof _interiorLayoutCommunityGuidelinesRoute;
+  "/contact": typeof _interiorLayoutContactRoute;
+  "/faq": typeof _interiorLayoutFaqRoute;
+  "/host-a-repeater": typeof _interiorLayoutHostARepeaterRoute;
   "/join": typeof _interiorLayoutJoinRoute;
   "/learn": typeof _interiorLayoutLearnRoute;
   "/mqtt": typeof _interiorLayoutMqttRoute;
@@ -89,6 +127,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   "/": typeof IndexRoute;
+  "/bot-guidelines": typeof _interiorLayoutBotGuidelinesRoute;
+  "/community-guidelines": typeof _interiorLayoutCommunityGuidelinesRoute;
+  "/contact": typeof _interiorLayoutContactRoute;
+  "/faq": typeof _interiorLayoutFaqRoute;
+  "/host-a-repeater": typeof _interiorLayoutHostARepeaterRoute;
   "/join": typeof _interiorLayoutJoinRoute;
   "/learn": typeof _interiorLayoutLearnRoute;
   "/mqtt": typeof _interiorLayoutMqttRoute;
@@ -102,6 +145,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport;
   "/": typeof IndexRoute;
   "/__interiorLayout": typeof _interiorLayoutRouteWithChildren;
+  "/__interiorLayout/bot-guidelines": typeof _interiorLayoutBotGuidelinesRoute;
+  "/__interiorLayout/community-guidelines": typeof _interiorLayoutCommunityGuidelinesRoute;
+  "/__interiorLayout/contact": typeof _interiorLayoutContactRoute;
+  "/__interiorLayout/faq": typeof _interiorLayoutFaqRoute;
+  "/__interiorLayout/host-a-repeater": typeof _interiorLayoutHostARepeaterRoute;
   "/__interiorLayout/join": typeof _interiorLayoutJoinRoute;
   "/__interiorLayout/learn": typeof _interiorLayoutLearnRoute;
   "/__interiorLayout/mqtt": typeof _interiorLayoutMqttRoute;
@@ -115,6 +163,11 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath;
   fullPaths:
     | "/"
+    | "/bot-guidelines"
+    | "/community-guidelines"
+    | "/contact"
+    | "/faq"
+    | "/host-a-repeater"
     | "/join"
     | "/learn"
     | "/mqtt"
@@ -126,6 +179,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo;
   to:
     | "/"
+    | "/bot-guidelines"
+    | "/community-guidelines"
+    | "/contact"
+    | "/faq"
+    | "/host-a-repeater"
     | "/join"
     | "/learn"
     | "/mqtt"
@@ -138,6 +196,11 @@ export interface FileRouteTypes {
     | "__root__"
     | "/"
     | "/__interiorLayout"
+    | "/__interiorLayout/bot-guidelines"
+    | "/__interiorLayout/community-guidelines"
+    | "/__interiorLayout/contact"
+    | "/__interiorLayout/faq"
+    | "/__interiorLayout/host-a-repeater"
     | "/__interiorLayout/join"
     | "/__interiorLayout/learn"
     | "/__interiorLayout/mqtt"
@@ -204,6 +267,41 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof _interiorLayoutJoinRouteImport;
       parentRoute: typeof _interiorLayoutRoute;
     };
+    "/__interiorLayout/host-a-repeater": {
+      id: "/__interiorLayout/host-a-repeater";
+      path: "/host-a-repeater";
+      fullPath: "/host-a-repeater";
+      preLoaderRoute: typeof _interiorLayoutHostARepeaterRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
+    "/__interiorLayout/faq": {
+      id: "/__interiorLayout/faq";
+      path: "/faq";
+      fullPath: "/faq";
+      preLoaderRoute: typeof _interiorLayoutFaqRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
+    "/__interiorLayout/contact": {
+      id: "/__interiorLayout/contact";
+      path: "/contact";
+      fullPath: "/contact";
+      preLoaderRoute: typeof _interiorLayoutContactRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
+    "/__interiorLayout/community-guidelines": {
+      id: "/__interiorLayout/community-guidelines";
+      path: "/community-guidelines";
+      fullPath: "/community-guidelines";
+      preLoaderRoute: typeof _interiorLayoutCommunityGuidelinesRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
+    "/__interiorLayout/bot-guidelines": {
+      id: "/__interiorLayout/bot-guidelines";
+      path: "/bot-guidelines";
+      fullPath: "/bot-guidelines";
+      preLoaderRoute: typeof _interiorLayoutBotGuidelinesRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
     "/__interiorLayout/articles/": {
       id: "/__interiorLayout/articles/";
       path: "/articles";
@@ -229,6 +327,11 @@ declare module "@tanstack/react-router" {
 }
 
 interface _interiorLayoutRouteChildren {
+  _interiorLayoutBotGuidelinesRoute: typeof _interiorLayoutBotGuidelinesRoute;
+  _interiorLayoutCommunityGuidelinesRoute: typeof _interiorLayoutCommunityGuidelinesRoute;
+  _interiorLayoutContactRoute: typeof _interiorLayoutContactRoute;
+  _interiorLayoutFaqRoute: typeof _interiorLayoutFaqRoute;
+  _interiorLayoutHostARepeaterRoute: typeof _interiorLayoutHostARepeaterRoute;
   _interiorLayoutJoinRoute: typeof _interiorLayoutJoinRoute;
   _interiorLayoutLearnRoute: typeof _interiorLayoutLearnRoute;
   _interiorLayoutMqttRoute: typeof _interiorLayoutMqttRoute;
@@ -240,6 +343,12 @@ interface _interiorLayoutRouteChildren {
 }
 
 const _interiorLayoutRouteChildren: _interiorLayoutRouteChildren = {
+  _interiorLayoutBotGuidelinesRoute: _interiorLayoutBotGuidelinesRoute,
+  _interiorLayoutCommunityGuidelinesRoute:
+    _interiorLayoutCommunityGuidelinesRoute,
+  _interiorLayoutContactRoute: _interiorLayoutContactRoute,
+  _interiorLayoutFaqRoute: _interiorLayoutFaqRoute,
+  _interiorLayoutHostARepeaterRoute: _interiorLayoutHostARepeaterRoute,
   _interiorLayoutJoinRoute: _interiorLayoutJoinRoute,
   _interiorLayoutLearnRoute: _interiorLayoutLearnRoute,
   _interiorLayoutMqttRoute: _interiorLayoutMqttRoute,
