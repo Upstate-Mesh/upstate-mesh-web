@@ -2,8 +2,17 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { Link } from "@tanstack/react-router";
 
 import SocialIcons from "./SocialIcons";
+
+const footerLinks = [
+  { label: "FAQ", to: "/faq" },
+  { label: "Host a repeater", to: "/host-a-repeater" },
+  { label: "Community guidelines", to: "/community-guidelines" },
+  { label: "Bot guidelines", to: "/bot-guidelines" },
+  { label: "Contact", to: "/contact" },
+] as const;
 
 export default function Footer() {
   return (
@@ -26,6 +35,18 @@ export default function Footer() {
           }}
         >
           <SocialIcons />
+          <Stack
+            direction="row"
+            useFlexGap
+            spacing={2}
+            sx={{ flexWrap: "wrap", justifyContent: "center" }}
+          >
+            {footerLinks.map((link) => (
+              <Link key={link.to} to={link.to} title={link.label}>
+                {link.label}
+              </Link>
+            ))}
+          </Stack>
           <Typography variant="caption">
             Website content licensed under the Creative Commons
             Attribution-ShareAlike 4.0 International License. Portions of the

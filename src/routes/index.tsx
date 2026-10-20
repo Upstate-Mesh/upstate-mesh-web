@@ -4,6 +4,8 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
+import MeetupBanner from "../MeetupBanner";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     links: [
@@ -73,6 +75,7 @@ function RouteComponent() {
             py: 3,
           }}
         >
+          <MeetupBanner />
           <Typography>
             Upstate Mesh is a community group of makers and tech enthusiasts
             tinkering with open source, solar-powered mesh networks in Upstate
