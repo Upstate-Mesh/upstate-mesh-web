@@ -35,17 +35,6 @@ function RouteComponent() {
       </Typography>
       <ul>
         <li>
-          <b>Capital District: </b>
-          <a
-            href="https://cdme.sh/"
-            target="_blank"
-            title="Capital District Mesh"
-          >
-            Capital District Mesh
-          </a>{" "}
-          (live map, repeater directory and stats for our area)
-        </li>
-        <li>
           <b>Hudson Valley: </b>
           <a
             href="https://hvmesh.net/"
@@ -140,12 +129,6 @@ function RouteComponent() {
           <b>Nashville, Tennessee: </b>
           <a href="https://www.instagram.com/meshville.tn" target="_blank">
             Meshville
-          </a>
-        </li>
-        <li>
-          <b>Charlotte, North Carolina: </b>
-          <a href="https://charlottemesh.org/" target="_blank">
-            Charlotte Mesh
           </a>
         </li>
         <li>

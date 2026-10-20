@@ -50,12 +50,12 @@ const ourRegions = [
   {
     name: "northeast",
     area: "The northeastern US",
-    use: "Messages that need to reach beyond the Capital District.",
+    use: "Emergencies only.",
   },
   {
     name: "east",
     area: "The eastern US",
-    use: "The widest scope we carry. Use it sparingly.",
+    use: "Emergencies only.",
   },
 ];
 
@@ -399,10 +399,13 @@ function RouteComponent() {
         </Table>
       </TableContainer>
       <Callout>
-        Save the wider scopes for messages that really need that reach. Our New
-        England neighbors reserve <code>east</code> and <code>northeast</code>{" "}
-        for emergencies (an imminent threat to life or property), so please
-        respect that when your message could reach their repeaters.
+        <b>
+          <code>east</code> and <code>northeast</code> are for emergencies only
+        </b>
+        : an imminent threat to life or property. They reach well beyond our
+        area, including our New England neighbors, who follow the same rule. For
+        everything else, use <code>alb</code> (or <code>hud</code> if you're
+        talking with the Hudson Valley).
       </Callout>
 
       <Typography component="h5" variant="h5">
@@ -517,8 +520,9 @@ function RouteComponent() {
           so Hudson Valley airtime stays free.
         </li>
         <li>
-          <b>Sent with scope northeast:</b> every repeater here carries{" "}
-          <code>northeast</code>, so it crosses both areas and keeps going.
+          <b>Sent with scope northeast (emergencies only):</b> every repeater
+          here carries <code>northeast</code>, so it crosses both areas and
+          keeps going.
         </li>
       </ul>
 
@@ -593,9 +597,11 @@ function RouteComponent() {
           <code>region allowf &lt;name&gt;</code>.
         </li>
         <li>
-          <code>region default alb</code> scopes the repeater's own adverts and
-          saves automatically. Login replies reuse the request's scope if it is
-          on your list, otherwise they go out unscoped.
+          <code>region default &lt;name&gt;</code> scopes the repeater's own
+          adverts and saves automatically. We're not recommending a default yet:
+          leave it unset so your repeater's adverts reach the whole mesh while
+          other repeaters are still adding regions. Login replies reuse the
+          request's scope if it is on your list, otherwise they go out unscoped.
         </li>
         <li>
           Leave <code>*</code> allowed. It's also needed for remote management

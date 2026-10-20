@@ -28,6 +28,16 @@ function RouteComponent() {
       <Typography component="h5" variant="h5">
         Connect to the network
       </Typography>
+      <Typography>
+        New to all this? Our{" "}
+        <Link
+          to="/articles/getting-started-with-meshcore"
+          title="Getting started with MeshCore"
+        >
+          getting started with MeshCore
+        </Link>{" "}
+        guide walks through each step in more detail.
+      </Typography>
       <ol>
         <li>
           Get a MeshCore node.

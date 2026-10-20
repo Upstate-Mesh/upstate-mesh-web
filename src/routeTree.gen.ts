@@ -17,6 +17,7 @@ import { Route as _interiorLayoutMqttRouteImport } from "./routes/__interiorLayo
 import { Route as _interiorLayoutLearnRouteImport } from "./routes/__interiorLayout/learn";
 import { Route as _interiorLayoutJoinRouteImport } from "./routes/__interiorLayout/join";
 import { Route as _interiorLayoutArticlesIndexRouteImport } from "./routes/__interiorLayout/articles/index";
+import { Route as _interiorLayoutArticlesGettingStartedWithMeshcoreRouteImport } from "./routes/__interiorLayout/articles/getting-started-with-meshcore";
 import { Route as _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport } from "./routes/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
 
 const _interiorLayoutRoute = _interiorLayoutRouteImport.update({
@@ -60,6 +61,12 @@ const _interiorLayoutArticlesIndexRoute =
     path: "/articles/",
     getParentRoute: () => _interiorLayoutRoute,
   } as any);
+const _interiorLayoutArticlesGettingStartedWithMeshcoreRoute =
+  _interiorLayoutArticlesGettingStartedWithMeshcoreRouteImport.update({
+    id: "/articles/getting-started-with-meshcore",
+    path: "/articles/getting-started-with-meshcore",
+    getParentRoute: () => _interiorLayoutRoute,
+  } as any);
 const _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute =
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport.update(
     {
@@ -77,6 +84,7 @@ export interface FileRoutesByFullPath {
   "/regions": typeof _interiorLayoutRegionsRoute;
   "/similar-networks": typeof _interiorLayoutSimilarNetworksRoute;
   "/articles/build-a-90s-hacker-pager-style-t114-mesh-node": typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  "/articles/getting-started-with-meshcore": typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRoute;
   "/articles/": typeof _interiorLayoutArticlesIndexRoute;
 }
 export interface FileRoutesByTo {
@@ -87,6 +95,7 @@ export interface FileRoutesByTo {
   "/regions": typeof _interiorLayoutRegionsRoute;
   "/similar-networks": typeof _interiorLayoutSimilarNetworksRoute;
   "/articles/build-a-90s-hacker-pager-style-t114-mesh-node": typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  "/articles/getting-started-with-meshcore": typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRoute;
   "/articles": typeof _interiorLayoutArticlesIndexRoute;
 }
 export interface FileRoutesById {
@@ -99,6 +108,7 @@ export interface FileRoutesById {
   "/__interiorLayout/regions": typeof _interiorLayoutRegionsRoute;
   "/__interiorLayout/similar-networks": typeof _interiorLayoutSimilarNetworksRoute;
   "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node": typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  "/__interiorLayout/articles/getting-started-with-meshcore": typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRoute;
   "/__interiorLayout/articles/": typeof _interiorLayoutArticlesIndexRoute;
 }
 export interface FileRouteTypes {
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | "/regions"
     | "/similar-networks"
     | "/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
+    | "/articles/getting-started-with-meshcore"
     | "/articles/";
   fileRoutesByTo: FileRoutesByTo;
   to:
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | "/regions"
     | "/similar-networks"
     | "/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
+    | "/articles/getting-started-with-meshcore"
     | "/articles";
   id:
     | "__root__"
@@ -132,6 +144,7 @@ export interface FileRouteTypes {
     | "/__interiorLayout/regions"
     | "/__interiorLayout/similar-networks"
     | "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
+    | "/__interiorLayout/articles/getting-started-with-meshcore"
     | "/__interiorLayout/articles/";
   fileRoutesById: FileRoutesById;
 }
@@ -198,6 +211,13 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof _interiorLayoutArticlesIndexRouteImport;
       parentRoute: typeof _interiorLayoutRoute;
     };
+    "/__interiorLayout/articles/getting-started-with-meshcore": {
+      id: "/__interiorLayout/articles/getting-started-with-meshcore";
+      path: "/articles/getting-started-with-meshcore";
+      fullPath: "/articles/getting-started-with-meshcore";
+      preLoaderRoute: typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
     "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node": {
       id: "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
       path: "/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
@@ -215,6 +235,7 @@ interface _interiorLayoutRouteChildren {
   _interiorLayoutRegionsRoute: typeof _interiorLayoutRegionsRoute;
   _interiorLayoutSimilarNetworksRoute: typeof _interiorLayoutSimilarNetworksRoute;
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute: typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  _interiorLayoutArticlesGettingStartedWithMeshcoreRoute: typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRoute;
   _interiorLayoutArticlesIndexRoute: typeof _interiorLayoutArticlesIndexRoute;
 }
 
@@ -226,6 +247,8 @@ const _interiorLayoutRouteChildren: _interiorLayoutRouteChildren = {
   _interiorLayoutSimilarNetworksRoute: _interiorLayoutSimilarNetworksRoute,
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute:
     _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute,
+  _interiorLayoutArticlesGettingStartedWithMeshcoreRoute:
+    _interiorLayoutArticlesGettingStartedWithMeshcoreRoute,
   _interiorLayoutArticlesIndexRoute: _interiorLayoutArticlesIndexRoute,
 };
 
