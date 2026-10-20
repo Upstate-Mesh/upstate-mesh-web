@@ -20,7 +20,8 @@ export const Route = createRootRoute({
       },
       {
         name: "description",
-        content: "A meshtastic user group for the Capital District and beyond!",
+        content:
+          "A MeshCore mesh networking community for the Capital District and beyond!",
       },
     ],
     title: PAGE_TITLE,

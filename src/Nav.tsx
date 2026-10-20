@@ -37,6 +37,10 @@ const navItems: ReadonlyArray<NavItem> = [
     to: "/join",
   },
   {
+    label: "Regions",
+    to: "/regions",
+  },
+  {
     label: "Articles",
     to: "/articles",
   },

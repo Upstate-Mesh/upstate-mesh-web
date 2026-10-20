@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -101,22 +101,26 @@ function RouteComponent() {
             >
               LoRa protocol
             </a>
-            . The radios mesh using the open-source software. Users can use
-            their own handheld nodes with a mobile app and can send messages to
-            other users. The messages hop from node to node, extending the reach
-            of the network, helping everyone receive messages.
+            . The radios mesh using the open-source{" "}
+            <a href="https://meshcore.io/" target="_blank" title="MeshCore">
+              MeshCore
+            </a>{" "}
+            software. Users can use their own handheld nodes with a mobile app
+            and can send messages to other users. The messages hop from node to
+            node, extending the reach of the network, helping everyone receive
+            messages.
           </Typography>
           <Typography component="h5" variant="h5">
             How to join the mesh
           </Typography>
           <Typography>
             Check out{" "}
-            <a
-              href="/join"
+            <Link
+              to="/join"
               title="instructions on how to join the mesh network"
             >
               instructions on how to join the mesh network
-            </a>
+            </Link>
             .
           </Typography>
           <Typography>

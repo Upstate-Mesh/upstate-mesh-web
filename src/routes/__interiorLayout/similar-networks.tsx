@@ -35,6 +35,17 @@ function RouteComponent() {
       </Typography>
       <ul>
         <li>
+          <b>Capital District: </b>
+          <a
+            href="https://cdme.sh/"
+            target="_blank"
+            title="Capital District Mesh"
+          >
+            Capital District Mesh
+          </a>{" "}
+          (live map, repeater directory and stats for our area)
+        </li>
+        <li>
           <b>Hudson Valley: </b>
           <a
             href="https://hvmesh.net/"
@@ -71,8 +82,8 @@ function RouteComponent() {
         Mesh networks outside of New York
       </Typography>
       <Typography>
-        Meshtastic is growing worldwide, here are some networks outside of New
-        York to check out.
+        Mesh networking is growing worldwide, here are some networks outside of
+        New York to check out.
       </Typography>
       <ul>
         <li>
@@ -162,14 +173,14 @@ function RouteComponent() {
           </a>
         </li>
         <li>
-          <b>Denver, Colorado: </b>
-          <a href="https://denvermesh.org/" target="_blank">
-            Denver Mesh
+          <b>Colorado: </b>
+          <a href="https://coloradomesh.org/" target="_blank">
+            Colorado Mesh
           </a>
         </li>
         <li>
           <b>Northwest Arkansas: </b>
-          <a href="https://nwamesh.com/" target="_blank">
+          <a href="https://nwame.sh/" target="_blank">
             Northwest Arkansas Mesh
           </a>
         </li>
