@@ -33,7 +33,7 @@ export default function SocialIcons() {
       />
       <SocialIcon
         src={gitHubIcon}
-        href="https://github.com/upstate-mesh/mesh-station"
+        href="https://github.com/Upstate-Mesh"
         title="GitHub"
       />
     </Stack>

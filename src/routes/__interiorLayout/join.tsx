@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 const PAGE_TITLE = "Join - Upstate Mesh";
 
@@ -27,6 +27,16 @@ function RouteComponent() {
       </Typography>
       <Typography component="h5" variant="h5">
         Connect to the network
+      </Typography>
+      <Typography>
+        New to all this? Our{" "}
+        <Link
+          to="/articles/getting-started-with-meshcore"
+          title="Getting started with MeshCore"
+        >
+          getting started with MeshCore
+        </Link>{" "}
+        guide walks through each step in more detail.
       </Typography>
       <ol>
         <li>
@@ -68,10 +78,20 @@ function RouteComponent() {
         <li>
           Configure your radio settings to match the Upstate Mesh network:
           <ul>
-            <li>Preset: US Default</li>
-            <li>Spread Factor: 7</li>
-            <li>Code Rate: 8</li>
+            <li>Frequency: 910.525 MHz</li>
+            <li>Bandwidth: 62.5 kHz</li>
+            <li>Spreading Factor: 7</li>
+            <li>Coding Rate: 5</li>
           </ul>
+          These match MeshCore's USA/Canada preset.
+        </li>
+        <li>
+          Set your region scope to <code>alb</code> so your messages stay local.
+          See{" "}
+          <Link to="/regions" title="How regions work">
+            how regions work
+          </Link>{" "}
+          for details.
         </li>
         <li>Say hi in the public channel!</li>
         <li>Send "ping" in the #testing channel.</li>

@@ -82,40 +82,51 @@ function RouteComponent() {
         <li>
           <b>Public channel</b>
           <br />
-          You can broadcast an unencrypted message to the Primary/Public Channel
-          and everyone on your mesh will see it. This is a bit like “posting”
-          publicly on a social media platform.
+          Every MeshCore node comes with the Public channel. Anyone on the mesh
+          can read what you post there. This is a bit like “posting” publicly on
+          a social media platform.
         </li>
         <li>
-          <b>Group channels</b>
+          <b>Hashtag channels</b>
           <br />
-          You can send an encrypted message to a select group of people on a
-          private and everyone who is subscribed to that channel will get it.
-          People can join the channel if you provide them with an encryption key
-          which you can send to them via Direct Message or which they can scan
-          from a QR code in person. This is a bit like a private group on social
-          media, or a group text message chain on SMS.
+          Channels whose names start with a #, like <code>#testing</code>, are
+          open topic rooms. Anyone who adds a channel with the same name joins
+          it. This is a bit like a public group or forum on social media.
+        </li>
+        <li>
+          <b>Private channels</b>
+          <br />
+          You can create a channel with its own secret key and share it with
+          friends by QR code or by sending them the key. Only people with the
+          key can read it. This is a bit like a group text message chain on SMS.
         </li>
         <li>
           <b>Direct messages</b>
           <br />
-          You can send encrypted direct messages to people on the mesh. This is
-          like a private text message or a DM on social medial.
+          You can send encrypted direct messages to people on the mesh. Once a
+          path to them is learned, messages travel straight down it and you get
+          a delivery acknowledgement. This is like a private text message or a
+          DM on social media.
+        </li>
+        <li>
+          <b>Room servers</b>
+          <br />A room server is a node that stores messages for a group, so
+          people who were offline can catch up when they connect. This is a bit
+          like an old-school BBS.
         </li>
         <li>
           <b>Location</b>
           <br />
-          If you choose to enable it you can send your location to the mesh and
-          it will show up on everyone’s map in the app.
+          If you choose to enable it, your node can include its location in its
+          advert so it shows up on maps in the app.
         </li>
         <li>
           <b>Telemetry data</b>
           <br />
-          Nodes can be set up to send telemetry data like the battery status or
-          signal strength, which is helpful for monitoring remote solar-powered
-          nodes. Nodes can also have sensors connected to them which allow them
-          to send data on temperature, humidity, or air pressure which allow
-          them to act like weather stations.
+          Repeaters and sensor nodes can report battery status, signal strength
+          and sensor readings like temperature, humidity or air pressure. In
+          MeshCore you request telemetry when you want it, rather than every
+          node broadcasting it on a timer, which saves airtime.
         </li>
       </ol>
       <Typography component="h5" variant="h5">
@@ -148,7 +159,7 @@ function RouteComponent() {
           <br />
           Mesh networks are decentralized - there is no central server or
           corporation - all the communication bounces through the entire mesh.
-          It' open to everyone - you don't have to ask permission to join and
+          It's open to everyone - you don't have to ask permission to join and
           all of the software is open-source. Mesh networks are resilient -
           solar-powered radios don't need cell phone towers, internet access, or
           electricity. Hopefully, this project will inspire others to build
@@ -159,11 +170,13 @@ function RouteComponent() {
         Meshtastic vs. MeshCore on Upstate Mesh
       </Typography>
       <Typography>
-        Upstate Mesh is technology-agnostic. We care about reliable,
-        decentralized mesh networking that keeps working even if the power goes
-        out. This page explains (1) how mesh networking works at a high level,
-        and (2) the practical differences between Meshtastic and MeshCore so you
-        can pick the right tool for your use case.
+        Upstate Mesh is focused on MeshCore. Our repeater network is built for
+        it and most of our members use it. That said, we're not anti-Meshtastic:
+        it's a great project, plenty of members run both, and Meshtastic users
+        are always welcome in our Discord. This section explains (1) how mesh
+        networking works at a high level, and (2) the practical differences
+        between Meshtastic and MeshCore, and why we chose MeshCore for the
+        region.
       </Typography>
       <Typography component="h6" variant="h6">
         ELI5
@@ -183,7 +196,7 @@ function RouteComponent() {
         which your whisper makes its way through the crowd.
       </Typography>
       <Typography component="h6" variant="h6">
-        TL;DR;
+        TL;DR
       </Typography>
       <Typography>
         Meshtastic works well when people and links are moving (friends at an
@@ -203,7 +216,7 @@ function RouteComponent() {
           do not. Only repeaters relay.
         </li>
         <li>
-          Telemetry(battery, temperature, etc): Meshtastic pushes data
+          Telemetry (battery, temperature, etc): Meshtastic pushes data
           regularly; MeshCore pushes rarely, and allows manual pulling.
         </li>
         <li>

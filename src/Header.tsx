@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
+import { Link } from "@tanstack/react-router";
 
 import upstateMeshLogo from "/um_logo_web.png";
 import Nav from "./Nav";
@@ -33,14 +34,14 @@ export default function Header() {
             width: "100%",
           }}
         >
-          <a href="/" title="Home">
+          <Link to="/" title="Home">
             <img
               src={upstateMeshLogo}
               alt="Upstate Mesh logo"
               width="100%"
               height="auto"
             />
-          </a>
+          </Link>
         </Box>
         <Box>
           <Nav />

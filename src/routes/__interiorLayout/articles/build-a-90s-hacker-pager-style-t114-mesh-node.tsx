@@ -12,7 +12,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 
 import Step from "../../../Step";
 
@@ -30,7 +30,7 @@ export const Route = createFileRoute(
       {
         name: "description",
         content:
-          "Use modern tech to build a Meshtastic text messaging node that goes wherever you go, complete with a '90s hacker cyberpunk aesthetic.",
+          "Use modern tech to build a MeshCore text messaging node that goes wherever you go, complete with a '90s hacker cyberpunk aesthetic.",
       },
     ],
     title: PAGE_TITLE,
@@ -106,7 +106,7 @@ function RouteComponent() {
           Build a '90s hacker pager-style T114 mesh node
         </Typography>
         <Typography variant="caption">
-          Use modern tech to build a Meshtastic text messaging node that goes
+          Use modern tech to build a MeshCore text messaging node that goes
           wherever you go, complete with a '90s hacker cyberpunk aesthetic.
           Trust your technolust.
         </Typography>
@@ -128,9 +128,13 @@ function RouteComponent() {
         Who is this for?
       </Typography>
       <Typography>
-        This is for anyone curious about off-grid text messaging with Meshtastic
+        This is for anyone curious about off-grid text messaging with MeshCore
         but unsure where to start. The intention behind this article is to
         present an entry point to the hobby.
+      </Typography>
+      <Typography sx={{ borderLeft: "3px solid #75eba5", pl: 2 }}>
+        <b>Prefer Meshtastic?</b> The T114 runs Meshtastic too, so this exact
+        build works for either. Just flash the firmware you want at the end.
       </Typography>
       <Typography>
         It's a combination of other nerdy hobbies including electronics, amateur
@@ -421,16 +425,27 @@ function RouteComponent() {
         All done!
       </Typography>
       <Typography>
-        That's it, you've completed the build. All that's left is to connect it
-        to your Meshtastic mobile app,{" "}
+        That's it, you've completed the build. All that's left is to{" "}
+        <a
+          href="https://meshcore.io/"
+          target="_blank"
+          title="flash MeshCore companion firmware"
+        >
+          flash MeshCore companion firmware
+        </a>
+        , pair it with the MeshCore app, and{" "}
+        <RouterLink to="/join" title="join the mesh">
+          join the mesh
+        </RouterLink>
+        . If you'd rather run Meshtastic, flash it from{" "}
         <a
           href="https://meshtastic.org/downloads/"
           target="_blank"
-          title="flash the latest firmware"
+          title="Meshtastic downloads"
         >
-          flash the latest firmware
-        </a>
-        , and you're on the mesh.
+          meshtastic.org
+        </a>{" "}
+        and pair it with the Meshtastic app instead.
       </Typography>
       <Typography>
         Hope you had fun with this build! If you run into issues or just want to

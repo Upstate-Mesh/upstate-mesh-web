@@ -15,8 +15,7 @@ export const Route = createFileRoute("/__interiorLayout/articles/")({
       },
       {
         name: "description",
-        content:
-          "Articles about Meshtastic and mesh communication technologies.",
+        content: "Articles about MeshCore and mesh communication technologies.",
       },
     ],
     title: PAGE_TITLE,
@@ -33,9 +32,15 @@ function RouteComponent() {
       <Box sx={{ flexGrow: 1, width: "100%" }}>
         <Grid container spacing={2}>
           <Article
+            title="Getting started with MeshCore"
+            thumbnail="/um_hero.png"
+            description="Everything you need to go from zero to sending your first message on Upstate Mesh."
+            href="/articles/getting-started-with-meshcore"
+          />
+          <Article
             title="Build a '90s hacker pager-style T114 mesh node"
             thumbnail="/pager_completed.jpg"
-            description="Use modern tech to build a Meshtastic text messaging node that goes wherever you go, complete with a '90s hacker cyberpunk aesthetic."
+            description="Use modern tech to build a MeshCore text messaging node that goes wherever you go, complete with a '90s hacker cyberpunk aesthetic."
             href="/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
           />
         </Grid>

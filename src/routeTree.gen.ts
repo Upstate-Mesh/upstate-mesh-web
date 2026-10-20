@@ -12,10 +12,12 @@ import { Route as rootRouteImport } from "./routes/__root";
 import { Route as _interiorLayoutRouteImport } from "./routes/__interiorLayout";
 import { Route as IndexRouteImport } from "./routes/index";
 import { Route as _interiorLayoutSimilarNetworksRouteImport } from "./routes/__interiorLayout/similar-networks";
+import { Route as _interiorLayoutRegionsRouteImport } from "./routes/__interiorLayout/regions";
 import { Route as _interiorLayoutMqttRouteImport } from "./routes/__interiorLayout/mqtt";
 import { Route as _interiorLayoutLearnRouteImport } from "./routes/__interiorLayout/learn";
 import { Route as _interiorLayoutJoinRouteImport } from "./routes/__interiorLayout/join";
 import { Route as _interiorLayoutArticlesIndexRouteImport } from "./routes/__interiorLayout/articles/index";
+import { Route as _interiorLayoutArticlesGettingStartedWithMeshcoreRouteImport } from "./routes/__interiorLayout/articles/getting-started-with-meshcore";
 import { Route as _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport } from "./routes/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
 
 const _interiorLayoutRoute = _interiorLayoutRouteImport.update({
@@ -33,6 +35,11 @@ const _interiorLayoutSimilarNetworksRoute =
     path: "/similar-networks",
     getParentRoute: () => _interiorLayoutRoute,
   } as any);
+const _interiorLayoutRegionsRoute = _interiorLayoutRegionsRouteImport.update({
+  id: "/regions",
+  path: "/regions",
+  getParentRoute: () => _interiorLayoutRoute,
+} as any);
 const _interiorLayoutMqttRoute = _interiorLayoutMqttRouteImport.update({
   id: "/mqtt",
   path: "/mqtt",
@@ -54,6 +61,12 @@ const _interiorLayoutArticlesIndexRoute =
     path: "/articles/",
     getParentRoute: () => _interiorLayoutRoute,
   } as any);
+const _interiorLayoutArticlesGettingStartedWithMeshcoreRoute =
+  _interiorLayoutArticlesGettingStartedWithMeshcoreRouteImport.update({
+    id: "/articles/getting-started-with-meshcore",
+    path: "/articles/getting-started-with-meshcore",
+    getParentRoute: () => _interiorLayoutRoute,
+  } as any);
 const _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute =
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRouteImport.update(
     {
@@ -68,8 +81,10 @@ export interface FileRoutesByFullPath {
   "/join": typeof _interiorLayoutJoinRoute;
   "/learn": typeof _interiorLayoutLearnRoute;
   "/mqtt": typeof _interiorLayoutMqttRoute;
+  "/regions": typeof _interiorLayoutRegionsRoute;
   "/similar-networks": typeof _interiorLayoutSimilarNetworksRoute;
   "/articles/build-a-90s-hacker-pager-style-t114-mesh-node": typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  "/articles/getting-started-with-meshcore": typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRoute;
   "/articles/": typeof _interiorLayoutArticlesIndexRoute;
 }
 export interface FileRoutesByTo {
@@ -77,8 +92,10 @@ export interface FileRoutesByTo {
   "/join": typeof _interiorLayoutJoinRoute;
   "/learn": typeof _interiorLayoutLearnRoute;
   "/mqtt": typeof _interiorLayoutMqttRoute;
+  "/regions": typeof _interiorLayoutRegionsRoute;
   "/similar-networks": typeof _interiorLayoutSimilarNetworksRoute;
   "/articles/build-a-90s-hacker-pager-style-t114-mesh-node": typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  "/articles/getting-started-with-meshcore": typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRoute;
   "/articles": typeof _interiorLayoutArticlesIndexRoute;
 }
 export interface FileRoutesById {
@@ -88,8 +105,10 @@ export interface FileRoutesById {
   "/__interiorLayout/join": typeof _interiorLayoutJoinRoute;
   "/__interiorLayout/learn": typeof _interiorLayoutLearnRoute;
   "/__interiorLayout/mqtt": typeof _interiorLayoutMqttRoute;
+  "/__interiorLayout/regions": typeof _interiorLayoutRegionsRoute;
   "/__interiorLayout/similar-networks": typeof _interiorLayoutSimilarNetworksRoute;
   "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node": typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  "/__interiorLayout/articles/getting-started-with-meshcore": typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRoute;
   "/__interiorLayout/articles/": typeof _interiorLayoutArticlesIndexRoute;
 }
 export interface FileRouteTypes {
@@ -99,8 +118,10 @@ export interface FileRouteTypes {
     | "/join"
     | "/learn"
     | "/mqtt"
+    | "/regions"
     | "/similar-networks"
     | "/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
+    | "/articles/getting-started-with-meshcore"
     | "/articles/";
   fileRoutesByTo: FileRoutesByTo;
   to:
@@ -108,8 +129,10 @@ export interface FileRouteTypes {
     | "/join"
     | "/learn"
     | "/mqtt"
+    | "/regions"
     | "/similar-networks"
     | "/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
+    | "/articles/getting-started-with-meshcore"
     | "/articles";
   id:
     | "__root__"
@@ -118,8 +141,10 @@ export interface FileRouteTypes {
     | "/__interiorLayout/join"
     | "/__interiorLayout/learn"
     | "/__interiorLayout/mqtt"
+    | "/__interiorLayout/regions"
     | "/__interiorLayout/similar-networks"
     | "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node"
+    | "/__interiorLayout/articles/getting-started-with-meshcore"
     | "/__interiorLayout/articles/";
   fileRoutesById: FileRoutesById;
 }
@@ -151,6 +176,13 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof _interiorLayoutSimilarNetworksRouteImport;
       parentRoute: typeof _interiorLayoutRoute;
     };
+    "/__interiorLayout/regions": {
+      id: "/__interiorLayout/regions";
+      path: "/regions";
+      fullPath: "/regions";
+      preLoaderRoute: typeof _interiorLayoutRegionsRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
     "/__interiorLayout/mqtt": {
       id: "/__interiorLayout/mqtt";
       path: "/mqtt";
@@ -179,6 +211,13 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof _interiorLayoutArticlesIndexRouteImport;
       parentRoute: typeof _interiorLayoutRoute;
     };
+    "/__interiorLayout/articles/getting-started-with-meshcore": {
+      id: "/__interiorLayout/articles/getting-started-with-meshcore";
+      path: "/articles/getting-started-with-meshcore";
+      fullPath: "/articles/getting-started-with-meshcore";
+      preLoaderRoute: typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRouteImport;
+      parentRoute: typeof _interiorLayoutRoute;
+    };
     "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node": {
       id: "/__interiorLayout/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
       path: "/articles/build-a-90s-hacker-pager-style-t114-mesh-node";
@@ -193,8 +232,10 @@ interface _interiorLayoutRouteChildren {
   _interiorLayoutJoinRoute: typeof _interiorLayoutJoinRoute;
   _interiorLayoutLearnRoute: typeof _interiorLayoutLearnRoute;
   _interiorLayoutMqttRoute: typeof _interiorLayoutMqttRoute;
+  _interiorLayoutRegionsRoute: typeof _interiorLayoutRegionsRoute;
   _interiorLayoutSimilarNetworksRoute: typeof _interiorLayoutSimilarNetworksRoute;
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute: typeof _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute;
+  _interiorLayoutArticlesGettingStartedWithMeshcoreRoute: typeof _interiorLayoutArticlesGettingStartedWithMeshcoreRoute;
   _interiorLayoutArticlesIndexRoute: typeof _interiorLayoutArticlesIndexRoute;
 }
 
@@ -202,9 +243,12 @@ const _interiorLayoutRouteChildren: _interiorLayoutRouteChildren = {
   _interiorLayoutJoinRoute: _interiorLayoutJoinRoute,
   _interiorLayoutLearnRoute: _interiorLayoutLearnRoute,
   _interiorLayoutMqttRoute: _interiorLayoutMqttRoute,
+  _interiorLayoutRegionsRoute: _interiorLayoutRegionsRoute,
   _interiorLayoutSimilarNetworksRoute: _interiorLayoutSimilarNetworksRoute,
   _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute:
     _interiorLayoutArticlesBuildA90sHackerPagerStyleT114MeshNodeRoute,
+  _interiorLayoutArticlesGettingStartedWithMeshcoreRoute:
+    _interiorLayoutArticlesGettingStartedWithMeshcoreRoute,
   _interiorLayoutArticlesIndexRoute: _interiorLayoutArticlesIndexRoute,
 };
 

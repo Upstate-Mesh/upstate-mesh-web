@@ -71,8 +71,8 @@ function RouteComponent() {
         Mesh networks outside of New York
       </Typography>
       <Typography>
-        Meshtastic is growing worldwide, here are some networks outside of New
-        York to check out.
+        Mesh networking is growing worldwide, here are some networks outside of
+        New York to check out.
       </Typography>
       <ul>
         <li>
@@ -132,12 +132,6 @@ function RouteComponent() {
           </a>
         </li>
         <li>
-          <b>Charlotte, North Carolina: </b>
-          <a href="https://charlottemesh.org/" target="_blank">
-            Charlotte Mesh
-          </a>
-        </li>
-        <li>
           <b>North Carolina: </b>
           <a href="https://ncmesh.net/" target="_blank">
             NC Mesh
@@ -162,14 +156,14 @@ function RouteComponent() {
           </a>
         </li>
         <li>
-          <b>Denver, Colorado: </b>
-          <a href="https://denvermesh.org/" target="_blank">
-            Denver Mesh
+          <b>Colorado: </b>
+          <a href="https://coloradomesh.org/" target="_blank">
+            Colorado Mesh
           </a>
         </li>
         <li>
           <b>Northwest Arkansas: </b>
-          <a href="https://nwamesh.com/" target="_blank">
+          <a href="https://nwame.sh/" target="_blank">
             Northwest Arkansas Mesh
           </a>
         </li>
