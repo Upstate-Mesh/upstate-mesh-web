@@ -104,7 +104,11 @@ const questions: ReadonlyArray<{ question: string; answers: ReactNode[] }> = [
   {
     question:
       "Will this increase the likelihood my property is struck by lightning?",
-    answers: ["No."],
+    answers: [
+      "Not in any meaningful way. Lightning tends to strike the tallest and most conductive point in an area, and our antennas are small and thin. We mount them close to the height of what's already on the roof, like vents, chimneys or HVAC units, rather than as the tallest thing around.",
+      "Because the repeater runs on its own solar panel and battery, there's no cable running into your building. That means there's no path for a surge to follow inside to your electrical or network wiring.",
+      "If a site calls for a taller mast, we'll talk it through with you first and ground it following standard antenna practice (National Electrical Code Article 810).",
+    ],
   },
   {
     question:
