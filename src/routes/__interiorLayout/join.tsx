@@ -95,6 +95,13 @@ function RouteComponent() {
         </li>
         <li>Say hi in the public channel!</li>
         <li>Send "ping" in the #testing channel.</li>
+        <li>
+          See how far you reach with a{" "}
+          <Link to="/live" title="Live tools">
+            health check
+          </Link>
+          .
+        </li>
       </ol>
     </>
   );

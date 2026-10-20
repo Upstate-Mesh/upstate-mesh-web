@@ -72,7 +72,12 @@ const faqs: ReadonlyArray<{ question: string; answer: ReactNode }> = [
         It depends mostly on height and terrain. A handheld radio at ground
         level might reach a repeater a mile or a few miles away. Repeaters on
         rooftops and hills can link to each other over much longer distances,
-        and a message can pass through up to 64 of them.
+        and a message can pass through up to 64 of them. To find out for your
+        own radio, run a{" "}
+        <Link to="/live" title="Live tools">
+          health check
+        </Link>
+        .
       </>
     ),
   },

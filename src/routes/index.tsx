@@ -114,6 +114,17 @@ function RouteComponent() {
             messages.
           </Typography>
           <Typography component="h5" variant="h5">
+            See it live
+          </Typography>
+          <Typography>
+            Watch messages hop across the Capital District in real time, and
+            test how far your own radio reaches, with our{" "}
+            <Link to="/live" title="live tools">
+              live map, packet analyzer and health check
+            </Link>
+            .
+          </Typography>
+          <Typography component="h5" variant="h5">
             How to join the mesh
           </Typography>
           <Typography>

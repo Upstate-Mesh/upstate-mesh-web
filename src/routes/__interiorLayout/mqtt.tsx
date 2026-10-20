@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 const PAGE_TITLE = "MQTT - Upstate Mesh";
 
@@ -24,12 +24,12 @@ function RouteComponent() {
   return (
     <>
       <Typography component="h1" variant="h4">
-        MQTT
+        Observers &amp; MQTT
       </Typography>
       <Typography>
-        Within the mesh network, MQTT is used as a means of visualizing mesh
-        activity on nodes which have Internet access, via a live map. It helps
-        everyone understand coverage and troubleshoot the network.
+        Within the mesh network, MQTT is used to collect what observer nodes
+        hear and show it on live maps and analyzers. It helps everyone
+        understand coverage and troubleshoot the network.
       </Typography>
       <Typography sx={{ borderLeft: "3px solid #75eba5", pl: 2 }}>
         It is <b>not</b> a substitute for building a robust, resilient mesh
@@ -37,21 +37,55 @@ function RouteComponent() {
         representation of the reality off-grid.
       </Typography>
       <Typography component="h5" variant="h5">
+        What is an observer?
+      </Typography>
+      <Typography>
+        An observer is a MeshCore radio connected to an always-on computer, such
+        as a Raspberry Pi, that has internet access. The radio runs repeater
+        firmware built with packet logging, and a small bridge program
+        (meshcoretomqtt) forwards every packet it overhears to MQTT servers.
+        Those packets power our{" "}
+        <Link to="/live" title="Live tools">
+          live tools
+        </Link>
+        : the live map, CoreScope, and the health check.
+      </Typography>
+      <Typography>
+        A spot that isn't great for a repeater can still make a good observer.
+        Set it to <code>repeat off</code> and it will listen and report without
+        retransmitting anything. Every observer adds a vantage point, so the
+        more of them there are, the more complete the picture.
+      </Typography>
+      <Typography component="h5" variant="h5">
+        Our observer
+      </Typography>
+      <Typography>
+        Upstate Mesh runs <b>UM-Observer-Westmere</b>. It reports to our own
+        tools and also shares its data with{" "}
+        <a
+          href="https://cdme.sh/"
+          target="_blank"
+          title="Capital District Mesh"
+        >
+          Capital District Mesh
+        </a>
+        ,{" "}
+        <a
+          href="https://bostonme.sh/"
+          target="_blank"
+          title="Greater Boston Mesh"
+        >
+          Greater Boston Mesh
+        </a>
+        , LetsMesh and MeshMapper, so our corner of the mesh shows up on their
+        maps too.
+      </Typography>
+      <Typography component="h5" variant="h5">
         Become an observer
       </Typography>
       <Typography>
-        For MeshCore, this is done with <b>observers</b>. An observer is a
-        MeshCore node you already run, plus a small meshcore-to-mqtt bridge. The
-        bridge forwards the packets your node overhears over the air to the
-        regional packet database, so they show up on the{" "}
-        <a href="https://live.cdme.sh/#/live" target="_blank" title="live map">
-          live map
-        </a>
-        . It uses encrypted, authenticated MQTT with your own credentials and
-        doesn't change how your node handles traffic on the mesh.
-      </Typography>
-      <Typography>
-        Observers for our area are run through Capital District Mesh. See{" "}
+        Observers in our area report through Capital District Mesh, and our live
+        tools read from there as well, so one setup puts you on every map. See{" "}
         <a
           href="https://cdme.sh/observe"
           target="_blank"
@@ -67,7 +101,8 @@ function RouteComponent() {
         >
           the observer list
         </a>{" "}
-        to see who is already contributing.
+        to see who is already contributing. Want help building one? Ask in our
+        Discord.
       </Typography>
       <Typography component="h5" variant="h5">
         Looking for the old MQTT server?
