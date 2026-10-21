@@ -34,6 +34,15 @@ const localChannels: ReadonlyArray<Channel> = [
     description: "Discussion for the Capital District and the wider area.",
   },
   {
+    name: "#testing",
+    description: (
+      <>
+        Local testing. Send <code>ping</code> and the txtme.sh bot will reply so
+        you know you're reaching the mesh.
+      </>
+    ),
+  },
+  {
     name: "#test",
     description: (
       <>
