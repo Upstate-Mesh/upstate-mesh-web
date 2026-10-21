@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 const PAGE_TITLE = "Learn - Upstate Mesh";
 
@@ -91,7 +91,12 @@ function RouteComponent() {
           <br />
           Channels whose names start with a #, like <code>#testing</code>, are
           open topic rooms. Anyone who adds a channel with the same name joins
-          it. This is a bit like a public group or forum on social media.
+          it. This is a bit like a public group or forum on social media. See
+          the{" "}
+          <Link to="/channels" title="Channels">
+            channels we use
+          </Link>
+          .
         </li>
         <li>
           <b>Private channels</b>
