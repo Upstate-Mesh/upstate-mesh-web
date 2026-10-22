@@ -29,3 +29,8 @@ export const CORESCOPE_URL = "https://live.upst8me.sh";
 export const LIVE_MAP_URL = "https://map.upst8me.sh";
 export const HEALTH_CHECK_URL = "https://health.upst8me.sh";
 export const HEALTH_CHECK_CHANNEL = "#ny-hc";
+
+// MQTT server for observers. Observers log in with a token signed by their
+// node's own key; everything is forwarded on to Capital District Mesh.
+export const MQTT_HOST = "mqtt.upst8me.sh";
+export const MQTT_URL = `wss://${MQTT_HOST}/mqtt`;

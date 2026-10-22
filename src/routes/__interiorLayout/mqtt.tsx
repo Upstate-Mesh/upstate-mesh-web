@@ -1,7 +1,11 @@
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const PAGE_TITLE = "MQTT - Upstate Mesh";
+import { DISCORD_URL, MQTT_HOST, MQTT_URL } from "../../site";
+
+const PAGE_TITLE = "Observers & MQTT - Upstate Mesh";
 
 export const Route = createFileRoute("/__interiorLayout/mqtt")({
   head: () => ({
@@ -19,6 +23,16 @@ export const Route = createFileRoute("/__interiorLayout/mqtt")({
   }),
   component: RouteComponent,
 });
+
+function CodeBlock({ lines }: { lines: string[] }) {
+  return (
+    <Paper sx={{ width: "100%", px: 2, py: 1.5, overflowX: "auto" }}>
+      <Box component="pre" sx={{ m: 0 }}>
+        <code>{lines.join("\n")}</code>
+      </Box>
+    </Paper>
+  );
+}
 
 function RouteComponent() {
   return (
@@ -40,10 +54,10 @@ function RouteComponent() {
         What is an observer?
       </Typography>
       <Typography>
-        An observer is a MeshCore radio connected to an always-on computer, such
-        as a Raspberry Pi, that has internet access. The radio runs repeater
-        firmware built with packet logging, and a small bridge program
-        (meshcoretomqtt) forwards every packet it overhears to MQTT servers.
+        An observer is a MeshCore radio that forwards every packet it overhears
+        to MQTT servers over the internet. It can be a Wi-Fi board running
+        observer firmware, or a radio plugged into an always-on computer, such
+        as a Raspberry Pi, running a small bridge program (meshcoretomqtt).
         Those packets power our{" "}
         <Link to="/live" title="Live tools">
           live tools
@@ -84,25 +98,131 @@ function RouteComponent() {
         Become an observer
       </Typography>
       <Typography>
-        Observers in our area report through Capital District Mesh, and our live
-        tools read from there as well, so one setup puts you on every map. See{" "}
+        Send your observer's data to the Upstate Mesh MQTT server,{" "}
+        <code>{MQTT_HOST}</code>. There's no account to sign up for and no
+        password to ask for: your observer logs in with a token signed by its
+        own node key, the same way it logs in to LetsMesh and MeshMapper. We
+        forward everything on to{" "}
         <a
-          href="https://cdme.sh/observe"
+          href="https://cdme.sh/"
           target="_blank"
-          title="Become an observer"
+          title="Capital District Mesh"
         >
-          cdme.sh/observe
-        </a>{" "}
-        for how to sign up, and{" "}
+          Capital District Mesh
+        </a>
+        , so one setup puts you on our live tools and theirs.
+      </Typography>
+      <Typography>The settings, whichever software you use:</Typography>
+      <ul>
+        <li>
+          <b>Server:</b> <code>{MQTT_URL}</code> (port 443, WebSockets over TLS)
+        </li>
+        <li>
+          <b>Login:</b> token signed by your node's key. Your software fills in
+          the username (<code>v1_</code> plus your public key) and the token for
+          you.
+        </li>
+        <li>
+          <b>Audience:</b> <code>{MQTT_HOST}</code>
+        </li>
+        <li>
+          <b>Airport code:</b> the nearest airport, in capitals, like{" "}
+          <code>ALB</code>. Lowercase codes are rejected.
+        </li>
+      </ul>
+      <Typography component="h6" variant="h6">
+        Wi-Fi observer firmware
+      </Typography>
+      <Typography>
+        The easiest observer is a Wi-Fi board, like a Heltec V3 or V4, running
+        the MeshCore observer firmware from the{" "}
+        <a
+          href="https://observer.gessaman.com/"
+          target="_blank"
+          title="MeshCore observer flasher"
+        >
+          observer flasher
+        </a>
+        . It needs no separate computer. Once it's on your Wi-Fi, run these
+        commands in its console, using any MQTT slot you aren't already using
+        (here, slot 3):
+      </Typography>
+      <CodeBlock
+        lines={[
+          "set mqtt.iata ALB",
+          "set mqtt3.preset custom",
+          `set mqtt3.server ${MQTT_URL}`,
+          `set mqtt3.audience ${MQTT_HOST}`,
+        ]}
+      />
+      <Typography>
+        Setting an audience is what switches the slot to token login. Boards
+        without PSRAM can only connect to two servers at once, so you may need
+        to turn another slot off with <code>set mqtt2.preset none</code>.
+      </Typography>
+      <Typography component="h6" variant="h6">
+        Raspberry Pi with meshcoretomqtt
+      </Typography>
+      <Typography>
+        If your radio is plugged into a computer running{" "}
+        <a
+          href="https://github.com/Cisien/meshcoretomqtt"
+          target="_blank"
+          title="meshcoretomqtt"
+        >
+          meshcoretomqtt
+        </a>
+        , add a file such as{" "}
+        <code>/etc/mctomqtt/config.d/30-upstatemesh.toml</code> and restart the
+        service:
+      </Typography>
+      <CodeBlock
+        lines={[
+          "[[broker]]",
+          'name = "upstatemesh"',
+          "enabled = true",
+          `server = "${MQTT_HOST}"`,
+          "port = 443",
+          'transport = "websockets"',
+          "keepalive = 60",
+          "qos = 0",
+          "retain = true",
+          "",
+          "[broker.tls]",
+          "enabled = true",
+          "verify = true",
+          "",
+          "[broker.auth]",
+          'method = "token"',
+          `audience = "${MQTT_HOST}"`,
+          "",
+          "# Only needed if your [general] iata is lowercase.",
+          "[broker.topics]",
+          'iata = "ALB"',
+        ]}
+      />
+      <Typography component="h6" variant="h6">
+        Check that it's working
+      </Typography>
+      <Typography>
+        Within a few minutes your observer should appear on the{" "}
+        <Link to="/live" title="Live tools">
+          live tools
+        </Link>{" "}
+        and on{" "}
         <a
           href="https://cdme.sh/observers"
           target="_blank"
           title="Current observers"
         >
-          the observer list
+          the Capital District Mesh observer list
+        </a>
+        . If your software can't do token login, ask in our{" "}
+        <a href={DISCORD_URL} target="_blank" title="Discord server">
+          Discord
         </a>{" "}
-        to see who is already contributing. Want help building one? Ask in our
-        Discord.
+        and we'll set you up with a username and password instead. Want help
+        building an observer? Ask there too.
       </Typography>
       <Typography component="h5" variant="h5">
         Looking for the old MQTT server?
