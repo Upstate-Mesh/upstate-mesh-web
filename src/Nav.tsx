@@ -37,6 +37,10 @@ const navItems: ReadonlyArray<NavItem> = [
     to: "/join",
   },
   {
+    label: "Channels",
+    to: "/channels",
+  },
+  {
     label: "Regions",
     to: "/regions",
   },
