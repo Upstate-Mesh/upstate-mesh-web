@@ -8,6 +8,7 @@ import SocialIcons from "./SocialIcons";
 
 const footerLinks = [
   { label: "FAQ", to: "/faq" },
+  { label: "Channels", to: "/channels" },
   { label: "Host a repeater", to: "/host-a-repeater" },
   { label: "Community guidelines", to: "/community-guidelines" },
   { label: "Bot guidelines", to: "/bot-guidelines" },

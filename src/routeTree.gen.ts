@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as _interiorLayoutRouteImport } from './routes/__interiorLayout'
 import { Route as _interiorLayoutBotGuidelinesRouteImport } from './routes/__interiorLayout/bot-guidelines'
+import { Route as _interiorLayoutChannelsRouteImport } from './routes/__interiorLayout/channels'
 import { Route as _interiorLayoutCommunityGuidelinesRouteImport } from './routes/__interiorLayout/community-guidelines'
 import { Route as _interiorLayoutContactRouteImport } from './routes/__interiorLayout/contact'
 import { Route as _interiorLayoutFaqRouteImport } from './routes/__interiorLayout/faq'
@@ -41,6 +42,11 @@ const _interiorLayoutBotGuidelinesRoute =
     path: '/bot-guidelines',
     getParentRoute: () => _interiorLayoutRoute,
   } as any)
+const _interiorLayoutChannelsRoute = _interiorLayoutChannelsRouteImport.update({
+  id: '/channels',
+  path: '/channels',
+  getParentRoute: () => _interiorLayoutRoute,
+} as any)
 const _interiorLayoutCommunityGuidelinesRoute =
   _interiorLayoutCommunityGuidelinesRouteImport.update({
     id: '/community-guidelines',
@@ -118,6 +124,7 @@ const _interiorLayoutArticlesGettingStartedWithMeshcoreRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/bot-guidelines': typeof _interiorLayoutBotGuidelinesRoute
+  '/channels': typeof _interiorLayoutChannelsRoute
   '/community-guidelines': typeof _interiorLayoutCommunityGuidelinesRoute
   '/contact': typeof _interiorLayoutContactRoute
   '/faq': typeof _interiorLayoutFaqRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/bot-guidelines': typeof _interiorLayoutBotGuidelinesRoute
+  '/channels': typeof _interiorLayoutChannelsRoute
   '/community-guidelines': typeof _interiorLayoutCommunityGuidelinesRoute
   '/contact': typeof _interiorLayoutContactRoute
   '/faq': typeof _interiorLayoutFaqRoute
@@ -154,6 +162,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/__interiorLayout': typeof _interiorLayoutRouteWithChildren
   '/__interiorLayout/bot-guidelines': typeof _interiorLayoutBotGuidelinesRoute
+  '/__interiorLayout/channels': typeof _interiorLayoutChannelsRoute
   '/__interiorLayout/community-guidelines': typeof _interiorLayoutCommunityGuidelinesRoute
   '/__interiorLayout/contact': typeof _interiorLayoutContactRoute
   '/__interiorLayout/faq': typeof _interiorLayoutFaqRoute
@@ -173,6 +182,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/bot-guidelines'
+    | '/channels'
     | '/community-guidelines'
     | '/contact'
     | '/faq'
@@ -190,6 +200,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/bot-guidelines'
+    | '/channels'
     | '/community-guidelines'
     | '/contact'
     | '/faq'
@@ -208,6 +219,7 @@ export interface FileRouteTypes {
     | '/'
     | '/__interiorLayout'
     | '/__interiorLayout/bot-guidelines'
+    | '/__interiorLayout/channels'
     | '/__interiorLayout/community-guidelines'
     | '/__interiorLayout/contact'
     | '/__interiorLayout/faq'
@@ -249,6 +261,13 @@ declare module '@tanstack/react-router' {
       path: '/bot-guidelines'
       fullPath: '/bot-guidelines'
       preLoaderRoute: typeof _interiorLayoutBotGuidelinesRouteImport
+      parentRoute: typeof _interiorLayoutRoute
+    }
+    '/__interiorLayout/channels': {
+      id: '/__interiorLayout/channels'
+      path: '/channels'
+      fullPath: '/channels'
+      preLoaderRoute: typeof _interiorLayoutChannelsRouteImport
       parentRoute: typeof _interiorLayoutRoute
     }
     '/__interiorLayout/community-guidelines': {
@@ -347,6 +366,7 @@ declare module '@tanstack/react-router' {
 
 interface _interiorLayoutRouteChildren {
   _interiorLayoutBotGuidelinesRoute: typeof _interiorLayoutBotGuidelinesRoute
+  _interiorLayoutChannelsRoute: typeof _interiorLayoutChannelsRoute
   _interiorLayoutCommunityGuidelinesRoute: typeof _interiorLayoutCommunityGuidelinesRoute
   _interiorLayoutContactRoute: typeof _interiorLayoutContactRoute
   _interiorLayoutFaqRoute: typeof _interiorLayoutFaqRoute
@@ -364,6 +384,7 @@ interface _interiorLayoutRouteChildren {
 
 const _interiorLayoutRouteChildren: _interiorLayoutRouteChildren = {
   _interiorLayoutBotGuidelinesRoute: _interiorLayoutBotGuidelinesRoute,
+  _interiorLayoutChannelsRoute: _interiorLayoutChannelsRoute,
   _interiorLayoutCommunityGuidelinesRoute:
     _interiorLayoutCommunityGuidelinesRoute,
   _interiorLayoutContactRoute: _interiorLayoutContactRoute,
