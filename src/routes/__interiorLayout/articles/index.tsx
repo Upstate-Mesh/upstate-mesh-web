@@ -32,6 +32,12 @@ function RouteComponent() {
       <Box sx={{ flexGrow: 1, width: "100%" }}>
         <Grid container spacing={2}>
           <Article
+            title="Set up a MeshCore observer"
+            thumbnail="/um_hero.png"
+            description="Turn a Wi-Fi LoRa board into an observer that puts what it hears on the Upstate Mesh live map."
+            href="/articles/set-up-a-meshcore-observer"
+          />
+          <Article
             title="Getting started with MeshCore"
             thumbnail="/um_hero.png"
             description="Everything you need to go from zero to sending your first message on Upstate Mesh."

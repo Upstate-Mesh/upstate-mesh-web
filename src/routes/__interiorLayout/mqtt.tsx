@@ -1,8 +1,7 @@
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
+import CodeBlock from "../../CodeBlock";
 import { DISCORD_URL, MQTT_HOST, MQTT_URL } from "../../site";
 
 const PAGE_TITLE = "Observers & MQTT - Upstate Mesh";
@@ -23,16 +22,6 @@ export const Route = createFileRoute("/__interiorLayout/mqtt")({
   }),
   component: RouteComponent,
 });
-
-function CodeBlock({ lines }: { lines: string[] }) {
-  return (
-    <Paper sx={{ width: "100%", px: 2, py: 1.5, overflowX: "auto" }}>
-      <Box component="pre" sx={{ m: 0 }}>
-        <code>{lines.join("\n")}</code>
-      </Box>
-    </Paper>
-  );
-}
 
 function RouteComponent() {
   return (
@@ -143,22 +132,30 @@ function RouteComponent() {
         >
           observer flasher
         </a>
-        . It needs no separate computer. Once it's on your Wi-Fi, run these
-        commands in its console, using any MQTT slot you aren't already using
-        (here, slot 3):
+        . It needs no separate computer. Fresh installs report to LetsMesh US in
+        slot 1 and LetsMesh EU in slot 2. Once it's on your Wi-Fi, point slot 2
+        at Upstate Mesh instead:
       </Typography>
       <CodeBlock
         lines={[
           "set mqtt.iata ALB",
-          "set mqtt3.preset custom",
-          `set mqtt3.server ${MQTT_URL}`,
-          `set mqtt3.audience ${MQTT_HOST}`,
+          "set mqtt2.preset custom",
+          `set mqtt2.server ${MQTT_URL}`,
+          `set mqtt2.audience ${MQTT_HOST}`,
         ]}
       />
       <Typography>
         Setting an audience is what switches the slot to token login. Boards
-        without PSRAM can only connect to two servers at once, so you may need
-        to turn another slot off with <code>set mqtt2.preset none</code>.
+        without PSRAM, like the Heltec V3, can only hold two secure connections
+        at once, which is why we reuse slot 2 rather than adding a third. See
+        our{" "}
+        <Link
+          to="/articles/set-up-a-meshcore-observer"
+          title="Set up a MeshCore observer"
+        >
+          step-by-step observer guide
+        </Link>{" "}
+        for the full setup.
       </Typography>
       <Typography component="h6" variant="h6">
         Raspberry Pi with meshcoretomqtt

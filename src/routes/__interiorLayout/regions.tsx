@@ -13,6 +13,8 @@ import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
+import CodeBlock from "../../CodeBlock";
+
 const PAGE_TITLE = "Regions - Upstate Mesh";
 
 const GREEN = "#75eba5";
@@ -195,16 +197,6 @@ function Callout({ children }: { children: ReactNode }) {
     <Typography sx={{ borderLeft: `3px solid ${GREEN}`, pl: 2 }}>
       {children}
     </Typography>
-  );
-}
-
-function CodeBlock({ lines }: { lines: string[] }) {
-  return (
-    <Paper sx={{ width: "100%", px: 2, py: 1.5, overflowX: "auto" }}>
-      <Box component="pre" sx={{ m: 0 }}>
-        <code>{lines.join("\n")}</code>
-      </Box>
-    </Paper>
   );
 }
 

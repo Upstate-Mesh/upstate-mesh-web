@@ -47,7 +47,11 @@ export default function Step({
         <CardMedia component="img" image={imgSrc} alt={title} width="100%" />
       )}
       <CardContent>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+        <Typography
+          component="div"
+          variant="body2"
+          sx={{ color: "text.secondary" }}
+        >
           {description}
         </Typography>
       </CardContent>
