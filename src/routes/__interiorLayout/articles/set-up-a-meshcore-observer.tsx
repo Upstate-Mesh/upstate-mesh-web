@@ -241,11 +241,11 @@ function RouteComponent() {
         </li>
       </ul>
       <Typography>
-        Using a radio plugged into a Raspberry Pi instead? See{" "}
+        Using pyMC_Repeater, or a radio plugged into a Raspberry Pi instead? See{" "}
         <Link to="/mqtt" title="Observers & MQTT">
           Observers &amp; MQTT
         </Link>{" "}
-        for the meshcoretomqtt settings. Stuck on anything else? Ask in our{" "}
+        for those settings. Stuck on anything else? Ask in our{" "}
         <a href={DISCORD_URL} target="_blank" title="Discord server">
           Discord
         </a>
