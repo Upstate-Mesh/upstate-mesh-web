@@ -81,8 +81,8 @@ const neighborRegions = [
     regions: ["nyc", "hud", "hv", "li"],
     notes: (
       <>
-        <code>hud</code> and <code>hv</code> both mean Hudson Valley. We support{" "}
-        <code>hud</code>. <code>li</code> is Long Island.
+        <code>hud</code> is from NYC to Albany along the Hudson River and <code>hv</code> is for the Hudson Valley in between Albany and NYC. 
+        We support{" "}<code>hud</code>. <code>li</code> is Long Island.
       </>
     ),
   },
