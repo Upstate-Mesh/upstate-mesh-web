@@ -101,15 +101,26 @@ function RouteComponent() {
         </a>
         , so one setup puts you on our live tools and theirs.
       </Typography>
-      <Typography>The settings, whichever software you use:</Typography>
+      <Typography>
+        The settings, whichever software you use. Most setup screens ask for
+        them one at a time:
+      </Typography>
       <ul>
         <li>
-          <b>Server:</b> <code>{MQTT_URL}</code> (port 443, WebSockets over TLS)
+          <b>Host:</b> <code>{MQTT_HOST}</code> (no <code>https://</code> and no{" "}
+          <code>/mqtt</code>)
         </li>
         <li>
-          <b>Login:</b> token signed by your node's key. Your software fills in
-          the username (<code>v1_</code> plus your public key) and the token for
-          you.
+          <b>Port:</b> <code>443</code>
+        </li>
+        <li>
+          <b>Transport:</b> WebSockets, with TLS on (not "insecure")
+        </li>
+        <li>
+          <b>Login:</b> turn on <b>JWT</b> or token auth, and leave the username
+          and password blank. Your software signs the login with your node's
+          key. Many apps have this switched off by default, and without it the
+          server turns you away.
         </li>
         <li>
           <b>Audience:</b> <code>{MQTT_HOST}</code>
@@ -119,6 +130,10 @@ function RouteComponent() {
           <code>ALB</code>. Lowercase codes are rejected.
         </li>
       </ul>
+      <Typography>
+        If your software only takes a single address, use{" "}
+        <code>{MQTT_URL}</code>.
+      </Typography>
       <Typography component="h6" variant="h6">
         Wi-Fi observer firmware
       </Typography>
@@ -198,6 +213,44 @@ function RouteComponent() {
           'iata = "ALB"',
         ]}
       />
+      <Typography component="h6" variant="h6">
+        pyMC_Repeater
+      </Typography>
+      <Typography>
+        If you run{" "}
+        <a
+          href="https://github.com/openhop-dev/openhop_repeater"
+          target="_blank"
+          title="pyMC_Repeater"
+        >
+          pyMC_Repeater
+        </a>
+        , add a broker in its web dashboard with these settings:
+      </Typography>
+      <ul>
+        <li>
+          <b>Format:</b> Meshcoretomqtt
+        </li>
+        <li>
+          <b>Transport:</b> Websockets
+        </li>
+        <li>
+          <b>Use JWT Auth:</b> on. It's off by default, so check this one.
+        </li>
+        <li>
+          <b>Host</b> and <b>Audience:</b> <code>{MQTT_HOST}</code>
+        </li>
+        <li>
+          <b>Port:</b> <code>443</code>
+        </li>
+        <li>
+          <b>TLS:</b> on, <b>Insecure:</b> off
+        </li>
+      </ul>
+      <Typography>
+        Leave Retain Status, Publish Neighbours and the packet type filters at
+        their defaults.
+      </Typography>
       <Typography component="h6" variant="h6">
         Check that it's working
       </Typography>
