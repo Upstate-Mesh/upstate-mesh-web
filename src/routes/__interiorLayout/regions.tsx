@@ -46,7 +46,7 @@ const ourRegions = [
   },
   {
     name: "hud",
-    area: "Hudson Valley",
+    area: "The Hudson River corridor, NYC to Albany",
     use: "Shared with our Hudson Valley and NYC neighbors. Repeaters toward the south of our area carry it.",
   },
   {
@@ -81,8 +81,10 @@ const neighborRegions = [
     regions: ["nyc", "hud", "hv", "li"],
     notes: (
       <>
-        <code>hud</code> and <code>hv</code> both mean Hudson Valley. We support{" "}
-        <code>hud</code>. <code>li</code> is Long Island.
+        <code>hud</code> covers the whole Hudson River corridor, from NYC up to
+        Albany. <code>hv</code> is a smaller region for just the mid-Hudson
+        Valley, between the two. We support <code>hud</code>. <code>li</code> is
+        Long Island.
       </>
     ),
   },
