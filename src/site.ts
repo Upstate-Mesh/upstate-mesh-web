@@ -14,14 +14,24 @@ export interface Meetup {
   details?: string;
 }
 
-// The next in-person meetup. Set to null when nothing is scheduled.
-export const NEXT_MEETUP: Meetup | null = {
-  title: "Mesh Meetup",
-  start: "2026-11-04T18:00:00-05:00",
-  location: "Tech Valley Center of Gravity",
-  address: "Troy, NY",
-  rsvpUrl: DISCORD_URL,
-};
+// Upcoming in-person meetups, in date order. The banner shows the first one
+// that hasn't finished yet and lists the rest, so past ones can stay here.
+export const MEETUPS: Meetup[] = [
+  {
+    title: "Mesh Meeting",
+    start: "2026-12-09T18:00:00-05:00",
+    location: "Tech Valley Center of Gravity",
+    address: "Troy, NY",
+    rsvpUrl: DISCORD_URL,
+  },
+  {
+    title: "Mesh Meeting",
+    start: "2027-01-12T18:00:00-05:00",
+    location: "Tech Valley Center of Gravity",
+    address: "Troy, NY",
+    rsvpUrl: DISCORD_URL,
+  },
+];
 
 // Live tools hosted by Upstate Mesh. Change these in one place when the tools
 // move to their permanent home.
