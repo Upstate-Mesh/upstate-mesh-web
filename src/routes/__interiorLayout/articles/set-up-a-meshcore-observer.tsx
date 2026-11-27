@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import CodeBlock from "../../../CodeBlock";
-import { DISCORD_URL, MQTT_HOST, MQTT_URL } from "../../../site";
+import { DISCORD_URL, MQTT_HOST } from "../../../site";
 import Step from "../../../Step";
 
 const PAGE_TITLE = "Set up a MeshCore observer - Upstate Mesh";
@@ -163,12 +163,18 @@ function RouteComponent() {
         description={
           <>
             Out of the box, slot 1 reports to LetsMesh US and slot 2 to LetsMesh
-            EU. Leave slot 1 alone and switch slot 2 to our server. Setting the
-            audience is what makes it log in with its node key.
+            EU. Leave slot 1 alone and switch slot 2 to our server. The firmware
+            has an Upstate Mesh preset built in, which fills in the address,
+            port and token login:
+            <CodeBlock lines={["set mqtt2.preset upstatemesh"]} />
+            If your board doesn't accept the preset, its firmware is older than
+            November 2026. Run <code>ota update</code>, or set the slot up by
+            hand. Include the <code>:443</code>, or the slot keeps its old port
+            and won't connect:
             <CodeBlock
               lines={[
                 "set mqtt2.preset custom",
-                `set mqtt2.server ${MQTT_URL}`,
+                `set mqtt2.server wss://${MQTT_HOST}:443/mqtt`,
                 `set mqtt2.audience ${MQTT_HOST}`,
               ]}
             />

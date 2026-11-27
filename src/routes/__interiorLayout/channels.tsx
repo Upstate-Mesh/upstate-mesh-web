@@ -111,8 +111,8 @@ const hamChannels: ReadonlyArray<Channel> = [
 
 const otherChannels: ReadonlyArray<Channel> = [
   { name: "#ct", description: "Connecticut" },
-  { name: "#hud", description: "Hudson Valley" },
-  { name: "#hv", description: "Hudson Valley" },
+  { name: "#hud", description: "Hudson River corridor, NYC to Albany" },
+  { name: "#hv", description: "Mid-Hudson Valley" },
   { name: "#li", description: "Long Island" },
   { name: "#ma-hc", description: "Massachusetts health check" },
   { name: "#ma-mesh", description: "Massachusetts" },

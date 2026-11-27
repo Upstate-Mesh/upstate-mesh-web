@@ -149,21 +149,29 @@ function RouteComponent() {
         </a>
         . It needs no separate computer. Fresh installs report to LetsMesh US in
         slot 1 and LetsMesh EU in slot 2. Once it's on your Wi-Fi, point slot 2
-        at Upstate Mesh instead:
+        at Upstate Mesh instead. The firmware has an Upstate Mesh preset built
+        in, which fills in the address, port and token login for you:
+      </Typography>
+      <CodeBlock
+        lines={["set mqtt.iata ALB", "set mqtt2.preset upstatemesh"]}
+      />
+      <Typography>
+        If your board doesn't accept the preset, its firmware is older than
+        November 2026. Run <code>ota update</code> to update it, or set the slot
+        up by hand. Include the <code>:443</code>, or the slot keeps its old
+        port and won't connect:
       </Typography>
       <CodeBlock
         lines={[
-          "set mqtt.iata ALB",
           "set mqtt2.preset custom",
-          `set mqtt2.server ${MQTT_URL}`,
+          `set mqtt2.server wss://${MQTT_HOST}:443/mqtt`,
           `set mqtt2.audience ${MQTT_HOST}`,
         ]}
       />
       <Typography>
-        Setting an audience is what switches the slot to token login. Boards
-        without PSRAM, like the Heltec V3, can only hold two secure connections
-        at once, which is why we reuse slot 2 rather than adding a third. See
-        our{" "}
+        Boards without PSRAM, like the Heltec V3, can only hold two secure
+        connections at once, which is why we reuse slot 2 rather than adding a
+        third. See our{" "}
         <Link
           to="/articles/set-up-a-meshcore-observer"
           title="Set up a MeshCore observer"
